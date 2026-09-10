@@ -190,6 +190,7 @@ footer{margin-top:44px; padding:26px 0 34px; text-align:center; color:var(--mute
 .day .head::after{content:'▾'; margin-left:auto; font-size:14px; color:var(--muted); transition:transform .25s;}
 .day.collapsed .head::after{transform:rotate(-90deg);}
 .day.collapsed .evs, .day.collapsed .stay, .day.collapsed .route, .day.collapsed .alts{display:none;}
+.pastchip{font-size:11px; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:1px 9px; font-weight:600;}
 .fold-btn{border:1px solid var(--line); background:var(--panel); color:var(--accent); font:inherit;
   font-size:12.5px; font-weight:700; border-radius:9px; padding:3px 12px; cursor:pointer;}
 .fold-btn:hover{filter:brightness(1.05);}
@@ -253,7 +254,7 @@ section.foldable.collapsed .cards{display:none;}
 
 <nav class="quicknav" data-page-node-id="ExNOAZ4eOxgufZMgG2B2Qp">
   <a href="#map" data-page-node-id="UEspk8owD4FFAnbmqcEWVD">🗺 总览地图</a>
-  <a href="#bookings" data-page-node-id="AhxDKtS77R3TKw9MuicTLZ">🎫 订单卡片</a>
+  <a href="#bookings" data-page-node-id="AhxDKtS77R3TKw9MuicTLZ">🚄 交通订单</a>
   <a href="#days" data-page-node-id="4aRSSOHCuMz7cqL85V95Td">📅 逐日行程</a>
   <a href="#todos" data-page-node-id="poU0gSyXKwhhxoxCFKeHtV">✅ 待办清单</a>
   <a href="#tips" data-page-node-id="liZjb0QUfAdxvMiBmLRH0v">💡 实用贴士</a>
@@ -343,7 +344,7 @@ section.foldable.collapsed .cards{display:none;}
 
   <!-- ================= 订单卡片 ================= -->
   <section id="bookings" class="foldable" data-page-node-id="b0OdOQbNDRdkC4fhPjbVqw">
-    <h2 data-page-node-id="fgZzqk0lrQiqi0UZ32EI1y">🎫 已确认订单 <span class="en" data-page-node-id="5bLbgv8nvvNZ2H6PQsXCkE">CONFIRMED</span> <button type="button" class="fold-btn" id="foldBookings" data-page-node-id="foldBookingsBtn">收起 ▴</button></h2>
+    <h2 data-page-node-id="fgZzqk0lrQiqi0UZ32EI1y">🚄 已确认交通订单 <span class="en" data-page-node-id="5bLbgv8nvvNZ2H6PQsXCkE">TRANSPORT</span> <button type="button" class="fold-btn" id="foldBookings" data-page-node-id="foldBookingsBtn">收起 ▴</button></h2>
     <div class="cards" data-page-node-id="3Uem6ezXO2GeyanK93wvH6">
       <div class="bcard" data-page-node-id="eOJil8EUZpNltiF2nrdfEj"><span class="cat cat-fly" data-page-node-id="0jKlCLP50OO8fHjTF5PIHS">✈️ 机票</span>
         <div class="t" data-page-node-id="E8mdDYWXgmATsFB2vVD82t">CA1566 上海虹桥 → 北京</div>
@@ -360,13 +361,14 @@ section.foldable.collapsed .cards{display:none;}
         <div class="note" data-page-node-id="FADvoF1GKBLN00YxgLlJYV">起飞前 7 天（9/20 起）线上值机</div>
       </div>
       <div class="bcard" data-page-node-id="D0JpflPq2M6qKov9wXUKpl"><span class="cat cat-fly" data-page-node-id="TKs3SRmY7DY5RkZp7uKCkd">✈️ 机票</span>
-        <div class="t" data-page-node-id="ynaphVte9Utb67xavw6MrP">CA866 马德里 → 北京</div>
-        <div class="d" data-page-node-id="B55ixdZrjzrEMp4qcN21kQ">10/4（日）17:30 巴拉哈斯 T1 起飞 · 10:25(+1) 抵京</div>
-        <div class="note" data-page-node-id="iRm8HyeyFGxU6fhIPqn3pi">国际航线建议提前 3 小时到机场</div>
+        <div class="t" data-page-node-id="ynaphVte9Utb67xavw6MrP">CA866 马德里 → 北京 <span class="badge need">✈️ 已航变</span></div>
+        <div class="d" data-page-node-id="B55ixdZrjzrEMp4qcN21kQ">10/5（一）01:05 巴拉哈斯 T1 起飞 · 10/6（二）18:25 抵首都 T3</div>
+        <div class="note" data-page-node-id="iRm8HyeyFGxU6fhIPqn3pi">全程约 35h20m · 10/4 深夜约 22:15 出发去机场 · 预留退税时间</div>
       </div>
       <div class="bcard" data-page-node-id="nytaDtviBRrAhr3cj3YMqe"><span class="cat cat-fly" data-page-node-id="xMOn4LkHDYrS3w6jPnn8o2">✈️ 机票</span>
-        <div class="t" data-page-node-id="KGLxUiifWySMyKINAYwRvo">CA1533 北京 → 上海</div>
-        <div class="d" data-page-node-id="gnY8kKbNaAcRsPpRwv3O8k">10/5（一）12:30 首都 T3 起飞 · 14:45 抵虹桥 T2</div>
+        <div class="t" data-page-node-id="KGLxUiifWySMyKINAYwRvo">CA1589 北京 → 上海</div>
+        <div class="d" data-page-node-id="gnY8kKbNaAcRsPpRwv3O8k">10/6（二）20:30 首都 T3 起飞 · 22:40 抵虹桥 T2</div>
+        <div class="note" data-page-node-id="gnY8kKbNote">中转 2h05m · 10/6 深夜到家，记得提前跟家里说</div>
       </div>
       <div class="bcard" data-page-node-id="s6kqPVHF30VIgk1HWHtL0f"><span class="cat cat-train" data-page-node-id="uo7VHxEp8H4llWhNo46Fn1">🚄 火车</span>
         <div class="t" data-page-node-id="4axeI7IV5I5nIU9nzQrkWy">AVE 高铁 格拉纳达 → 马德里</div>
@@ -377,46 +379,6 @@ section.foldable.collapsed .cards{display:none;}
         <div class="t" data-page-node-id="wbfiH02GFapOG6zuI4jmrq">Centauro · 大众 T-Roc 或同组 SUV</div>
         <div class="d" data-page-node-id="OCjxeAJ2u22ycwx9Y0Uwny">9/25（五）09:00 巴塞罗那 Sants 取车 · 当日 20:30 前还车</div>
         <div class="note" data-page-node-id="renhsD6ehOKHLWtg9puUYq">带驾照原件+认证翻译件+主驾驶人信用卡</div>
-      </div>
-      <div class="bcard" data-page-node-id="WpkXX9CIM141URAyavuZIH"><span class="cat cat-hotel" data-page-node-id="CqyHsDVuA9Yzfwr86eyx0i">🏨 住宿</span>
-        <div class="t" data-page-node-id="DrHAqTBpK4rF7WyEJ2NjUg">巴塞罗那 · Sants 广场公寓</div>
-        <div class="d" data-page-node-id="Tb7eYPr2m7gQSWMJTrqN4g">Plaça de Sants 5 · 9/23 15:00 入住 — 9/27 10:00 退房 · 4 晚</div>
-        <div class="note" data-page-node-id="zdBQaboNsPEGsrHZJxsTGN">9/27 航班早，需提前出发（约 07:15）</div>
-      </div>
-      <div class="bcard" data-page-node-id="FzF4dAeW21wC17ipeAZdTw"><span class="cat cat-hotel" data-page-node-id="5EVs5Jqkg9gue4gJC0SuOr">🏨 住宿</span>
-        <div class="t" data-page-node-id="SIqYruT5IaLfoBw7czJRRR">塞维利亚 · Hotel Giralda Center</div>
-        <div class="d" data-page-node-id="BAxdt20H41MBJdKVZzbbXh">Calle Juan de Mata Carriazo 7 · 9/27 14:00 入住 — 9/29 12:00 退房 · 2 晚</div>
-        <div class="note" data-page-node-id="aiO2H0cSVCZBapGJYAnlW5">到店付款 · 步行约 15 分钟到大教堂</div>
-      </div>
-      <div class="bcard" data-page-node-id="t7AKCR9C2iE1YqN0GEzhaY"><span class="cat cat-hotel" data-page-node-id="7xKzwQb343C8wCoJJJzIEi">🏨 住宿</span>
-        <div class="t" data-page-node-id="cdh57yg2a9CgyUOeGw4P2T">格拉纳达 · BiBo Suites 公寓</div>
-        <div class="d" data-page-node-id="iKSwC15c92jqeRxn8QJ3IO">Calle Cristo de San Agustín 9 · 9/29 — 9/30 · 1 晚</div>
-        <div class="note" data-page-node-id="h39LgqUBB4elkn8E259bqu">老城区内，步行可到阿尔罕布拉山脚</div>
-      </div>
-      <div class="bcard" data-page-node-id="DCgtUZeDuZk9AjsTXEIn4R"><span class="cat cat-hotel" data-page-node-id="mqM7VTNJmeyFg2pkIylill">🏨 住宿</span>
-        <div class="t" data-page-node-id="GAIKUxYDGDEWurV27h8gDG">马德里 · Attic Luna 顶楼公寓</div>
-        <div class="d" data-page-node-id="8MctXQOuNEsFe548tkNGX8">Calle de la Luna 5 · 9/30 15:00 入住 — 10/4 12:00 退房 · 4 晚</div>
-        <div class="note" data-page-node-id="oDjEQP3sT99CGM9iZTyu8r">近 Gran Vía 地铁站，市中心位置</div>
-      </div>
-      <div class="bcard" data-page-node-id="dLMe9H4NxCQutrN7vrCIJL"><span class="cat cat-ticket" data-page-node-id="U4v4V1LNY8LrFTTWDAjoEX">🎟️ 门票</span>
-        <div class="t" data-page-node-id="Cs2FWZPPBgUqOyA3rixfuC">圣家堂 Sagrada Família</div>
-        <div class="d" data-page-node-id="X9CSE0DseAxXErODkFQQDa">9/24（四）14:00 · Marina 大道入口 · 3 人</div>
-        <div class="note" data-page-node-id="Qid9zbyqsva99Zh6TY8xcZ">带护照原件 · 建议提前 30 分钟到场</div>
-      </div>
-      <div class="bcard" data-page-node-id="ocfhlQFD1hLLS4tsiuWFDE"><span class="cat cat-ticket" data-page-node-id="vIaN9qgieFLuGATDCaoPlE">🎟️ 门票</span>
-        <div class="t" data-page-node-id="C7U2hf8DaCeCEyPrExZ4EH">加泰罗尼亚音乐宫 · 勃拉姆斯匈牙利舞曲</div>
-        <div class="d" data-page-node-id="kEhgSL6aP9pKvzFFRtcFZ0">9/26（六）18:30 音乐厅 · 3 座</div>
-        <div class="note" data-page-node-id="noHGV1YfiDRze0AeCtx0oQ">建议提前 30 分钟入场 · 演出约 1.5–2 小时</div>
-      </div>
-      <div class="bcard" data-page-node-id="VJ86CHQ2QcXEmxskViY17P"><span class="cat cat-ticket" data-page-node-id="83J43RBPVMoq5SCQcSbZVK">🎟️ 门票</span>
-        <div class="t" data-page-node-id="UYaoEywAkHdVUHFqCSTHNs">塞维利亚大教堂 + 希拉尔达塔</div>
-        <div class="d" data-page-node-id="s0PmIJCWckbKBD2yEMNrcC">9/27（日）17:05 · 免费预约场次 · 3 人</div>
-        <div class="note" data-page-node-id="EJQO4FTEC5oO6jHkFEp0nw">按预约时段入场，建议提前 15 分钟</div>
-      </div>
-      <div class="bcard" data-page-node-id="zYlDH38Gy4KSYdfAd4XcKS"><span class="cat cat-ticket" data-page-node-id="2KhXgrV7RRW3Ibek2zhrV3">🎟️ 门票</span>
-        <div class="t" data-page-node-id="r8j9lcS5HfQtL9y5V5f2LH">阿尔罕布拉宫 · 全区通票</div>
-        <div class="d" data-page-node-id="juRW7lsiwB3VCnAwM5yECl">9/29（二）纳斯里德宫 17:00 · 3 人</div>
-        <div class="note" data-page-node-id="iGqpEInVQvwNSDE5aG7rqE">⏰ 纳斯里德宫时间锁定，迟到作废！其余区域 08:30 起可逛 · 带护照 · 禁大背包(&gt;40cm)</div>
       </div>
     </div>
   </section>
@@ -453,7 +415,7 @@ section.foldable.collapsed .cards{display:none;}
       <div class="tip" data-page-node-id="fjXUIgMg397Mohu3nAinOg"><div class="h" data-page-node-id="K7WTyol7y3lv6SOBE3W3xm">⛪ 着装与礼仪</div><div class="b" data-page-node-id="IoiMgQxGuZuRu9yYCwLHbC">进教堂需遮住肩膀和膝盖（大教堂尤其严格）。音乐会建议 smart casual。餐厅小费非强制，满意留 5–10% 或凑整。</div></div>
       <div class="tip" data-page-node-id="bNqehdtFPVEe2J4FWAvGwL"><div class="h" data-page-node-id="1wxrLS9CCEpw17T719nOwH">🎟️ 免费与预约</div><div class="b" data-page-node-id="UYzkV0sFwbxXdUT3i2cbhJ">圣家堂、阿尔罕布拉宫入场需核对护照原件。纳斯里德宫 17:00 时间不可改，建议提前 1 小时进园区。<b data-page-node-id="s59VpdhBrWthuiRqEulcM0">普拉多美术馆</b>：周一至周六 18:00–20:00 免费（排队入场）；<b data-page-node-id="XHFtq32AjbbdnihaUBppB0">毕加索博物馆（巴塞）</b>：周四至六 19:00–21:00 免费，但票只能在参观前 4 天 10:00 起（线上）提供，要抢；<b data-page-node-id="uGS6B4bzUAw9Ppzyq9oqRZ">索菲亚王后中心</b>：周一、三至六 19:00 后免费。古埃尔公园、塞维利亚王宫、马德里王宫务必按待办清单提前购票。🎓 <b data-page-node-id="ITICnew1">教师福利：妈妈已申领 ITIC 电子教师证</b>——马德里王宫、普拉多、提森-博内米萨、索菲亚王后中心四馆教师免费，到馆出示电子证件+护照核验即可，线上购票只需买 2 张。</div></div>
       <div class="tip" data-page-node-id="90Dcc70qaveBUv2FPMxrpU"><div class="h" data-page-node-id="1VvhBdJbNqcyRCGieMkS6u">☎️ 紧急情况</div><div class="b" data-page-node-id="OGeVeQu5kqEco8HV5rTLvd">全欧紧急电话 <b data-page-node-id="zFchWRNaAadzQzwXCpkUs8">112</b>（警察/急救/消防，有中文翻译服务）。中国领事 APP 可在线求助；出发前在中国领事服务网查存驻西使馆领保电话。药店找绿色十字招牌（Farmacia）。</div></div>
-      <div class="tip" data-page-node-id="NgZ5b2rhlMeoFtMfBKwZO5"><div class="h" data-page-node-id="0vrmb9uMVmMvXP3Yv6AKnB">🛍️ 购物退税</div><div class="b" data-page-node-id="hLykOyRung4MNYbgpXYXaL">同店同日消费超 90.15 欧可退增值税（约 10–13%）。留好发票，机场盖电子章（DIVA kiosk）后再取现金/退卡。10/4 马德里机场预留办理时间。</div></div>
+      <div class="tip" data-page-node-id="NgZ5b2rhlMeoFtMfBKwZO5"><div class="h" data-page-node-id="0vrmb9uMVmMvXP3Yv6AKnB">🛍️ 购物退税</div><div class="b" data-page-node-id="hLykOyRung4MNYbgpXYXaL">同店同日消费超 90.15 欧可退增值税（约 10–13%）。留好发票，机场盖电子章（DIVA kiosk）后再取现金/退卡。⚠️ 航变后是 <b>10/5 凌晨 01:05 起飞</b>，10/4 深夜到机场时一并办理。</div></div>
       <div class="tip" data-page-node-id="0OBfgydMDuetzpTjcOUhgY"><div class="h" data-page-node-id="sHZzmjx2zbM3HEoVpIMAHR">☀️ 天气穿衣</div><div class="b" data-page-node-id="fHzGcoiahBEUqsCW9ZugFE">9 月底巴塞 20–26°C，塞维利亚仍可超 32°C，马德里昼夜温差大。防晒霜、墨镜、薄外套都要带；阿尔罕布拉和教堂参观全程暴晒/暴走，穿舒适的鞋。</div></div>
       <div class="tip" data-page-node-id="Qk6OnXfqSN5jMJA3SuBdrb"><div class="h" data-page-node-id="1aH2bjNxzfDtTR7uVcVmH1">📵 网络电话卡</div><div class="b" data-page-node-id="3vcp1kVRdfrfZ9sO75ZQTh">落地后按待办清单办 Vodafone prepago 卡（约 10–20 欧，含流量）。Google 地图在国内无法使用，落地西班牙后正常；可提前离线保存马德里、巴塞罗那地图。</div></div>
     </div>
@@ -486,6 +448,7 @@ const EVENTS = [
   ['2026-09-23','02:50','CN','✈️ CA845 北京起飞','飞往巴塞罗那 · 11h25m'],
   ['2026-09-23','08:15','ES','🛬 落地巴塞罗那 T1','入境取行李 → 落地待办（月卡+电话卡）→ 赫罗纳'],
   ['2026-09-23','13:30','ES','🍽️ 赫罗纳 Restaurant Normal 午餐','已订 3 人 · 别忘了提前 3 天邮件确认'],
+  ['2026-09-24','09:15','ES','🏠 巴特罗之家入场','银票已订 3 人 · 9:15 时段 · 凭二维码'],
   ['2026-09-24','14:00','ES','⛪ 圣家堂入内','Marina 入口 · 提前 30 分钟 · 带护照'],
   ['2026-09-24','17:30','ES','🏞️ 古埃尔公园','按时段入园 · 19:30 前'],
   ['2026-09-25','09:00','ES','🚗 Costa Brava 自驾出发','Sants 取车 · Marimurtra 植物园 → Tossa de Mar'],
@@ -501,9 +464,11 @@ const EVENTS = [
   ['2026-10-01','18:00','ES','🖼️ 普拉多美术馆免费时段','周一至周六 18:00–20:00 免费，提前排队'],
   ['2026-10-02','09:45','ES','🏛️ 塞戈维亚一日','水道桥 · 大教堂 · 阿尔卡萨城堡'],
   ['2026-10-03','09:30','ES','⛪ 托莱多一日','古城全景 · 大教堂 · 格列柯名画'],
-  ['2026-10-04','17:30','ES','✈️ CA866 马德里回国','巴拉哈斯 T1 · 提前 3 小时到 · 预留退税时间'],
-  ['2026-10-05','10:25','CN','🛬 抵达北京中转','首都 T3'],
-  ['2026-10-05','14:45','CN','🏠 抵达上海虹桥','行程圆满结束 🎉']
+  ['2026-10-04','09:30','ES','🌳 马德里自由日','丽池公园 / 索菲亚《格尔尼卡》/ 最后采购 · 深夜机场'],
+  ['2026-10-04','22:15','ES','🚕 出发巴拉哈斯机场 T1','CA866 01:05 起飞 · 到机场约 23:00 · 预留退税时间'],
+  ['2026-10-05','01:05','ES','✈️ CA866 马德里起飞','已航变 · 全程约 35h20m · 10/6 18:25 抵京'],
+  ['2026-10-06','18:25','CN','🛬 抵达北京中转','首都 T3 · 中转 2h05m'],
+  ['2026-10-06','20:30','CN','✈️ CA1589 北京 → 上海','22:40 抵虹桥 T2 · 行程圆满结束 🎉']
 ];
 
 /* ---- 待办清单 ---- */
@@ -513,14 +478,15 @@ const TODOS = [
   { id:'t11',due:'2026-09-21', chip:'订票',  txt:'预约 9/25 毕加索博物馆免费票（19:00 场）', note:'免费票提前 4 天 10:00 起开抢，手速要快' },
   { id:'t3', due:'2026-09-23', chip:'交通',  txt:'落地后联系领取巴塞罗那月卡', note:'落地待办' },
   { id:'t4', due:'2026-09-23', chip:'电话',  txt:'去就近 Vodafone 门店买 prepago 电话卡', note:'约 10–20 欧 · 落地待办' },
-  { id:'t5', due:'2026-09-23', chip:'订票',  txt:'购买 9/24 上午 巴特罗之家 / 米拉之家门票', note:'热门时段容易售罄，建议尽快' },
+  { id:'t5', due:'2026-09-23', chip:'订票',  txt:'购买 9/24 米拉之家门票（建议 11:00 时段）', note:'巴特罗银票已买好 ✓ · 只剩米拉，热门时段尽快' },
   { id:'t6', due:'2026-09-23', chip:'订票',  txt:'购买 9/24 傍晚 古埃尔公园门票', note:'纪念区限时段入园（9:30–19:30）' },
   { id:'t7', due:'2026-09-26', chip:'订票',  txt:'购买 9/28 塞维利亚王宫门票', note:'限时段入场' },
   { id:'t12',due:'2026-09-26', chip:'订票',  txt:'购买 9/28 晚 弗拉明戈博物馆演出票', note:'现场座位有限，建议提前订' },
   { id:'t8', due:'2026-09-28', chip:'订票',  txt:'购买 9/29 ALSA 巴士票（塞维利亚 → 格拉纳达 08:30）', note:'旺季建议提前买' },
   { id:'t9', due:'2026-09-29', chip:'订票',  txt:'购买 10/1 马德里王宫门票（只需 2 张）', note:'🎓 妈妈 ITIC 教师证免费 · 限时段预约' },
   { id:'t10',due:'2026-10-02', chip:'订票',  txt:'购买 10/3 马德里 ⇄ 托莱多高铁票', note:'AVE/Avant 约 30 分钟' },
-  { id:'t13',due:'2026-09-23', chip:'证件',  txt:'下载/保存妈妈 ITIC 电子教师证（四馆免费凭证）', note:'存手机+备份打印 · 王宫/普拉多/提森/索菲亚教师免费，购票只需买 2 张' }
+  { id:'t13',due:'2026-09-23', chip:'证件',  txt:'下载/保存妈妈 ITIC 电子教师证（四馆免费凭证）', note:'存手机+备份打印 · 王宫/普拉多/提森/索菲亚教师免费，购票只需买 2 张' },
+  { id:'t14',due:'2026-09-28', chip:'住宿',  txt:'联系 Attic Luna 房东：10/4 延迟退房或寄存行李', note:'⚠️ 航变后航班是 10/5 凌晨 01:05，需要 10/4 整晚住宿或至少待到 21:30', urgent:1 }
 ];
 
 /* ---- 逐日行程 ---- */
@@ -554,8 +520,8 @@ const DAYS = [
     ]},
   { date:'2026-09-24', tz:'ES', color:'#E8833A', title:'巴塞罗那 · 高迪的一天', stay:'巴塞罗那 · Plaça de Sants 公寓', stayQ:'Plaça de Sants 5, Barcelona',
     stops:[
-      {t:'09:30', x:'巴特略之家', q:'Casa Batlló', d:'高迪代表作 · ⚠️ 需提前订票选时段', book:1},
-      {t:'11:15', x:'米拉之家', q:'Casa Milà', d:'距巴特略步行约 10 分钟 · 顶楼"武士烟囱"最出片'},
+      {t:'09:15', x:'巴特罗之家（银票入场）', q:'Casa Batlló', d:'已订 3 人 · 9:15 时段 · 凭二维码直接入场（Passeig de Gràcia 43）', ok:1},
+      {t:'11:00', x:'米拉之家', q:'Casa Milà', d:'距巴特略步行约 10 分钟 · ⚠️ 需订票（建议 11:00 时段）· 顶楼"武士烟囱"最出片', book:1},
       {t:'12:45', x:'Buenas Migas 午餐', q:'Buenas Migas Barcelona', d:'本地烘焙连锁 · 佛卡夏/咸派配咖啡，快吃省时间'},
       {t:'14:00', x:'圣家堂入内', q:'Sagrada Família', d:'已订 3 人 · Marina 入口 · 提前 30 分钟 · 带护照原件', ok:1},
       {t:'17:30', x:'古埃尔公园（傍晚场）', q:'Park Guell', d:'⚠️ 按票面时段入园 · 傍晚光线柔和，平台看巴塞全景', book:1},
@@ -695,17 +661,21 @@ const DAYS = [
       {t:'16:30', x:'山谷观景台', q:'Mirador del Valle', d:'整座古城的全景明信片，日落更美'},
       {t:'19:00', x:'高铁返回马德里', q:'Madrid Atocha Railway Station', d:'收拾行李，明天回家'}
     ]},
-  { date:'2026-10-04', tz:'ES', color:'#8a7f6d', title:'马德里 · 起飞回国', stay:'夜宿飞机',
+  { date:'2026-10-04', tz:'ES', color:'#8a7f6d', title:'马德里 · 自由一天 · 深夜机场', stay:'⚠️ 今晚航班 01:05，需与房东确认延迟退房/寄存行李',
     stops:[
-      {t:'10:00', x:'英格列斯百货 Preciados 店', q:'El Corte Ingles Preciados Madrid', d:'太阳门旁的主店 · 伴手礼：火腿、橄榄油、Turrón'},
-      {t:'13:00', x:'午餐', q:'', d:''},
-      {t:'14:15', x:'出发巴拉哈斯机场 T1', q:'Madrid Barajas Airport Terminal 1', d:'国际航线提前 3 小时 · 预留退税（DIVA 盖章）时间'},
-      {t:'17:30', x:'CA866 起飞', q:'', d:'10h55m · 10:25(+1) 抵北京首都 T3'}
+      {t:'09:30', x:'丽池公园晨逛（可选）', q:'Parque del Retiro', d:'水晶宫、大池塘划船 · 行程里还没去过的马德里地标'},
+      {t:'11:00', x:'索菲亚王后中心（可选）', q:'Museo Reina Sofia', d:'看毕加索《格尔尼卡》 · 🎓 妈妈 ITIC 教师免费，只需买 2 张'},
+      {t:'12:30', x:'午餐', q:'', d:'太阳门周边，随便找家 menu del día'},
+      {t:'14:00', x:'英格列斯 Preciados 最后采购', q:'El Corte Ingles Preciados Madrid', d:'火腿、橄榄油、Turrón · 退税小票全部留好'},
+      {t:'17:00', x:'回公寓收拾行李', q:'Calle de la Luna 5 Madrid', d:'⏰ 记得提前和房东约好 10/4 晚的安排（待办 t14）'},
+      {t:'20:00', x:'告别晚餐', q:'', d:'吃饱一点，回程在机上/机场要熬 30 多个小时'},
+      {t:'22:15', x:'出发巴拉哈斯机场 T1', q:'Madrid Barajas Airport Terminal 1', d:'01:05 起飞 · 约 23:00 到机场 · 国际航线 + 退税（DIVA 盖章）时间要留足'}
     ]},
-  { date:'2026-10-05', tz:'CN', color:'#8a7f6d', title:'抵家 🏠', stay:'—',
+  { date:'2026-10-05', tz:'ES', color:'#8a7f6d', title:'CA866 回国 · 空中一天', stay:'夜宿飞机',
     stops:[
-      {t:'10:25', x:'抵达北京首都 T3', q:'', d:'中转 2h05m'},
-      {t:'12:30', x:'CA1533 北京 → 上海', q:'', d:'14:45 抵虹桥 T2，回家！'}
+      {t:'01:05', x:'CA866 马德里起飞', q:'', d:'已航变 · 全程约 35h20m · 机上好好休息'},
+      {t:'18:25', x:'抵达北京首都 T3（10/6 周二）', q:'', d:'当地 10/6 18:25 落地 · 中转 2h05m'},
+      {t:'20:30', x:'CA1589 北京 → 上海', q:'', d:'22:40 抵虹桥 T2，到家记得报平安 🏠'}
     ]}
 ];
 
@@ -717,7 +687,7 @@ const SPOT = {
 'Barcelona Sants Railway Station': { tag:'🚉 巴塞罗那主火车站', why:'巴塞罗那最大的交通枢纽，高铁、近郊火车、地铁都在这里换乘，也是 9/25 自驾的取还车点。', exp:'站内可寄存行李。去赫罗纳、去机场的火车都从这里发车；站外就是地铁 L3/L5 号线，进城很方便。' },
 'Girona Railway Station': { tag:'🚉 赫罗纳火车站', why:'赫罗纳的火车站在城墙脚下，出站步行十来分钟就能走进老城。', note:'车站没有大件寄存柜不方便存行李，建议轻装进老城。' },
 'Seville Airport': { tag:'✈️ 塞维利亚机场', why:'9/27 从巴塞罗那飞到这里，进入安达卢西亚地区。', note:'机场不大，出航站楼打车去市区约 20 分钟。提前在线上办好值机更省时间。' },
-'Madrid Barajas Airport Terminal 1': { tag:'✈️ 马德里主机场', why:'10/4 从这里飞回北京，是行程的最后一站。', exp:'国际航班提前 3 小时到。要退税的话，先办登机牌再去海关盖章（DIVA 自助机），盖完章才能去退税点领钱，时间要留足。' },
+'Madrid Barajas Airport Terminal 1': { tag:'✈️ 马德里主机场', why:'10/5 凌晨 01:05 从这里飞回北京，是行程的最后一站。', exp:'航班已航变到深夜：约 22:15 从市区出发，23:00 前后到机场。要退税的话，先办登机牌再去海关盖章（DIVA 自助机），盖完章才能去退税点领钱，深夜排队人不少，时间要留足。', note:'回程全程约 35h20m、10/6 傍晚才到北京，机上多睡。' },
 'Granada Railway Station': { tag:'🚉 格拉纳达火车站', why:'9/30 下午从这里坐 AVE 高铁去马德里。', note:'建议提前 45 分钟到站，进站安检需要时间。' },
 'Madrid Atocha Railway Station': { tag:'🚉 马德里主火车站', why:'马德里最大的火车站，大厅里还种着一片室内热带花园（棕榈树和龟池），本身就可以顺路看一眼。', exp:'从这里出发去托莱多约 30 分钟。站内指示清楚，提前 15–20 分钟看大屏找站台即可。' },
 'Estacion de Moncloa': { tag:'🚌 马德里西北汽车站', why:'去塞戈维亚的大巴（La Sepulvedana 公司）从这里发车，约 1 小时 15 分直达。', note:'大巴随到随买，但旺季建议提前一天在官网买好来回票，打印或存二维码。' },
@@ -739,7 +709,7 @@ const SPOT = {
 'Barri Vell de Girona': { tag:'🏘️ 赫罗纳老城', why:'《权力的游戏》里君临城的拍摄地之一，窄窄的石板巷、河边彩色房子，本身就是一座露天博物馆。', exp:'老城是步行区，随便钻小巷都会有惊喜：教堂前的台阶、河岸的彩色房、铁桥都是打卡点。傍晚店铺陆续关门，想买东西趁早。', feet:'全程石板路，今天累计步数会不少，穿舒服的鞋。' },
 
 /* ---------- 巴塞罗那（9/24–9/26） ---------- */
-'Casa Batlló': { tag:'🏠 高迪代表作 · 建议 1–1.5 小时', why:'高迪改造的公寓楼，外立面像龙脊和面具，内部几乎没有直线——门框、楼梯、天井全是波浪形，是"曲线属于上帝"的最佳体现。', see:['楼顶龙脊造型与彩色马赛克烟囱','天井的蓝色瓷砖（从下往上看像海底）','高迪设计的内庭与木质细节'], exp:'门票含官方平板智能导览（有中文），跟着一层层往上逛即可，出口在礼品店那层。上午光线好，拍照更漂亮。', feet:'全程约 5–6 层螺旋上下，台阶多但不算陡，穿舒服的鞋。' },
+'Casa Batlló': { tag:'🏠 高迪代表作 · 已订 9/24 9:15 银票', why:'高迪改造的公寓楼，外立面像龙脊和面具，内部几乎没有直线——门框、楼梯、天井全是波浪形，是"曲线属于上帝"的最佳体现。', see:['楼顶龙脊造型与彩色马赛克烟囱','天井的蓝色瓷砖（从下往上看像海底）','高迪设计的内庭与木质细节'], exp:'已订 3 张银票（Silver），9:15 时段，凭二维码直接入场（Passeig de Gràcia 43）。银票含官方平板智能导览（有中文），跟着一层层往上逛即可，约 1–1.5 小时，10:30 前后出来步行去米拉之家正合适。', feet:'全程约 5–6 层螺旋上下，台阶多但不算陡，穿舒服的鞋。' },
 'Sagrada Família': { tag:'⛪ 圣家堂 · 已订 9/24 14:00 入场（3 人）', why:'高迪倾尽毕生心血、盖了 140 多年还没完工的旷世教堂，是全世界唯一一座还没完工就被列入世界遗产的建筑，被称为"石头写的圣经"。', see:['诞生立面：高迪生前亲手完成、细节最丰富的一面（Marina 口入口这侧）','内部彩色花窗光线：下午斜阳洒进来如置身森林','受难立面的几何线条与塔楼（外观）'], exp:'已订 14:00 场次，提前 30 分钟到 Marina 入口排队，带护照原件核对。进去先别急着走，坐下看一会儿光透过彩窗的变化——这是圣家堂最动人的体验。', dress:'这是仍在举行弥撒的教堂，请勿穿吊带、超短裙/裤，备薄外套或披肩。', feet:'内部参观约 1.5 小时基本是平地+扶梯，上塔才需要爬楼梯，量力而行。', audio:'官方语音导览含中文讲解，非常值得租；也可提前下载官方 App 自带耳机听。' },
 'Park Guell': { tag:'🏞️ 古埃尔公园 · 建议 1.5 小时', why:'高迪的"童话公园"：彩色马赛克蜥蜴、波浪长椅、百柱厅都集中在这里，建在半山腰上，还能俯瞰巴塞罗那市区和海。', see:['门口马赛克大蜥蜴（公园吉祥物）','百柱厅与波浪长椅（贴满碎瓷片）','平台上看巴塞罗那全景'], exp:'纪念区（monumental zone）按票面时段入园，需要提前购票；大门外围区域免费。公园在山上，从地铁站出来还要走一段上坡。', feet:'园区里台阶、坡道、碎石路都多，全程都在"爬山"，务必穿防滑舒适的鞋，带瓶水。' },
 'Cathedral of Barcelona': { tag:'⛪ 巴塞罗那大教堂（哥特区）', why:'哥特区中心的哥特式大教堂，13 世纪动工、盖了几百年。教堂庭院里养着一群白鹅，是中世纪"鹅守护圣器室"传统的延续，非常有趣。', see:['中殿与回廊（回廊里的白鹅是看点）','登上屋顶/塔楼看哥特区全景（付费可选）','教堂外的国王广场与哥特小巷'], dress:'教堂要求衣着得体，别穿吊带和过短短裤，带件外套/披肩。', audio:'现场可租语音导览（多语言）。' },
@@ -806,7 +776,8 @@ const SPOT = {
 'Mirador del Valle': { tag:'📷 托莱多全景观景台', why:'在塔霍河对岸的山坡上看整座托莱多古城的最佳位置：红瓦老城被河水环抱，像一幅中世纪油画，尤其日落时分。', exp:'下午 16:30 左右过去，等光线变暖拍全景。观景台在老城对岸，打车约 5 分钟或坐观光小火车；想徒步走过去要翻过河再上坡，约 40 分钟。', feet:'如选择徒步，是持续上坡山路，穿好走的鞋、留足时间；否则建议打车上去。' },
 
 /* ---------- 购物（10/4） ---------- */
-'El Corte Ingles Preciados Madrid': { tag:'🛍️ 英格列斯百货（太阳门店）', why:'西班牙最大的连锁百货，这家在太阳门旁的主店货最全：火腿、橄榄油、藏红花、Turrón 等伴手礼一趟买齐。', exp:'时间有限就直接去地下一层食品超市扫货；服饰箱包在楼上。买满退税金额可到服务台咨询退税（Global Blue 柜台）。', note:'购物时间按 1.5 小时封顶，别耽误去机场；离境前保留好小票和退税单。' },
+'Museo Reina Sofia': { tag:'🖼️ 索菲亚王后国家艺术中心', why:'西班牙现代艺术的殿堂，毕加索的巨作《格尔尼卡》就挂在这里——这幅 3.5 米×7.8 米的黑白巨画，是 1937 年格尔尼卡镇被轰炸后毕加索的怒吼，站在原作前的震撼感照片给不了。', see:['毕加索《格尔尼卡》（绝对主角）','达利、米罗的超现实主义作品','4 楼收藏覆盖毕加索蓝色时期等'], exp:'10/4 是自由日的可选行程。🎓 妈妈 ITIC 教师证免费，只需买 2 张；周一闭馆，10/4 周日正常开放。看《格尔尼卡》30 分钟足够，全程 1–1.5 小时。', feet:'馆内平层为主，有免费寄包；离阿托查站很近。', audio:'官方语音导览含中文可选；也可提前下载 App。' },
+'El Corte Ingles Preciados Madrid': { tag:'🛍️ 英格列斯百货（太阳门店）', why:'西班牙最大的连锁百货，这家在太阳门旁的主店货最全：火腿、橄榄油、藏红花、Turrón 等伴手礼一趟买齐。', exp:'10/4 是最后采购日，时间有限就直接去地下一层食品超市扫货；买满退税金额到服务台开 Global Blue 退税单，离境时在机场 DIVA 盖章。', note:'退税小票、发票全部留好别打包进行李托运——机场验货要看实物。' },
 
 /* ---------- 9/24 新增 ---------- */
 'Casa Milà': { tag:'🏠 米拉之家（La Pedrera）· 建议 1–1.5 小时', why:'高迪设计的最后一座私人住宅，外墙像起伏的海浪，锻铁阳台像海藻缠绕；因为它通体灰白、粗粝如采石场，被本地人戏称"La Pedrera（采石场）"。', see:['顶楼露台：一排"武士头"造型烟囱（最出片）','阁楼层：鲸鱼骨架般的拱形结构展馆','中庭从下仰望天光'], exp:'离巴特略之家步行约 10 分钟，两家安排一上午正合适。顶楼露台视野开阔，白天拍照光线好。', feet:'室内以平层参观为主，上顶楼需坐电梯+走一段台阶，穿舒服的鞋。', audio:'官方语音导览可租（多语言），门票一般已含讲解设备，记得领一副。' },
@@ -854,6 +825,10 @@ function gDayNav(day) {
 (function renderDays() {
   const box = document.getElementById('dayList');
   const reg = window.__reg = [];
+  // 马德里时区的今天，用于「过完一天自动折叠」
+  let todayES = '';
+  try { todayES = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' }); }
+  catch (e) { todayES = new Date().toISOString().slice(0, 10); }
   // 返回地名的 HTML：有介绍库→可点击按钮；否则→地图导航链接
   function nameHtml(x, q, mode, arrow) {
     if (!q) return x;
@@ -892,9 +867,11 @@ function gDayNav(day) {
       ? '<div class="alts">🍽 备选餐厅/咖啡：' + day.alts.map(a =>
           '<a href="' + gSearch(a.q) + '" target="_blank" rel="noopener">' + a.n + '</a>').join('') + '</div>'
       : '';
-    return '<div class="day" style="border-left-color:' + day.color + '">' +
+    const past = day.date < todayES; // 已过完的天 → 默认折叠（点标题可再展开）
+    return '<div class="day' + (past ? ' collapsed' : '') + '" style="border-left-color:' + day.color + '">' +
       '<div class="head"><span class="date">' + day.date.slice(5).replace('-', '/') + ' 周' + wd(day.date, day.tz) + '</span>' +
-      '<span class="title">' + day.title + '</span></div>' +
+      '<span class="title">' + day.title + '</span>' +
+      (past ? '<span class="pastchip">已结束</span>' : '') + '</div>' +
       (stayHtml ? '<div class="stay">' + stayHtml + '</div>' : '') +
       '<div class="evs">' + evs + '</div>' + route + alts + '</div>';
   }).join('');
