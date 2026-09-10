@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-page-node-id="45b7ioiQHw21KLAa85wjZY">
+<head data-page-node-id="Vb0x2UW1kgxlpKdkDmIRpq">
+<meta charset="UTF-8" data-page-node-id="cSSeMQ3j6cVJUsCiXklG3j">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="gsKKU9tiiI4gi2FzVP4V16">
+<title>西班牙之旅 · 旅行手册</title>
+<meta name="description" content="西班牙 9.22–10.5 三人行旅行手册：行程、订单、待办、贴士" data-page-node-id="FQ2Peyk7VWpGeGcnABBzSb">
+<style>
+:root{
+  --bg:#faf6ee; --panel:#ffffff; --card:#fffdf7; --ink:#3a342a; --muted:#8b8272;
+  --line:#e9e0cd; --accent:#c2571f; --accent-soft:#fbe9d8; --ok:#2e8b57;
+  --hero1:#f7d9a4; --hero2:#eeb26d; --hero-ink:#4a3413;
+  --shadow:0 2px 10px rgba(120,90,40,.08);
+}
+[data-theme="dark"]{
+  --bg:#121824; --panel:#1a2231; --card:#1e2838; --ink:#e9e4d8; --muted:#929cae;
+  --line:#2b3648; --accent:#f09a4e; --accent-soft:#3a2c1c; --ok:#5cc48c;
+  --hero1:#1c2a44; --hero2:#24355c; --hero-ink:#eae2d0;
+  --shadow:0 2px 12px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+  line-height:1.65; transition:background .4s,color .4s;
+}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:960px; margin:0 auto; padding:0 16px;}
+
+/* ---------- hero ---------- */
+.hero{
+  background:linear-gradient(135deg,var(--hero1),var(--hero2));
+  color:var(--hero-ink); padding:34px 0 30px; border-radius:0 0 26px 26px;
+}
+.hero .wrap{position:relative;}
+.hero .kicker{font-size:13px; letter-spacing:4px; opacity:.75; font-weight:600;}
+.hero h1{font-size:30px; margin:4px 0 2px; font-weight:800;}
+.hero .sub{font-size:14px; opacity:.8;}
+.hero-card{
+  margin-top:18px; background:rgba(255,255,255,.55); backdrop-filter:blur(6px);
+  border-radius:18px; padding:18px 20px;
+}
+[data-theme="dark"] .hero-card{background:rgba(10,16,28,.45);}
+.hero-card .label{font-size:12px; letter-spacing:3px; font-weight:700; opacity:.7;}
+.hero-card .next-title{font-size:20px; font-weight:800; margin-top:4px;}
+.hero-card .next-meta{font-size:13px; opacity:.8; margin-bottom:10px;}
+.countdown{display:flex; gap:10px; align-items:flex-end; flex-wrap:wrap;}
+.cd-box{min-width:64px; text-align:center; background:rgba(255,255,255,.55); border-radius:12px; padding:8px 6px 4px;}
+[data-theme="dark"] .cd-box{background:rgba(10,16,28,.5);}
+.cd-num{font-size:40px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums; font-family:"SF Mono",Consolas,monospace;}
+.cd-unit{font-size:11px; opacity:.7;}
+.hero-todo{margin-top:12px; font-size:14px; display:flex; gap:8px; align-items:baseline;}
+.hero-todo .tag{flex:none; font-size:12px; font-weight:700; background:var(--accent); color:#fff; border-radius:8px; padding:1px 8px;}
+.hero-todo a{color:inherit; font-weight:700; border-bottom:1px dashed currentColor;}
+.theme-btn{
+  position:absolute; top:0; right:0; border:1px solid rgba(0,0,0,.15);
+  background:rgba(255,255,255,.6); border-radius:999px; padding:6px 14px;
+  cursor:pointer; font-size:13px; color:inherit;
+}
+[data-theme="dark"] .theme-btn{background:rgba(10,16,28,.5); border-color:rgba(255,255,255,.2);}
+
+/* ---------- sections ---------- */
+main .wrap{padding-bottom:20px;}
+section{margin-top:34px;}
+h2{font-size:21px; font-weight:800; margin-bottom:14px; display:flex; align-items:center; gap:8px;}
+h2 .en{font-size:12px; color:var(--muted); font-weight:500; letter-spacing:2px;}
+.quicknav{
+  position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  display:flex; gap:6px; overflow-x:auto; padding:8px 16px; justify-content:center;
+}
+.quicknav a{
+  flex:none; font-size:13px; color:var(--ink); background:var(--panel);
+  border:1px solid var(--line); border-radius:999px; padding:4px 13px; text-decoration:none;
+}
+.quicknav a:hover{border-color:var(--accent); color:var(--accent);}
+
+/* ---------- map ---------- */
+.map-panel{background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:var(--shadow);}
+.map-panel svg{width:100%; height:auto; display:block;}
+.legend{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:10px; font-size:13px; color:var(--muted);}
+.legend span{display:inline-flex; align-items:center; gap:6px;}
+.legend i{width:22px; height:0; border-top:3px solid; border-radius:2px; display:inline-block;}
+.legend i.dash{border-top-style:dashed;}
+
+/* ---------- booking cards ---------- */
+.cards{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px;}
+.bcard{
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:13px 15px; box-shadow:var(--shadow);
+}
+.bcard .cat{font-size:11px; font-weight:800; letter-spacing:2px; border-radius:6px; padding:1px 8px; display:inline-block; margin-bottom:6px;}
+.cat-fly{background:#fdeaea; color:#c0392b;} [data-theme="dark"] .cat-fly{background:#3a2020; color:#f19a8e;}
+.cat-train{background:#e8f0fd; color:#2b6cb0;} [data-theme="dark"] .cat-train{background:#1c2a44; color:#8fb6f0;}
+.cat-car{background:#e6f7f1; color:#1e7d5f;} [data-theme="dark"] .cat-car{background:#14342a; color:#6fd3a8;}
+.cat-hotel{background:#f3ecfd; color:#7c4dbe;} [data-theme="dark"] .cat-hotel{background:#2c2140; color:#c3a1f0;}
+.cat-ticket{background:#fdf3e0; color:#b07514;} [data-theme="dark"] .cat-ticket{background:#3a2f18; color:#e8b45a;}
+.bcard .t{font-weight:800; font-size:15px;}
+.bcard .d{font-size:13.5px; color:var(--muted); margin-top:3px;}
+.bcard .note{font-size:12.5px; margin-top:7px; background:var(--accent-soft); color:var(--accent); border-radius:8px; padding:3px 9px; display:inline-block;}
+
+/* ---------- day timeline ---------- */
+.day{
+  background:var(--card); border:1px solid var(--line); border-left:5px solid #999;
+  border-radius:16px; padding:16px 18px; margin-bottom:14px; box-shadow:var(--shadow);
+}
+.day .head{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px;}
+.day .date{font-weight:800; font-size:17px;}
+.day .title{font-weight:700; font-size:15.5px; color:var(--muted);}
+.day .stay{font-size:13px; color:var(--muted); margin:6px 0 4px;}
+.evs{margin-top:8px;}
+.ev{display:grid; grid-template-columns:96px 1fr; gap:10px; padding:7px 0; border-top:1px dashed var(--line);}
+.ev:first-child{border-top:none;}
+.ev .time{font-weight:800; font-variant-numeric:tabular-nums; font-size:13.5px; color:var(--accent); padding-top:1px;}
+.ev .what{font-size:14.5px;}
+.ev .what .desc{display:block; font-size:13px; color:var(--muted);}
+.badge{display:inline-block; font-size:11.5px; font-weight:700; border-radius:7px; padding:0 7px; margin-left:6px; vertical-align:1px;}
+.badge.need{background:#fdeaea; color:#c0392b;}
+[data-theme="dark"] .badge.need{background:#3a2020; color:#f19a8e;}
+.badge.ok{background:#e6f4ec; color:#1e7d5f;}
+[data-theme="dark"] .badge.ok{background:#14342a; color:#6fd3a8;}
+.poi{cursor:pointer;}
+details.route{margin-top:10px; border:1px solid var(--line); border-radius:12px; background:var(--panel);}
+details.route summary{
+  cursor:pointer; padding:9px 14px; font-size:13.5px; font-weight:700; color:var(--accent); list-style:none;
+}
+details.route summary::before{content:"▸ ";}
+details.route[open] summary::before{content:"▾ ";}
+.stops{padding:4px 18px 14px;}
+.stops li{margin:7px 0 7px 4px; font-size:14px; list-style:none;}
+.stops .n{
+  display:inline-flex; width:20px; height:20px; border-radius:50%; background:var(--accent);
+  color:#fff; font-size:12px; font-weight:700; align-items:center; justify-content:center; margin-right:8px;
+}
+.stops .tm{color:var(--muted); font-size:13px; font-weight:700; margin-right:8px; font-variant-numeric:tabular-nums;}
+.navbtn{
+  display:inline-block; margin:4px 18px 14px; background:var(--accent); color:#fff !important;
+  border-radius:999px; padding:8px 18px; font-size:14px; font-weight:700; text-decoration:none;
+}
+.navbtn:hover{text-decoration:none; filter:brightness(1.08);}
+.alts{margin-top:10px; font-size:12.5px; color:var(--muted); line-height:2;}
+.alts a{
+  display:inline-block; background:var(--accent-soft); color:var(--accent);
+  border-radius:999px; padding:1px 11px; margin:0 5px 2px 0; text-decoration:none; font-size:12.5px;
+}
+.alts a:hover{text-decoration:none; filter:brightness(.96);}
+
+/* ---------- todos ---------- */
+.todo-head{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:12px;}
+.progress{flex:1; min-width:200px; height:12px; background:var(--line); border-radius:999px; overflow:hidden;}
+.progress i{display:block; height:100%; background:linear-gradient(90deg,var(--accent),#e8a04a); border-radius:999px; transition:width .4s;}
+.todo-count{font-size:13.5px; color:var(--muted); font-weight:700;}
+.sync-dot{font-size:12px; color:var(--muted);}
+.sync-dot::before{content:"● "; color:#b8b0a0;}
+.sync-dot.on::before{color:var(--ok);}
+.todo{
+  display:flex; gap:12px; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:12px 15px; margin-bottom:9px;
+  cursor:pointer; user-select:none; transition:opacity .3s;
+}
+.todo:hover{border-color:var(--accent);}
+.todo .box{
+  flex:none; width:22px; height:22px; margin-top:2px; border-radius:7px;
+  border:2px solid var(--muted); display:flex; align-items:center; justify-content:center;
+  font-size:14px; color:transparent; transition:all .2s;
+}
+.todo.done{opacity:.5;}
+.todo.done .box{background:var(--ok); border-color:var(--ok); color:#fff;}
+.todo .txt{font-size:15px; font-weight:600;}
+.todo.done .txt{text-decoration:line-through;}
+.todo .meta{font-size:12.5px; color:var(--muted); margin-top:1px;}
+.chip{display:inline-block; font-size:11.5px; font-weight:700; border-radius:6px; padding:0 7px; margin-right:6px; background:var(--accent-soft); color:var(--accent);}
+
+/* ---------- tips ---------- */
+.tips{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px;}
+.tip{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:13px 15px; box-shadow:var(--shadow);}
+.tip .h{font-weight:800; font-size:14.5px; margin-bottom:5px;}
+.tip .b{font-size:13.5px; color:var(--muted);}
+
+footer{margin-top:44px; padding:26px 0 34px; text-align:center; color:var(--muted); font-size:13px; border-top:1px solid var(--line);}
+@media (max-width:560px){
+  .cd-num{font-size:30px;} .cd-box{min-width:54px;}
+  .ev{grid-template-columns:80px 1fr;}
+  .hero h1{font-size:24px;}
+}
+/* ---------- 折叠 ---------- */
+.day .head{cursor:pointer; user-select:none;}
+.day .head::after{content:'▾'; margin-left:auto; font-size:14px; color:var(--muted); transition:transform .25s;}
+.day.collapsed .head::after{transform:rotate(-90deg);}
+.day.collapsed .evs, .day.collapsed .stay, .day.collapsed .route, .day.collapsed .alts{display:none;}
+.fold-btn{border:1px solid var(--line); background:var(--panel); color:var(--accent); font:inherit;
+  font-size:12.5px; font-weight:700; border-radius:9px; padding:3px 12px; cursor:pointer;}
+.fold-btn:hover{filter:brightness(1.05);}
+section.foldable.collapsed .cards{display:none;}
+/* ---------- 景点中文介绍（点名字弹层） ---------- */
+.hint{font-size:13px; color:var(--muted); margin:8px 0 4px;}
+.sname{background:none; border:0; padding:0; font:inherit; line-height:1.55; text-align:left;
+  color:var(--accent); cursor:pointer; text-decoration:underline dotted 1px; text-underline-offset:3px;}
+.sname:hover{text-decoration:underline;}
+.sn{display:inline-block; margin-left:7px; font-size:13.5px; opacity:.8;}
+.sn:hover{opacity:1; text-decoration:none;}
+.smodal{position:fixed; top:0; left:0; width:100%; height:100%; z-index:300;
+  display:flex; align-items:center; justify-content:center; padding:18px;
+  background:rgba(28,20,10,.55); backdrop-filter:blur(3px);}
+[data-theme="dark"] .smodal{background:rgba(3,6,12,.66);}
+.smodal[hidden]{display:none;}
+.spop{max-width:540px; width:100%; max-height:84vh; overflow:auto; background:var(--card);
+  border:1px solid var(--line); border-radius:18px; box-shadow:0 18px 55px rgba(0,0,0,.28);
+  padding:20px 22px 18px; position:relative;}
+.spop h3{font-size:19.5px; line-height:1.35; padding-right:30px;}
+.spop .tag{font-size:12.5px; color:var(--muted); margin-top:2px;}
+.spop .x{position:absolute; top:8px; right:10px; background:none; border:0; font-size:24px; line-height:1;
+  color:var(--muted); cursor:pointer; padding:4px 9px;}
+.spop .x:hover{color:var(--ink);}
+.spop .sec{margin-top:13px; font-size:14px;}
+.spop .sh{font-weight:800; font-size:12.5px; letter-spacing:.5px; color:var(--accent); margin-bottom:2px;}
+.spop .b ul{margin:0 0 0 19px;}
+.spop .b li{margin:2px 0;}
+.spop .sec.warn .b{background:#fdeaea; color:#8f2d1e; border-radius:10px; padding:8px 11px;}
+[data-theme="dark"] .spop .sec.warn .b{background:#3a2020; color:#f3b0a4;}
+.spop .sbtns{display:flex; gap:10px; margin-top:17px; flex-wrap:wrap;}
+.spop .sbtn{flex:1 1 150px; text-align:center; padding:10px 12px; border-radius:11px; font-weight:700;
+  font-size:14px; text-decoration:none !important;}
+.spop .sbtn.map{background:var(--accent); color:#fff;}
+[data-theme="dark"] .spop .sbtn.map{color:#201306;}
+.spop .sbtn.walk{background:var(--accent-soft); color:var(--accent);}
+</style>
+</head>
+<body data-page-node-id="B3Z0zgaf6ReMh4ECNtMhUx">
+
+<header class="hero" data-page-node-id="1QmUGBOjZfZo8eYMBJZGwe">
+  <div class="wrap" data-page-node-id="wUJJHGyiUtcvc3bM2pITE2">
+    <button class="theme-btn" id="themeBtn" title="切换配色" data-page-node-id="BAhTT7bV4HotRxNXi44ZYH">🌗 自动</button>
+    <div class="kicker" data-page-node-id="74YKzuh6PTYSr2Sey9HJN6">SPAIN · TRIP HANDBOOK</div>
+    <h1 data-page-node-id="Oqqhxc4Zm16nF2L2BLlUTz">西班牙之旅 🇪🇸</h1>
+    <div class="sub" data-page-node-id="At5MX7EFW6CYAOKoyxrKI4">2026.9.22 — 10.5 · 3 人 · 巴塞罗那 → 安达卢西亚 → 马德里</div>
+    <div class="hero-card" data-page-node-id="Sw4M7aP8oRWYuEBi1jHo0v">
+      <div class="label" data-page-node-id="P1Xh1lS0VFaejkzDf15WgO">此刻关注 NEXT UP</div>
+      <div class="next-title" id="nextTitle" data-page-node-id="rs1Q7HGtP5YFwdy6LY2Rzk">—</div>
+      <div class="next-meta" id="nextMeta" data-page-node-id="C8UbZO2vVflZPmEjJVliEs">—</div>
+      <div class="countdown" id="countdown" data-page-node-id="ao12S6DccHWjGLiFhOC86G">
+        <div class="cd-box" data-page-node-id="4iX589DKAtR6llSKdZs2WK"><div class="cd-num" id="cdD" data-page-node-id="yzMJ0fvqDVglDEYNEBlGwp">0</div><div class="cd-unit" data-page-node-id="NMiZHKkSwCwJL92mMJxZz9">天</div></div>
+        <div class="cd-box" data-page-node-id="1OyWM9l0BQGCweR0fVARP2"><div class="cd-num" id="cdH" data-page-node-id="FM7sTZd4StZGBxzAHCiZOx">0</div><div class="cd-unit" data-page-node-id="dLVBSc9lXdcOpY7ruCLoLB">时</div></div>
+        <div class="cd-box" data-page-node-id="UGXm5H33nXJTyGAboocf0a"><div class="cd-num" id="cdM" data-page-node-id="4cN8YBAUaq9TRLkFe0E1Ku">0</div><div class="cd-unit" data-page-node-id="CvtMzrqnktICqka3odtz40">分</div></div>
+        <div class="cd-box" data-page-node-id="1734UtHlrnRPBjOtJUIrnL"><div class="cd-num" id="cdS" data-page-node-id="NGEP48GKmDmnhFKgzGrG8c">0</div><div class="cd-unit" data-page-node-id="IDgHlcZK4E2iLGS8ZefVwk">秒</div></div>
+      </div>
+      <div class="hero-todo" data-page-node-id="b6rrDA6hJtHKJVBjIuWnlA"><span class="tag" data-page-node-id="BWCGv6kT88nFHqbB1595zV">当前待办</span><span id="heroTodo" data-page-node-id="qVPyFBBK41qOGGILzwEH83">加载中…</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="quicknav" data-page-node-id="ExNOAZ4eOxgufZMgG2B2Qp">
+  <a href="#map" data-page-node-id="UEspk8owD4FFAnbmqcEWVD">🗺 总览地图</a>
+  <a href="#bookings" data-page-node-id="AhxDKtS77R3TKw9MuicTLZ">🎫 订单卡片</a>
+  <a href="#days" data-page-node-id="4aRSSOHCuMz7cqL85V95Td">📅 逐日行程</a>
+  <a href="#todos" data-page-node-id="poU0gSyXKwhhxoxCFKeHtV">✅ 待办清单</a>
+  <a href="#tips" data-page-node-id="liZjb0QUfAdxvMiBmLRH0v">💡 实用贴士</a>
+</nav>
+
+<main data-page-node-id="zoT1AGXuduKU4QDWuFsvHK">
+  <div class="wrap" data-page-node-id="uYjz5ysnFEiS0MU26tsQEe">
+
+  <!-- ================= 总览地图 ================= -->
+  <section id="map" data-page-node-id="eFCko0XrK7KaebZGOH8TL0">
+    <h2 data-page-node-id="cOP7WGeLMEjqZc4Z53RnKr">🗺 行程总览 <span class="en" data-page-node-id="yq5fweJHxUDc1v6wVRwzaQ">ROUTE OVERVIEW</span></h2>
+    <div class="map-panel" data-page-node-id="0d2PSsObg8Q6OWWZhSqdDG">
+      <svg viewBox="0 0 640 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="西班牙行程手绘地图" data-page-node-id="r9obO6DrkAYQgwQigbqmjg">
+        <defs data-page-node-id="PJOY3CsnwCzkJlJtVMFiCK">
+          <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%" data-page-node-id="qOrpEx91U3x16OFYa7UqoG">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="7" result="n" data-page-node-id="b5D7ypmNXVezkmQZkGnPZL"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="5" data-page-node-id="LeyEZcXujkgUeP6tQKFnn5"/>
+          </filter>
+        </defs>
+        <!-- paper -->
+        <rect x="0" y="0" width="640" height="470" rx="14" fill="var(--card)" data-page-node-id="7tSg4FUWImo1924rWETChB"/>
+        <!-- sea hint -->
+        <text x="600" y="330" font-size="13" fill="var(--muted)" opacity=".55" transform="rotate(-72 600 330)" data-page-node-id="5ESN3XvhViUsPgGYsY426e">地中海 Mediterranean Sea</text>
+        <text x="30" y="90" font-size="12" fill="var(--muted)" opacity=".5" data-page-node-id="HGRaMep6pEThXHnxliUZN0">大西洋</text>
+        <g filter="url(#wobble)" data-page-node-id="KcCr71Mdi0O3FiCvNr1yvd">
+          <!-- Iberia outline -->
+          <path d="M14,55 L72,17 L168,22 L264,28 L370,33 L490,72 L614,88
+                   L605,121 L560,144 L516,160 L439,250 L432,311 L408,352 L338,394
+                   L242,401 L187,438 L154,413 L125,374 L101,374
+                   L94,319 L125,237 L127,165 L62,116 L29,118 Z"
+                fill="var(--panel)" stroke="var(--muted)" stroke-width="2.4" stroke-linejoin="round" data-page-node-id="Roq3FptTyQYgxKEAT3BAZm"/>
+          <!-- Portugal -->
+          <path d="M29,118 L36,165 L8,197 L29,208 L34,374 L101,374 L94,319 L125,237 L127,165 L62,116 Z"
+                fill="var(--line)" opacity=".45" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5 4" data-page-node-id="079k8rJeqgYMG6GhABAJFP"/>
+          <text x="46" y="265" font-size="12" fill="var(--muted)" opacity=".8" data-page-node-id="lyjehTa8b1FykPjR728qC5">葡萄牙</text>
+          <!-- routes -->
+          <!-- D1 Girona -->
+          <path d="M560,144 Q580,128 594,113" fill="none" stroke="#E8833A" stroke-width="3.4" stroke-linecap="round" data-page-node-id="e9ZXzC2VJXs5oTn560W1au"/>
+          <!-- D3 Costa Brava loop -->
+          <path d="M560,144 Q575,132 589,128 Q600,124 597,128 Q592,134 575,141 Q565,146 560,144" fill="none" stroke="#2FA88C" stroke-width="3.2" stroke-linecap="round" data-page-node-id="cTrfJnqLpPuY8HhEBFb7S2"/>
+          <!-- D5 flight BCN-SVQ -->
+          <path d="M556,152 Q390,300 176,360" fill="none" stroke="#E05252" stroke-width="3.2" stroke-dasharray="8 7" stroke-linecap="round" data-page-node-id="DEzmbXRPCqidzklxS4KApd"/>
+          <!-- D7 SVQ-GRX -->
+          <path d="M172,364 Q225,378 278,374" fill="none" stroke="#8A63C9" stroke-width="3.2" stroke-linecap="round" data-page-node-id="cInSV6T4wCrRXP3crKp18o"/>
+          <!-- D8 train GRX-MAD -->
+          <path d="M281,370 Q290,280 278,202" fill="none" stroke="#3E7BC4" stroke-width="3.2" stroke-dasharray="2 6" stroke-linecap="round" data-page-node-id="6WD2MOwStGKeElFcra1G2T"/>
+          <!-- D10 MAD-Segovia -->
+          <path d="M276,193 Q266,180 259,172" fill="none" stroke="#4CAF6D" stroke-width="3.2" stroke-linecap="round" data-page-node-id="Gq2nXWUiAeFkV7y68OlTks"/>
+          <!-- D11 MAD-Toledo -->
+          <path d="M276,202 Q268,214 264,224" fill="none" stroke="#D4A017" stroke-width="3.2" stroke-linecap="round" data-page-node-id="PezXeHIf4hxN8TvhBxizf1"/>
+          <!-- D12 flight home -->
+          <path d="M285,193 Q430,90 590,45" fill="none" stroke="var(--muted)" stroke-width="2.6" stroke-dasharray="8 7" stroke-linecap="round" data-page-node-id="BJL1b0eUytg6CF3xYM7PaW"/>
+          <text x="596" y="42" font-size="15" data-page-node-id="R08O3DJq4V1t41ypYbFehe">✈️</text>
+        </g>
+        <!-- cities -->
+        <g font-size="13" font-weight="700" fill="var(--ink)" data-page-node-id="XxtFLkbNTQyq4XCD1pAiho">
+          <circle cx="560" cy="144" r="6" fill="#E8833A" stroke="#fff" stroke-width="2" data-page-node-id="Nsk0RIAOzy6DIs0EFcjrno"/>
+          <text x="548" y="165" data-page-node-id="7JUfBGXdRbzzlYUgaT1obd">巴塞罗那 <tspan font-size="11" fill="var(--muted)" data-page-node-id="HdF4SmrQsnsxD66lxSZxOh">🌙×4</tspan></text>
+          <circle cx="594" cy="111" r="5" fill="#E8833A" stroke="#fff" stroke-width="2" data-page-node-id="KWkICV7x1qnCcmbRJz1Yx5"/>
+          <text x="560" y="100" data-page-node-id="jAkXZtEhiopcJNM3A7mwLu">赫罗纳</text>
+          <circle cx="597" cy="127" r="4" fill="#2FA88C" stroke="#fff" stroke-width="2" data-page-node-id="HJGqXuGnWCa7eOPLFsI4V0"/>
+          <text x="606" y="130" font-size="11" fill="var(--muted)" data-page-node-id="EC2NCclFEXzjEzuIjytyx9">Tossa</text>
+          <circle cx="168" cy="364" r="6" fill="#E05252" stroke="#fff" stroke-width="2" data-page-node-id="SHytVGfaBTMAWPH8FmHz7R"/>
+          <text x="150" y="385" data-page-node-id="hWV9GdvBt5rO2wBjrmquQl">塞维利亚 <tspan font-size="11" fill="var(--muted)" data-page-node-id="ziEFxPRTooECZwro100taU">🌙×2</tspan></text>
+          <circle cx="283" cy="375" r="6" fill="#8A63C9" stroke="#fff" stroke-width="2" data-page-node-id="Ap5UuLFprtcfa3IKa9KUuN"/>
+          <text x="295" y="392" data-page-node-id="CPAJHwURqLOsO442vuBcEp">格拉纳达 <tspan font-size="11" fill="var(--muted)" data-page-node-id="H0vAEieEkYRwZqkgl0ilj9">🌙×1</tspan></text>
+          <circle cx="278" cy="197" r="6" fill="#3E7BC4" stroke="#fff" stroke-width="2" data-page-node-id="lBk6HREEUhMLFCupEYX8VI"/>
+          <text x="290" y="192" data-page-node-id="Un77eg0uJu6zuSM319Q1hR">马德里 <tspan font-size="11" fill="var(--muted)" data-page-node-id="JjbFavVhHmaCqvCFAKVqLN">🌙×4</tspan></text>
+          <circle cx="258" cy="168" r="4.5" fill="#4CAF6D" stroke="#fff" stroke-width="2" data-page-node-id="k20Sd4Ff0H2dK7Bh3EuhCq"/>
+          <text x="200" y="162" font-size="12" data-page-node-id="0v1CuuTJHGVtDJAGRbeN6s">塞戈维亚</text>
+          <circle cx="263" cy="228" r="4.5" fill="#D4A017" stroke="#fff" stroke-width="2" data-page-node-id="o7ewxaIcKNJqAPkEDlR5C1"/>
+          <text x="275" y="240" font-size="12" data-page-node-id="iO0K1UWObV2hLxVaP7PfAd">托莱多</text>
+        </g>
+      </svg>
+      <div class="legend" data-page-node-id="iGAuCeMcqe1dKYN9koN2Hm">
+        <span data-page-node-id="B7UfgFmdRX3MPGiXoOCNte"><i style="border-color:#E8833A" data-page-node-id="jR5mmuf63JJti0UDSwkj4x"></i>9/23 赫罗纳</span>
+        <span data-page-node-id="hxEdhYGm20u3OVxtbPSHCl"><i style="border-color:#2FA88C" data-page-node-id="gxOPMAxytcIHcEuDlCaFuP"></i>9/25 Costa Brava 自驾</span>
+        <span data-page-node-id="YYjPtfBBAKyafblMT7sOsw"><i style="border-color:#E05252" class="dash" data-page-node-id="gsgvldBlU5DweYfPMH5DrY"></i>9/27 飞塞维利亚</span>
+        <span data-page-node-id="2JqWUKPZJoebxby0DBBggC"><i style="border-color:#8A63C9" data-page-node-id="atclgzx7zanna3E7yhpTX8"></i>9/29 巴士去格拉纳达</span>
+        <span data-page-node-id="zDsUTjFqMWpyl38DJcSOwJ"><i style="border-color:#3E7BC4" class="dash" data-page-node-id="ri3Z8SEeW8vPlQYgNxbg9P"></i>9/30 高铁去马德里</span>
+        <span data-page-node-id="4deptEuIVrlvB9FGnNbADI"><i style="border-color:#4CAF6D" data-page-node-id="bGR6Dz1SmHEoDqSl8kbvkH"></i>10/2 塞戈维亚</span>
+        <span data-page-node-id="EqMPDPDgAJ4H1XNWqBH2DA"><i style="border-color:#D4A017" data-page-node-id="goYqHxDIij2fUM3TQ1wgqE"></i>10/3 托莱多</span>
+        <span data-page-node-id="GYUwY2gKl4JdGeGYAQcOfD"><i style="border-color:var(--muted)" class="dash" data-page-node-id="jQQfCuTMhOtOgYZIahb4zk"></i>10/4 回国航班</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 订单卡片 ================= -->
+  <section id="bookings" class="foldable" data-page-node-id="b0OdOQbNDRdkC4fhPjbVqw">
+    <h2 data-page-node-id="fgZzqk0lrQiqi0UZ32EI1y">🎫 已确认订单 <span class="en" data-page-node-id="5bLbgv8nvvNZ2H6PQsXCkE">CONFIRMED</span> <button type="button" class="fold-btn" id="foldBookings" data-page-node-id="foldBookingsBtn">收起 ▴</button></h2>
+    <div class="cards" data-page-node-id="3Uem6ezXO2GeyanK93wvH6">
+      <div class="bcard" data-page-node-id="eOJil8EUZpNltiF2nrdfEj"><span class="cat cat-fly" data-page-node-id="0jKlCLP50OO8fHjTF5PIHS">✈️ 机票</span>
+        <div class="t" data-page-node-id="E8mdDYWXgmATsFB2vVD82t">CA1566 上海虹桥 → 北京</div>
+        <div class="d" data-page-node-id="KtZ9jiKbcZ2W6QJOFIWaEh">9/22（二）22:30 虹桥 T2 起飞 · 00:55 抵首都 T3</div>
+        <div class="note" data-page-node-id="xxTnksa2BuSQZAvv4OiRcK">中转时间 1h55m，行李直挂，留意登机口</div>
+      </div>
+      <div class="bcard" data-page-node-id="A0qY7li7jaU1DrUgsZyMhr"><span class="cat cat-fly" data-page-node-id="1lkaoJcePTsNtcr8zehnfo">✈️ 机票</span>
+        <div class="t" data-page-node-id="UszEGEFmtJBpaBg6hslFlj">CA845 北京 → 巴塞罗那</div>
+        <div class="d" data-page-node-id="waaRiS7QvuQSZtQNiobkA6">9/23（三）02:50 首都 T3 起飞 · 08:15 抵巴塞罗那 T1</div>
+      </div>
+      <div class="bcard" data-page-node-id="svGc173oLxv0M3B9pDl5eG"><span class="cat cat-fly" data-page-node-id="6aYKgKbv3CS4lY9ozXFR2q">✈️ 机票</span>
+        <div class="t" data-page-node-id="gdN8HJYAEi0TIE2CZEf4rg">VY2224 巴塞罗那 → 塞维利亚</div>
+        <div class="d" data-page-node-id="GGjA5CanYGylGH7g0lnFGE">9/27（日）10:05 起飞 · 11:50 抵达</div>
+        <div class="note" data-page-node-id="FADvoF1GKBLN00YxgLlJYV">起飞前 7 天（9/20 起）线上值机</div>
+      </div>
+      <div class="bcard" data-page-node-id="D0JpflPq2M6qKov9wXUKpl"><span class="cat cat-fly" data-page-node-id="TKs3SRmY7DY5RkZp7uKCkd">✈️ 机票</span>
+        <div class="t" data-page-node-id="ynaphVte9Utb67xavw6MrP">CA866 马德里 → 北京</div>
+        <div class="d" data-page-node-id="B55ixdZrjzrEMp4qcN21kQ">10/4（日）17:30 巴拉哈斯 T1 起飞 · 10:25(+1) 抵京</div>
+        <div class="note" data-page-node-id="iRm8HyeyFGxU6fhIPqn3pi">国际航线建议提前 3 小时到机场</div>
+      </div>
+      <div class="bcard" data-page-node-id="nytaDtviBRrAhr3cj3YMqe"><span class="cat cat-fly" data-page-node-id="xMOn4LkHDYrS3w6jPnn8o2">✈️ 机票</span>
+        <div class="t" data-page-node-id="KGLxUiifWySMyKINAYwRvo">CA1533 北京 → 上海</div>
+        <div class="d" data-page-node-id="gnY8kKbNaAcRsPpRwv3O8k">10/5（一）12:30 首都 T3 起飞 · 14:45 抵虹桥 T2</div>
+      </div>
+      <div class="bcard" data-page-node-id="s6kqPVHF30VIgk1HWHtL0f"><span class="cat cat-train" data-page-node-id="uo7VHxEp8H4llWhNo46Fn1">🚄 火车</span>
+        <div class="t" data-page-node-id="4axeI7IV5I5nIU9nzQrkWy">AVE 高铁 格拉纳达 → 马德里</div>
+        <div class="d" data-page-node-id="RpES0jgsmiGbyE8LNlWEfy">9/30（三）15:00 发车 · 18:39 抵马德里阿托查站</div>
+        <div class="note" data-page-node-id="zFRCkC5YPHcRf053rew0tT">提前 2 分钟停止检票，预留取票时间</div>
+      </div>
+      <div class="bcard" data-page-node-id="YeNFJRta8fecb2HOhK4x2z"><span class="cat cat-car" data-page-node-id="eW0RsdGweQ3lScPEHBTE6S">🚗 租车</span>
+        <div class="t" data-page-node-id="wbfiH02GFapOG6zuI4jmrq">Centauro · 大众 T-Roc 或同组 SUV</div>
+        <div class="d" data-page-node-id="OCjxeAJ2u22ycwx9Y0Uwny">9/25（五）09:00 巴塞罗那 Sants 取车 · 当日 20:30 前还车</div>
+        <div class="note" data-page-node-id="renhsD6ehOKHLWtg9puUYq">带驾照原件+认证翻译件+主驾驶人信用卡</div>
+      </div>
+      <div class="bcard" data-page-node-id="WpkXX9CIM141URAyavuZIH"><span class="cat cat-hotel" data-page-node-id="CqyHsDVuA9Yzfwr86eyx0i">🏨 住宿</span>
+        <div class="t" data-page-node-id="DrHAqTBpK4rF7WyEJ2NjUg">巴塞罗那 · Sants 广场公寓</div>
+        <div class="d" data-page-node-id="Tb7eYPr2m7gQSWMJTrqN4g">Plaça de Sants 5 · 9/23 15:00 入住 — 9/27 10:00 退房 · 4 晚</div>
+        <div class="note" data-page-node-id="zdBQaboNsPEGsrHZJxsTGN">9/27 航班早，需提前出发（约 07:15）</div>
+      </div>
+      <div class="bcard" data-page-node-id="FzF4dAeW21wC17ipeAZdTw"><span class="cat cat-hotel" data-page-node-id="5EVs5Jqkg9gue4gJC0SuOr">🏨 住宿</span>
+        <div class="t" data-page-node-id="SIqYruT5IaLfoBw7czJRRR">塞维利亚 · Hotel Giralda Center</div>
+        <div class="d" data-page-node-id="BAxdt20H41MBJdKVZzbbXh">Calle Juan de Mata Carriazo 7 · 9/27 14:00 入住 — 9/29 12:00 退房 · 2 晚</div>
+        <div class="note" data-page-node-id="aiO2H0cSVCZBapGJYAnlW5">到店付款 · 步行约 15 分钟到大教堂</div>
+      </div>
+      <div class="bcard" data-page-node-id="t7AKCR9C2iE1YqN0GEzhaY"><span class="cat cat-hotel" data-page-node-id="7xKzwQb343C8wCoJJJzIEi">🏨 住宿</span>
+        <div class="t" data-page-node-id="cdh57yg2a9CgyUOeGw4P2T">格拉纳达 · BiBo Suites 公寓</div>
+        <div class="d" data-page-node-id="iKSwC15c92jqeRxn8QJ3IO">Calle Cristo de San Agustín 9 · 9/29 — 9/30 · 1 晚</div>
+        <div class="note" data-page-node-id="h39LgqUBB4elkn8E259bqu">老城区内，步行可到阿尔罕布拉山脚</div>
+      </div>
+      <div class="bcard" data-page-node-id="DCgtUZeDuZk9AjsTXEIn4R"><span class="cat cat-hotel" data-page-node-id="mqM7VTNJmeyFg2pkIylill">🏨 住宿</span>
+        <div class="t" data-page-node-id="GAIKUxYDGDEWurV27h8gDG">马德里 · Attic Luna 顶楼公寓</div>
+        <div class="d" data-page-node-id="8MctXQOuNEsFe548tkNGX8">Calle de la Luna 5 · 9/30 15:00 入住 — 10/4 12:00 退房 · 4 晚</div>
+        <div class="note" data-page-node-id="oDjEQP3sT99CGM9iZTyu8r">近 Gran Vía 地铁站，市中心位置</div>
+      </div>
+      <div class="bcard" data-page-node-id="dLMe9H4NxCQutrN7vrCIJL"><span class="cat cat-ticket" data-page-node-id="U4v4V1LNY8LrFTTWDAjoEX">🎟️ 门票</span>
+        <div class="t" data-page-node-id="Cs2FWZPPBgUqOyA3rixfuC">圣家堂 Sagrada Família</div>
+        <div class="d" data-page-node-id="X9CSE0DseAxXErODkFQQDa">9/24（四）14:00 · Marina 大道入口 · 3 人</div>
+        <div class="note" data-page-node-id="Qid9zbyqsva99Zh6TY8xcZ">带护照原件 · 建议提前 30 分钟到场</div>
+      </div>
+      <div class="bcard" data-page-node-id="ocfhlQFD1hLLS4tsiuWFDE"><span class="cat cat-ticket" data-page-node-id="vIaN9qgieFLuGATDCaoPlE">🎟️ 门票</span>
+        <div class="t" data-page-node-id="C7U2hf8DaCeCEyPrExZ4EH">加泰罗尼亚音乐宫 · 勃拉姆斯匈牙利舞曲</div>
+        <div class="d" data-page-node-id="kEhgSL6aP9pKvzFFRtcFZ0">9/26（六）18:30 音乐厅 · 3 座</div>
+        <div class="note" data-page-node-id="noHGV1YfiDRze0AeCtx0oQ">建议提前 30 分钟入场 · 演出约 1.5–2 小时</div>
+      </div>
+      <div class="bcard" data-page-node-id="VJ86CHQ2QcXEmxskViY17P"><span class="cat cat-ticket" data-page-node-id="83J43RBPVMoq5SCQcSbZVK">🎟️ 门票</span>
+        <div class="t" data-page-node-id="UYaoEywAkHdVUHFqCSTHNs">塞维利亚大教堂 + 希拉尔达塔</div>
+        <div class="d" data-page-node-id="s0PmIJCWckbKBD2yEMNrcC">9/27（日）17:05 · 免费预约场次 · 3 人</div>
+        <div class="note" data-page-node-id="EJQO4FTEC5oO6jHkFEp0nw">按预约时段入场，建议提前 15 分钟</div>
+      </div>
+      <div class="bcard" data-page-node-id="zYlDH38Gy4KSYdfAd4XcKS"><span class="cat cat-ticket" data-page-node-id="2KhXgrV7RRW3Ibek2zhrV3">🎟️ 门票</span>
+        <div class="t" data-page-node-id="r8j9lcS5HfQtL9y5V5f2LH">阿尔罕布拉宫 · 全区通票</div>
+        <div class="d" data-page-node-id="juRW7lsiwB3VCnAwM5yECl">9/29（二）纳斯里德宫 17:00 · 3 人</div>
+        <div class="note" data-page-node-id="iGqpEInVQvwNSDE5aG7rqE">⏰ 纳斯里德宫时间锁定，迟到作废！其余区域 08:30 起可逛 · 带护照 · 禁大背包(&gt;40cm)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 逐日行程 ================= -->
+  <section id="days" data-page-node-id="zQQgQlQbxfuAnI5JeD3Fyr">
+    <h2 data-page-node-id="BbdRFC1LDofKsIVbW0kJT8">📅 逐日行程 <span class="en" data-page-node-id="hytQs56gq0JGchibicJsbu">DAY BY DAY</span></h2>
+    <div class="hint" data-page-node-id="hintDaysLine">💡 点一下带虚线下划线的地名，就能看到中文介绍：这是什么、来了看什么、有什么要注意。</div>
+    <div id="dayList" data-page-node-id="k8BAC1q5mwyaIqnDRtU6Xh"></div>
+  </section>
+
+  <!-- ================= 待办清单 ================= -->
+  <section id="todos" data-page-node-id="igE4uAYoxihL1FznDa7YLG">
+    <h2 data-page-node-id="4hrfa4vprabK8TizcGPVgq">✅ 待办清单 <span class="en" data-page-node-id="iOcaxonJfgpaaX2Eivx0Lw">TO-DOS</span></h2>
+    <div class="todo-head" data-page-node-id="u2MeecFQpEmlLV9BDimt2H">
+      <div class="progress" data-page-node-id="yc0dY2JeFi5RrDYhNUK27k"><i id="todoBar" style="width:0%" data-page-node-id="Bna4L2nrFeExiHnXkZ4fQC"></i></div>
+      <div class="todo-count" id="todoCount" data-page-node-id="l3yz3XAXIUykoOJ1AIzBSg">0 / 0</div>
+      <div class="sync-dot" id="syncDot" data-page-node-id="sdiKO6RAC5bgDdAq93C1Sa">多端同步中…</div>
+    </div>
+    <div id="todoList" data-page-node-id="9yBSKiFAJwgDqaqeSh06TZ"></div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:8px" data-page-node-id="ZXlVBEYwDQhDkgRYWiRpL6">勾选后自动同步——同行的伙伴打开本页看到的是同一份清单。</p>
+  </section>
+
+  <!-- ================= 实用贴士 ================= -->
+  <section id="tips" data-page-node-id="b42IKxPZNvwwsFux5F6L6D">
+    <h2 data-page-node-id="DFxVk7pz1IrnwKBQYU5Op5">💡 实用贴士 <span class="en" data-page-node-id="V6TuFVqOfzJMHUJXr2Q03H">TIPS</span></h2>
+    <div class="tips" data-page-node-id="2yYAQ8qcAxeG6VcwcMhh0U">
+      <div class="tip" data-page-node-id="Gu4P4ioyEOZvhKALG5b1Zp"><div class="h" data-page-node-id="LAUJqIkVVDzQd3En5Pvdty">🕐 时差</div><div class="b" data-page-node-id="qNQHTezDjXxAESeB2ohZaB">西班牙夏令时比中国<b data-page-node-id="Mmv9znEqKB2eTxyGdnubi1">慢 6 小时</b>（中国中午 12 点 = 西班牙早上 6 点）。手机到西班牙后自动对时即可。</div></div>
+      <div class="tip" data-page-node-id="wkklGaRf3NHGFo8hmrhiVv"><div class="h" data-page-node-id="KPVOckzE036w88q1ZPTHsg">🍽️ 吃饭时间</div><div class="b" data-page-node-id="A1RAvMjsfqjLRyrE9qwYNb">西班牙午餐约 14:00、晚餐 21:00 起。多数餐厅 20:00 前不开晚餐门；14:00–17:00 很多店午休（siesta）。赶早吃可找 "menu del día" 午市套餐，性价比高。</div></div>
+      <div class="tip" data-page-node-id="PYlrTcfYSkNgcAmWMbu7lR"><div class="h" data-page-node-id="JUFF1zrIEUxEgfbsHHZiqD">💳 支付与现金</div><div class="b" data-page-node-id="49dhF11BmD01JsHoh9H5eX">刷卡（Visa/Master）基本通行，地铁票和小店偶需现金。备 100–200 欧/人现金即可，取款优先选银行 ATM 并拒绝动态汇率转换（DCC）。</div></div>
+      <div class="tip" data-page-node-id="Q59YFo4Y5cSK5t4eMCd3Vm"><div class="h" data-page-node-id="nKmTBPGgenvXvvDXjbCyfA">🎒 防扒提醒</div><div class="b" data-page-node-id="oDod1VNAqfOqjJhZ0SATOy">巴塞罗那地铁、兰布拉大道、圣家堂周边和马德里太阳门是扒手高发区：背包背胸前、手机不离桌、证件分开存放。护照建议拍照留底+存酒店保险箱，出门带复印件。</div></div>
+      <div class="tip" data-page-node-id="BpOTFNpztan5gtmgXyecLZ"><div class="h" data-page-node-id="w04HHbFSYfnHgeGkESvDwA">🚇 市内交通</div><div class="b" data-page-node-id="TWsTssL6l08BXoHFenCs1u">巴塞罗那地铁用 T-usual/月卡；马德里 10 次卡或 Multi 卡充值。打车用 FreeNow / Bolt / Uber 均可。注意：部分出租车站只收现金或车费最低额。</div></div>
+      <div class="tip" data-page-node-id="tlw9tEXttEIOPPG9vud1NB"><div class="h" data-page-node-id="GkRV15JwCgrXv6839GT319">🚗 自驾注意</div><div class="b" data-page-node-id="s5Ril0PG99rCOUSnu4CTJo">西班牙对外国驾照认可较严格，请提前办理驾照官方认证翻译件。停车认准颜色：白线免费、蓝线/绿线收费。高速部分路段收费（peaje），备零钱或卡。古城（如赫罗纳老城）多为步行区，车停外围。</div></div>
+      <div class="tip" data-page-node-id="fjXUIgMg397Mohu3nAinOg"><div class="h" data-page-node-id="K7WTyol7y3lv6SOBE3W3xm">⛪ 着装与礼仪</div><div class="b" data-page-node-id="IoiMgQxGuZuRu9yYCwLHbC">进教堂需遮住肩膀和膝盖（大教堂尤其严格）。音乐会建议 smart casual。餐厅小费非强制，满意留 5–10% 或凑整。</div></div>
+      <div class="tip" data-page-node-id="bNqehdtFPVEe2J4FWAvGwL"><div class="h" data-page-node-id="1wxrLS9CCEpw17T719nOwH">🎟️ 免费与预约</div><div class="b" data-page-node-id="UYzkV0sFwbxXdUT3i2cbhJ">圣家堂、阿尔罕布拉宫入场需核对护照原件。纳斯里德宫 17:00 时间不可改，建议提前 1 小时进园区。<b data-page-node-id="s59VpdhBrWthuiRqEulcM0">普拉多美术馆</b>：周一至周六 18:00–20:00 免费（排队入场）；<b data-page-node-id="XHFtq32AjbbdnihaUBppB0">毕加索博物馆（巴塞）</b>：周四至六 19:00–21:00 免费，但票只能在参观前 4 天 10:00 起（线上）提供，要抢；<b data-page-node-id="uGS6B4bzUAw9Ppzyq9oqRZ">索菲亚王后中心</b>：周一、三至六 19:00 后免费。古埃尔公园、塞维利亚王宫、马德里王宫务必按待办清单提前购票。🎓 <b data-page-node-id="ITICnew1">教师福利：妈妈已申领 ITIC 电子教师证</b>——马德里王宫、普拉多、提森-博内米萨、索菲亚王后中心四馆教师免费，到馆出示电子证件+护照核验即可，线上购票只需买 2 张。</div></div>
+      <div class="tip" data-page-node-id="90Dcc70qaveBUv2FPMxrpU"><div class="h" data-page-node-id="1VvhBdJbNqcyRCGieMkS6u">☎️ 紧急情况</div><div class="b" data-page-node-id="OGeVeQu5kqEco8HV5rTLvd">全欧紧急电话 <b data-page-node-id="zFchWRNaAadzQzwXCpkUs8">112</b>（警察/急救/消防，有中文翻译服务）。中国领事 APP 可在线求助；出发前在中国领事服务网查存驻西使馆领保电话。药店找绿色十字招牌（Farmacia）。</div></div>
+      <div class="tip" data-page-node-id="NgZ5b2rhlMeoFtMfBKwZO5"><div class="h" data-page-node-id="0vrmb9uMVmMvXP3Yv6AKnB">🛍️ 购物退税</div><div class="b" data-page-node-id="hLykOyRung4MNYbgpXYXaL">同店同日消费超 90.15 欧可退增值税（约 10–13%）。留好发票，机场盖电子章（DIVA kiosk）后再取现金/退卡。10/4 马德里机场预留办理时间。</div></div>
+      <div class="tip" data-page-node-id="0OBfgydMDuetzpTjcOUhgY"><div class="h" data-page-node-id="sHZzmjx2zbM3HEoVpIMAHR">☀️ 天气穿衣</div><div class="b" data-page-node-id="fHzGcoiahBEUqsCW9ZugFE">9 月底巴塞 20–26°C，塞维利亚仍可超 32°C，马德里昼夜温差大。防晒霜、墨镜、薄外套都要带；阿尔罕布拉和教堂参观全程暴晒/暴走，穿舒适的鞋。</div></div>
+      <div class="tip" data-page-node-id="Qk6OnXfqSN5jMJA3SuBdrb"><div class="h" data-page-node-id="1aH2bjNxzfDtTR7uVcVmH1">📵 网络电话卡</div><div class="b" data-page-node-id="3vcp1kVRdfrfZ9sO75ZQTh">落地后按待办清单办 Vodafone prepago 卡（约 10–20 欧，含流量）。Google 地图在国内无法使用，落地西班牙后正常；可提前离线保存马德里、巴塞罗那地图。</div></div>
+    </div>
+  </section>
+
+  </div>
+</main>
+
+<footer data-page-node-id="1ITLBL1DyDFL04LGgKczv3">祝旅途愉快，¡Buen viaje! ✈️<br data-page-node-id="cojs3lGOpSQSRNOyaSZPDr"><span style="font-size:12px" data-page-node-id="lubCtMPSLv8oIchLNOva1b">西班牙三人行 · 2026 年秋</span></footer>
+
+<script>
+/* ================= 数据 ================= */
+const TZ = { CN: 8, ES: 2 }; // UTC offsets (CEST)
+function evUTC(date, time, tz) {
+  const [y, m, d] = date.split('-').map(Number);
+  const [h, mi] = time.split(':').map(Number);
+  return new Date(Date.UTC(y, m - 1, d, h - TZ[tz], mi));
+}
+const WEEK = ['日','一','二','三','四','五','六'];
+function wd(dateStr, tz) {
+  const [y,m,d] = dateStr.split('-').map(Number);
+  const dt = new Date(Date.UTC(y, m-1, d, 12 - TZ[tz]));
+  return WEEK[dt.getUTCDay()];
+}
+
+/* ---- 倒计时事件 ---- */
+const EVENTS = [
+  ['2026-09-22','22:30','CN','✈️ CA1566 上海虹桥起飞','浦东出发前 2 小时到虹桥 T2'],
+  ['2026-09-23','00:55','CN','🛬 抵达北京中转','首都 T3 · 中转 1h55m · 行李直挂'],
+  ['2026-09-23','02:50','CN','✈️ CA845 北京起飞','飞往巴塞罗那 · 11h25m'],
+  ['2026-09-23','08:15','ES','🛬 落地巴塞罗那 T1','入境取行李 → 落地待办（月卡+电话卡）→ 赫罗纳'],
+  ['2026-09-23','13:30','ES','🍽️ 赫罗纳 Restaurant Normal 午餐','已订 3 人 · 别忘了提前 3 天邮件确认'],
+  ['2026-09-24','14:00','ES','⛪ 圣家堂入内','Marina 入口 · 提前 30 分钟 · 带护照'],
+  ['2026-09-24','17:30','ES','🏞️ 古埃尔公园','按时段入园 · 19:30 前'],
+  ['2026-09-25','09:00','ES','🚗 Costa Brava 自驾出发','Sants 取车 · Marimurtra 植物园 → Tossa de Mar'],
+  ['2026-09-25','18:15','ES','🎡 蒂比达博俯瞰巴塞','自驾返程顺路 · 20:30 前还车'],
+  ['2026-09-25','20:30','ES','🚗 Sants 还车截止','当日还车，别超时'],
+  ['2026-09-26','18:30','ES','🎻 加泰罗尼亚音乐宫音乐会','勃拉姆斯匈牙利舞曲 · 已订 3 座'],
+  ['2026-09-27','10:05','ES','✈️ VY2224 飞塞维利亚','9/20 起线上值机 · 航班早，07:15 出门'],
+  ['2026-09-27','17:05','ES','⛪ 塞维利亚大教堂','免费预约场 · 17:05 入场'],
+  ['2026-09-28','11:30','ES','🏰 塞维利亚王宫','按时段入场 · 需提前购票'],
+  ['2026-09-29','17:00','ES','🕌 阿尔罕布拉 · 纳斯里德宫','时间锁定不可迟到！建议 13:00 进园区先逛其余区域'],
+  ['2026-09-30','15:00','ES','🚄 AVE 高铁去马德里','15:00 发车 · 18:39 抵阿托查站'],
+  ['2026-10-01','10:00','ES','👑 马德里王宫','先逛萨巴蒂尼花园 · 需预约时段票'],
+  ['2026-10-01','18:00','ES','🖼️ 普拉多美术馆免费时段','周一至周六 18:00–20:00 免费，提前排队'],
+  ['2026-10-02','09:45','ES','🏛️ 塞戈维亚一日','水道桥 · 大教堂 · 阿尔卡萨城堡'],
+  ['2026-10-03','09:30','ES','⛪ 托莱多一日','古城全景 · 大教堂 · 格列柯名画'],
+  ['2026-10-04','17:30','ES','✈️ CA866 马德里回国','巴拉哈斯 T1 · 提前 3 小时到 · 预留退税时间'],
+  ['2026-10-05','10:25','CN','🛬 抵达北京中转','首都 T3'],
+  ['2026-10-05','14:45','CN','🏠 抵达上海虹桥','行程圆满结束 🎉']
+];
+
+/* ---- 待办清单 ---- */
+const TODOS = [
+  { id:'t1', due:'2026-09-20', chip:'餐厅',  txt:'邮件回复确认 Restaurant Normal 订位（9/23 13:30 · 3 人）', note:'餐厅要求提前 3 天确认，超时可能被取消' },
+  { id:'t2', due:'2026-09-20', chip:'值机',  txt:'Vueling VY2224 线上值机（起飞前 7 天开放）', note:'官网或 App · 9/27 巴塞罗那 → 塞维利亚' },
+  { id:'t11',due:'2026-09-21', chip:'订票',  txt:'预约 9/25 毕加索博物馆免费票（19:00 场）', note:'免费票提前 4 天 10:00 起开抢，手速要快' },
+  { id:'t3', due:'2026-09-23', chip:'交通',  txt:'落地后联系领取巴塞罗那月卡', note:'落地待办' },
+  { id:'t4', due:'2026-09-23', chip:'电话',  txt:'去就近 Vodafone 门店买 prepago 电话卡', note:'约 10–20 欧 · 落地待办' },
+  { id:'t5', due:'2026-09-23', chip:'订票',  txt:'购买 9/24 上午 巴特罗之家 / 米拉之家门票', note:'热门时段容易售罄，建议尽快' },
+  { id:'t6', due:'2026-09-23', chip:'订票',  txt:'购买 9/24 傍晚 古埃尔公园门票', note:'纪念区限时段入园（9:30–19:30）' },
+  { id:'t7', due:'2026-09-26', chip:'订票',  txt:'购买 9/28 塞维利亚王宫门票', note:'限时段入场' },
+  { id:'t12',due:'2026-09-26', chip:'订票',  txt:'购买 9/28 晚 弗拉明戈博物馆演出票', note:'现场座位有限，建议提前订' },
+  { id:'t8', due:'2026-09-28', chip:'订票',  txt:'购买 9/29 ALSA 巴士票（塞维利亚 → 格拉纳达 08:30）', note:'旺季建议提前买' },
+  { id:'t9', due:'2026-09-29', chip:'订票',  txt:'购买 10/1 马德里王宫门票（只需 2 张）', note:'🎓 妈妈 ITIC 教师证免费 · 限时段预约' },
+  { id:'t10',due:'2026-10-02', chip:'订票',  txt:'购买 10/3 马德里 ⇄ 托莱多高铁票', note:'AVE/Avant 约 30 分钟' },
+  { id:'t13',due:'2026-09-23', chip:'证件',  txt:'下载/保存妈妈 ITIC 电子教师证（四馆免费凭证）', note:'存手机+备份打印 · 王宫/普拉多/提森/索菲亚教师免费，购票只需买 2 张' }
+];
+
+/* ---- 逐日行程 ---- */
+const DAYS = [
+  { date:'2026-09-22', tz:'CN', color:'#8a7f6d', title:'启程 · 上海 → 北京', stay:'夜宿飞机',
+    stops:[
+      {t:'21:00', x:'虹桥机场 T2 集合', q:'Shanghai Hongqiao Airport Terminal 2', d:'提前 2 小时到，值机托运'},
+      {t:'22:30', x:'CA1566 起飞', q:'', d:'00:55(+1) 抵北京首都 T3'}
+    ]},
+  { date:'2026-09-23', tz:'ES', color:'#E8833A', title:'落地西班牙 · 赫罗纳古城', stay:'巴塞罗那 · Plaça de Sants 公寓', stayQ:'Plaça de Sants 5, Barcelona',
+    stops:[
+      {t:'02:50', x:'CA845 北京起飞', q:'', d:'11h25m · 机上补觉'},
+      {t:'08:15', x:'落地巴塞罗那 T1', q:'Barcelona Airport Terminal 1', d:'入境、取行李 · 落地待办：领月卡 + 买电话卡'},
+      {t:'10:00', x:'机场 → Sants 车站', q:'Barcelona Sants Railway Station', d:'R2 Nord 火车约 25 分钟或打车约 30 分钟 · 行李可寄存车站'},
+      {t:'11:00', x:'高铁 Sants → 赫罗纳', q:'Girona Railway Station', d:'AVE 约 40 分钟，⚠️ 建议提前购票', book:1},
+      {t:'13:30', x:'Restaurant Normal 午餐', q:'Restaurant Normal Girona', d:'已订 3 人 · 老城为步行区，车停外围', ok:1},
+      {t:'14:45', x:'旧鱼市桥', q:'Pont de les Peixateries Velles', d:'埃菲尔设计的红杆桥 · 《权游》布拉佛斯取景机位'},
+      {t:'15:15', x:'阿拉伯浴场', q:'Banys Arabs Girona', d:'中世纪浴场 · 门票约 3 欧（周日 14:00 关门，周三无碍）'},
+      {t:'16:00', x:'赫罗纳主教座堂', q:'Girona Cathedral', d:'世界最宽哥特中殿 · 86 级台阶是《权游》经典机位 · 约 8 欧'},
+      {t:'17:15', x:'赫罗纳城墙', q:'Muralles de Girona', d:'免费登城墙，俯瞰红瓦老城全景'},
+      {t:'18:15', x:'老城区漫步', q:'Barri Vell de Girona', d:'《权游》君临城取景地，石板小巷 + 彩色河畔房'},
+      {t:'19:30', x:'高铁返回巴塞罗那', q:'Barcelona Sants Railway Station', d:'车程约 40 分钟'},
+      {t:'20:30', x:'公寓附近超市采购早餐', q:'Mercadona Sants Barcelona', d:'🛒 回公寓前先去超市囤接下来几天早餐：牛奶、酸奶、面包、火腿、水果 · 就近 Mercadona / Condis / Bonpreu 都行，Google 地图一搜就有 · 公寓有冰箱和厨房'},
+      {t:'21:00', x:'入住公寓', q:'Plaça de Sants 5, Barcelona', d:'早点休息倒时差 · 明早 9:30 巴特略之家出发'}
+    ],
+    alts:[
+      {n:'La Maglia Coffee', q:'La Maglia Coffee Girona'},
+      {n:'JONCAKE 赫罗纳', q:'JONCAKE Girona'},
+      {n:'Rocambolesc 冰淇淋', q:'Rocambolesc Girona'},
+      {n:'Masaniello 披萨（公寓附近晚餐）', q:'Masaniello Restaurant Pizza Barcelona'}
+    ]},
+  { date:'2026-09-24', tz:'ES', color:'#E8833A', title:'巴塞罗那 · 高迪的一天', stay:'巴塞罗那 · Plaça de Sants 公寓', stayQ:'Plaça de Sants 5, Barcelona',
+    stops:[
+      {t:'09:30', x:'巴特略之家', q:'Casa Batlló', d:'高迪代表作 · ⚠️ 需提前订票选时段', book:1},
+      {t:'11:15', x:'米拉之家', q:'Casa Milà', d:'距巴特略步行约 10 分钟 · 顶楼"武士烟囱"最出片'},
+      {t:'12:45', x:'Buenas Migas 午餐', q:'Buenas Migas Barcelona', d:'本地烘焙连锁 · 佛卡夏/咸派配咖啡，快吃省时间'},
+      {t:'14:00', x:'圣家堂入内', q:'Sagrada Família', d:'已订 3 人 · Marina 入口 · 提前 30 分钟 · 带护照原件', ok:1},
+      {t:'17:30', x:'古埃尔公园（傍晚场）', q:'Park Guell', d:'⚠️ 按票面时段入园 · 傍晚光线柔和，平台看巴塞全景', book:1},
+      {t:'20:00', x:'La Madurada 晚餐', q:'La Madurada Barcelona', d:'高迪一天在这里收尾'}
+    ],
+    alts:[
+      {n:'Vietnam autèntic（越南菜）', q:'Vietnam autentic restaurant Barcelona'},
+      {n:'Lluritu 3（海鲜小馆）', q:'Lluritu 3 Barcelona'},
+      {n:'ONIS COFFEE（咖啡）', q:'ONIS COFFEE Barcelona'},
+      {n:'LA PAPA | Pau Claris', q:'LA PAPA Pau Claris Barcelona'}
+    ]},
+  { date:'2026-09-25', tz:'ES', color:'#2FA88C', title:'Costa Brava 自驾日', stay:'巴塞罗那 · Plaça de Sants 公寓', stayQ:'Plaça de Sants 5, Barcelona', mode:'driving',
+    stops:[
+      {t:'08:30', x:'Sants 取车（Centauro）', q:'Centauro Rent a Car Barcelona Sants', d:'带驾照原件 + 认证翻译件 + 主驾驶人信用卡'},
+      {t:'10:15', x:'Blanes · Marimurtra 植物园', q:'Jardi Botanic Marimurtra', d:'车程约 1h05 · 地中海悬崖花园'},
+      {t:'11:45', x:'圣胡安城堡', q:'Castillo de San Juan Blanes', d:'就在植物园旁的 Blanes 山顶 · 10 世纪了望塔，俯瞰海岸线与小镇全景'},
+      {t:'13:15', x:'滨海托萨 · 午餐', q:'Tossa de Mar', d:'到 Tossa 小镇吃午饭，海边餐厅多'},
+      {t:'15:00', x:'Tossa 老城墙 & 海滩漫步', q:'Vila Vella Tossa de Mar', d:'中世纪石头古城 + 海湾，慢慢逛'},
+      {t:'17:00', x:'出发去蒂比达博（车程约 1h）', q:'Tibidabo', d:'山顶游乐场 + 全巴塞最佳观景位'},
+      {t:'18:15', x:'蒂比达博俯瞰巴塞', q:'Tibidabo Amusement Park', d:'傍晚光线最美，游乐场可选'},
+      {t:'19:45', x:'下山还车', q:'Centauro Rent a Car Barcelona Sants', d:'⏰ 20:30 前还车'}
+    ],
+    alts:[
+      {n:'La Placeta（Tossa 午餐）', q:'Restaurant La Placeta Tossa de Mar'},
+      {n:"L'Espai（Tossa 咖啡）", q:'L Espai Tossa de Mar'},
+      {n:'Popa Tapes', q:'Popa Tapes Tossa de Mar'},
+      {n:'Tursia 餐厅（Tossa 晚餐）', q:'Tursia Tossa de Mar'},
+      {n:'🖼️ 毕加索博物馆免费场（周五 19:00–21:00，9/21 10:00 起抢票；若去则跳过蒂比达博）', q:'Picasso Museum Barcelona'}
+    ]},
+  { date:'2026-09-26', tz:'ES', color:'#E8833A', title:'巴塞罗那 · 老城与音乐之夜', stay:'巴塞罗那 · Plaça de Sants 公寓', stayQ:'Plaça de Sants 5, Barcelona',
+    stops:[
+      {t:'08:45', x:'公寓出发（今天老城步行日）', q:'', d:'地铁到老城，之后全程步行'},
+      {t:'09:45', x:'圣保罗现代主义建筑群', q:'Recinte Modernista de Sant Pau Barcelona', d:'9:45–11:15 · 高迪之外巴塞另一座现代主义明珠'},
+      {t:'12:00', x:'El Xampanyet 午餐', q:'El Xampanyet Barcelona', d:'12 点开门要排队 · 点 copa 自酿酒 + baby clam 小海螺'},
+      {t:'13:15', x:'CAJÙ gelato 冰淇淋', q:'CAJU gelato Barcelona', d:'饭后一支'},
+      {t:'14:00', x:'巴塞罗那主教座堂', q:'Cathedral of Barcelona', d:'加泰罗尼亚哥特式代表 · 回廊养着 13 只白鹅'},
+      {t:'15:00', x:'主教桥', q:'Pont del Bisbe Barcelona', d:'哥特区石桥 · 桥下有骷髅头浮雕'},
+      {t:'15:30', x:'世界因吻而生（亲吻墙）', q:'El món neix en un petó Barcelona', d:'4000 张照片拼贴的马赛克吻墙'},
+      {t:'16:15', x:'Nomad Coffee 咖啡休息', q:'Nomad Coffee Barcelona', d:'前 Coffee Lab · 巴塞精品咖啡名店'},
+      {t:'17:00', x:'圣卡特琳娜市场', q:'Mercat de Santa Caterina Barcelona', d:'彩色波浪屋顶市场 · 红魔虾是招牌'},
+      {t:'17:45', x:'YUMILAB The Deco artshop 逛店', q:'YUMILAB The Deco artshop Barcelona', d:'复古杂货小店，随手淘'},
+      {t:'18:00', x:'JONCAKE 波恩店甜品', q:'JONCAKE Barcelona', d:'演出前甜品 · 巴斯克蛋糕 · 距音乐宫步行几分钟'},
+      {t:'18:30', x:'加泰罗尼亚音乐宫音乐会', q:'Palau de la Musica Catalana', d:'已订 3 座 · 提前入场 · 全场禁拍照', ok:1},
+      {t:'20:30', x:'Prado de Flores 演出后晚餐', q:'Prado de Flores Restaurant Barcelona', d:'章鱼脚招牌 · 约 10% 服务费'}
+    ]},
+  { date:'2026-09-27', tz:'ES', color:'#E05252', title:'飞往安达卢西亚 · 塞维利亚', stay:'Hotel Giralda Center', stayQ:'Hotel Giralda Center Seville',
+    stops:[
+      {t:'06:45', x:'起床退房', q:'', d:'⚠️ 航班早：07:15 必须出门打车去机场'},
+      {t:'10:05', x:'VY2224 巴塞罗那 → 塞维利亚', q:'Seville Airport', d:'9/20 起线上值机 · 11:50 落地', ok:1},
+      {t:'12:45', x:'机场 → 酒店（建议打车）', q:'Hotel Giralda Center Seville', d:'拖着行李坐公共交通不方便，直接打车约 20 分钟到酒店 · 先放行李、办入住'},
+      {t:'13:30', x:'La Bartola 午餐', q:'La Bartola Sevilla', d:'老城中心 · 落地第一顿安达卢西亚风味'},
+      {t:'14:45', x:'烟草店买「绿卡」', q:'Estanco Sevillano', d:'塞维利亚公共交通卡：制卡费 €1.5、€5 起充 · 老城烟草店（estanco）都有卖，后面坐地铁/公交用'},
+      {t:'15:20', x:'塞维利亚大学（外观）', q:'Universidad de Sevilla', d:'原 18 世纪皇家卷烟厂 · 《卡门》故事背景地'},
+      {t:'16:00', x:'西班牙广场', q:'Plaza de Espana Seville', d:'半圆红砖广场 + 48 省瓷砖长椅，出片圣地'},
+      {t:'16:45', x:'步行返回大教堂（约 25 分钟）', q:'Catedral de Sevilla', d:'17:05 免费预约场入场 · 19:00 闭馆前登塔', ok:1},
+      {t:'19:15', x:'塞维利亚市政厅（外观）', q:'Ayuntamiento de Sevilla', d:'银匠风格立面 · 就在圣弗朗西斯科广场'},
+      {t:'19:45', x:'都市阳伞（可选 · 日落约 20:15）', q:'Metropol Parasol Seville', d:'顶部步道看日落+华灯初上 · 赶不及留到 9/28'},
+      {t:'21:00', x:'河边晚餐（可去对岸 Triana）', q:'Puente de Triana', d:'老桥夜景收尾，对岸 tapas 酒吧很多'}
+    ]},
+  { date:'2026-09-28', tz:'ES', color:'#E05252', title:'塞维利亚 · 弗拉明戈之城', stay:'Hotel Giralda Center', stayQ:'Hotel Giralda Center Seville',
+    stops:[
+      {t:'11:30', x:'塞维利亚王宫', q:'Real Alcazar de Sevilla', d:'《权游》多恩花园 · ⚠️ 需按时段订票（上午先逛别处）', book:1},
+      {t:'14:30', x:'斗牛广场（可选）', q:'Plaza de Toros de la Real Maestranza', d:'无演出日，可去可不去'},
+      {t:'16:00', x:'Triana 老桥 & 河对岸', q:'Puente de Triana', d:'陶艺街区，晚餐可在对岸解决'},
+      {t:'18:00', x:'弗拉明戈博物馆 + 演出', q:'Museo del Baile Flamenco', d:'⚠️ 演出票需提前购买', book:1},
+      {t:'20:00', x:'黄金塔河边散步', q:'Torre del Oro', d:'瓜达尔基维尔河夜景收尾'}
+    ],
+    alts:[
+      {n:'Dehesa Puerta Carmona（午餐）', q:'Dehesa Puerta Carmona Sevilla'},
+      {n:'Arrocería Criaito Triana（海鲜饭）', q:'Arroceria Criaito Triana'}
+    ]},
+  { date:'2026-09-29', tz:'ES', color:'#8A63C9', title:'格拉纳达 · 阿尔罕布拉宫', stay:'BiBo Suites San Agustín', stayQ:'BiBo Suites San Agustin Granada',
+    stops:[
+      {t:'08:30', x:'ALSA 巴士 塞维利亚 → 格拉纳达', q:'Estacion de Autobuses Granada', d:'约 2.5–3.5 小时 · ⚠️ 建议提前购票', book:1},
+      {t:'11:30', x:'抵达格拉纳达，入住/寄存', q:'BiBo Suites San Agustin Granada', d:'老城区内，放好行李轻装上山'},
+      {t:'12:30', x:'阿尔罕布拉宫附近午餐', q:'Parador de Granada', d:'山上解决午饭，省得来回跑'},
+      {t:'14:00', x:'赫内拉利费宫（夏宫花园）', q:'Palacio de Generalife', d:'水渠庭院 + 花园漫步，通票已含', ok:1},
+      {t:'16:00', x:'阿尔卡萨瓦 & Partal', q:'Alcazaba Alhambra', d:'要塞塔楼俯瞰全城 · 通票已含', ok:1},
+      {t:'17:00', x:'正义之门 → 纳斯里德宫（时间锁定！）', q:'Palacios Nazaries', d:'⏰ 迟到作废 · 带护照 · 禁大背包 · 宫内禁自拍杆/三脚架', ok:1},
+      {t:'19:30', x:'下山老城傍晚漫步', q:'Albaicin Granada', d:'阿尔拜辛白墙小巷'},
+      {t:'21:00', x:'晚餐', q:'', d:'格拉纳达点酒送小食的老传统'}
+    ],
+    alts:[
+      {n:'阿尔贝托花园餐厅（宫附近午餐）', q:'Jardin Alberto Granada'},
+      {n:'La Sitarilla', q:'La Sitarilla Granada'},
+      {n:'粉红胡椒格拉纳达', q:'Pimienta Rosa Granada'}
+    ]},
+  { date:'2026-09-30', tz:'ES', color:'#3E7BC4', title:'高铁北上 · 马德里', stay:'马德里 · Attic Luna 顶楼公寓', stayQ:'Calle de la Luna 5 Madrid',
+    stops:[
+      {t:'09:30', x:'格拉纳达老城收尾', q:'Granada Cathedral', d:'大教堂或再逛一圈阿尔拜辛'},
+      {t:'13:30', x:'午餐 & 前往火车站', q:'Granada Railway Station', d:'提前 45 分钟到，预留安检'},
+      {t:'15:00', x:'AVE 高铁 → 马德里', q:'Madrid Atocha Railway Station', d:'18:39 抵阿托查站 · 已出票', ok:1},
+      {t:'19:30', x:'入住 Attic Luna', q:'Calle de la Luna 5 Madrid', d:'近 Gran Vía / Callao 地铁站，放行李马上出门'},
+      {t:'20:00', x:'丽池公园日落 & 夜景', q:'Parque del Retiro', d:'10 月日落约 19:45，抓紧最后的余晖'},
+      {t:'21:15', x:'阿尔卡拉门夜景', q:'Puerta de Alcala', d:'亮灯后更好看，步行可达'},
+      {t:'22:00', x:'晚餐', q:'', d:'Gran Vía 附近'}
+    ],
+    alts:[
+      {n:'胡杨麻辣烫（中餐胃救急）', q:'胡杨麻辣烫 Granada'},
+      {n:'Restaurante Vinitus', q:'Restaurante Vinitus Gran Via Madrid'}
+    ]},
+  { date:'2026-10-01', tz:'ES', color:'#3E7BC4', title:'马德里 · 皇室与艺术', stay:'马德里 · Attic Luna 顶楼公寓', stayQ:'Calle de la Luna 5 Madrid',
+    stops:[
+      {t:'09:30', x:'萨巴蒂尼花园', q:'Sabatini Gardens Madrid', d:'王宫旁法式古典花园 · 拍摄王宫倒影的最佳机位'},
+      {t:'10:00', x:'马德里王宫', q:'Royal Palace of Madrid', d:'西欧最大王宫 · ⚠️ 需预约时段票 · 🎓 妈妈持 ITIC 教师证免费 → 线上只需买 2 张 · 有中文语音导览', book:1},
+      {t:'12:30', x:'太阳门广场', q:'Puerta del Sol Madrid', d:'零公里地标、熊与树莓城徽 · 步行 14 分钟可达'},
+      {t:'13:00', x:'圣吉内斯巧克力油条店', q:'Chocolateria San Gines', d:'1894 年百年老店 · 油条蘸热巧克力'},
+      {t:'15:00', x:'提森-博内米萨博物馆', q:'Museo Thyssen-Bornemisza', d:'世界第一的私人收藏 · 🎓 妈妈 ITIC 教师证免费，同行购票 2 张'},
+      {t:'18:00', x:'普拉多博物馆（免费时段）', q:'Museo Nacional del Prado', d:'周一至六 18:00–20:00 免费入场（周日及节假日 17:00–19:00）· 免费时段全员无需购票；若白天进馆，妈妈凭 ITIC 教师证免费，同行买 2 张'}
+    ]},
+  { date:'2026-10-02', tz:'ES', color:'#4CAF6D', title:'塞戈维亚一日 · 白雪公主城堡', stay:'马德里 · Attic Luna 顶楼公寓', stayQ:'Calle de la Luna 5 Madrid', mode:'transit',
+    stops:[
+      {t:'08:00', x:'Moncloa 站乘大巴出发', q:'Estacion de Moncloa', d:'约 1h15 · 也可选高铁 27 分钟（Chamartín 站发车）'},
+      {t:'09:45', x:'罗马大水道', q:'Aqueduct of Segovia', d:'两千年无灰浆干砌奇迹，印在欧元上'},
+      {t:'10:30', x:'恶魔雕像 & 老城爬坡', q:'Casa de los Picos Segovia', d:'穿城往大教堂方向'},
+      {t:'11:15', x:'塞戈维亚大教堂', q:'Segovia Cathedral', d:'西班牙最后一座哥特式大教堂，"大教堂中的贵妇"'},
+      {t:'12:30', x:'阿尔卡萨城堡', q:'Alcazar of Segovia', d:'白雪公主城堡原型'},
+      {t:'14:00', x:'城堡和山谷观景台', q:'Mirador del Alcazar Segovia', d:'俯瞰城堡与平原全景'},
+      {t:'15:00', x:'圣马尔科斯草坪休息', q:'Paseo de San Marcos Segovia', d:'评分最高的休闲地，晒晒太阳'},
+      {t:'17:30', x:'返回马德里', q:'Estacion de Moncloa', d:'晚上回马德里休整'}
+    ],
+    alts:[
+      {n:'Mesón de Cándido（烤乳猪百年老店）', q:'Meson de Candido Segovia'},
+      {n:'José María（塞戈维亚名店）', q:'Restaurante Jose Maria Segovia'}
+    ]},
+  { date:'2026-10-03', tz:'ES', color:'#D4A017', title:'托莱多一日 · 三文化古城', stay:'马德里 · Attic Luna 顶楼公寓', stayQ:'Calle de la Luna 5 Madrid', mode:'transit',
+    stops:[
+      {t:'08:30', x:'Atocha 乘高铁 → 托莱多', q:'Toledo Railway Station', d:'约 30 分钟 · ⚠️ 建议提前购票', book:1},
+      {t:'09:15', x:'比萨格拉门', q:'Puerta Nueva de Bisagra Toledo', d:'老城正门 · 查理五世双头鹰徽章，从这里进城'},
+      {t:'09:45', x:'太阳门', q:'Puerta del Sol Toledo', d:'14 世纪穆德哈尔风格城门'},
+      {t:'10:15', x:'索科多韦广场', q:'Plaza de Zocodover Toledo', d:'古城中心广场 · 苏丹曾经的市集，现在满街杏仁糕香'},
+      {t:'10:45', x:'阿尔坎塔拉桥', q:'Alcantara Bridge Toledo', d:'罗马古桥 + 塔霍河峡谷，拍托莱多侧影的好机位'},
+      {t:'11:15', x:'商业街3号（伴手礼）', q:'Calle Comercio 3 Toledo', d:'古城主干道 Calle Comercio 上的小店 · 杏仁糕 marzipan 是托莱多特产'},
+      {t:'12:00', x:'城堡观景台', q:'Mirador del Alcazar Toledo', d:'俯瞰阿尔卡萨城堡与全城屋顶'},
+      {t:'13:00', x:'Taberna Skala 午餐', q:'Taberna Skala Toledo', d:'本地人气小馆 · 卡拉马雷斯鱿鱼、烤椒都出名'},
+      {t:'14:30', x:'托莱多大主教座堂', q:'Toledo Cathedral', d:'西班牙首席红衣主教座堂 · 唱诗班格列柯画作'},
+      {t:'16:30', x:'山谷观景台', q:'Mirador del Valle', d:'整座古城的全景明信片，日落更美'},
+      {t:'19:00', x:'高铁返回马德里', q:'Madrid Atocha Railway Station', d:'收拾行李，明天回家'}
+    ]},
+  { date:'2026-10-04', tz:'ES', color:'#8a7f6d', title:'马德里 · 起飞回国', stay:'夜宿飞机',
+    stops:[
+      {t:'10:00', x:'英格列斯百货 Preciados 店', q:'El Corte Ingles Preciados Madrid', d:'太阳门旁的主店 · 伴手礼：火腿、橄榄油、Turrón'},
+      {t:'13:00', x:'午餐', q:'', d:''},
+      {t:'14:15', x:'出发巴拉哈斯机场 T1', q:'Madrid Barajas Airport Terminal 1', d:'国际航线提前 3 小时 · 预留退税（DIVA 盖章）时间'},
+      {t:'17:30', x:'CA866 起飞', q:'', d:'10h55m · 10:25(+1) 抵北京首都 T3'}
+    ]},
+  { date:'2026-10-05', tz:'CN', color:'#8a7f6d', title:'抵家 🏠', stay:'—',
+    stops:[
+      {t:'10:25', x:'抵达北京首都 T3', q:'', d:'中转 2h05m'},
+      {t:'12:30', x:'CA1533 北京 → 上海', q:'', d:'14:45 抵虹桥 T2，回家！'}
+    ]}
+];
+
+/* ================= 景点中文介绍库（key = 地点地图检索串） ================= */
+const SPOT = {
+/* ---------- 交通 / 服务点 ---------- */
+'Shanghai Hongqiao Airport Terminal 2': { tag:'✈️ 出发机场', why:'9/22 晚上从这里飞北京，转机去巴塞罗那。', note:'国际+国内联程航班建议起飞前 2 小时到，先值机托运行李，行李是直挂巴塞罗那的，中途不用取。' },
+'Barcelona Airport Terminal 1': { tag:'✈️ 巴塞罗那主机场', why:'9/23 早上 8:15 落地，是这次旅行的第一站。', exp:'落地后先过边检、取行李。出关后按待办：领巴塞罗那交通月卡、买 Vodafone 电话卡。去市区可坐 R2 Nord 火车到 Sants 站（约 25 分钟），或打车约 30 分钟。' },
+'Barcelona Sants Railway Station': { tag:'🚉 巴塞罗那主火车站', why:'巴塞罗那最大的交通枢纽，高铁、近郊火车、地铁都在这里换乘，也是 9/25 自驾的取还车点。', exp:'站内可寄存行李。去赫罗纳、去机场的火车都从这里发车；站外就是地铁 L3/L5 号线，进城很方便。' },
+'Girona Railway Station': { tag:'🚉 赫罗纳火车站', why:'赫罗纳的火车站在城墙脚下，出站步行十来分钟就能走进老城。', note:'车站没有大件寄存柜不方便存行李，建议轻装进老城。' },
+'Seville Airport': { tag:'✈️ 塞维利亚机场', why:'9/27 从巴塞罗那飞到这里，进入安达卢西亚地区。', note:'机场不大，出航站楼打车去市区约 20 分钟。提前在线上办好值机更省时间。' },
+'Madrid Barajas Airport Terminal 1': { tag:'✈️ 马德里主机场', why:'10/4 从这里飞回北京，是行程的最后一站。', exp:'国际航班提前 3 小时到。要退税的话，先办登机牌再去海关盖章（DIVA 自助机），盖完章才能去退税点领钱，时间要留足。' },
+'Granada Railway Station': { tag:'🚉 格拉纳达火车站', why:'9/30 下午从这里坐 AVE 高铁去马德里。', note:'建议提前 45 分钟到站，进站安检需要时间。' },
+'Madrid Atocha Railway Station': { tag:'🚉 马德里主火车站', why:'马德里最大的火车站，大厅里还种着一片室内热带花园（棕榈树和龟池），本身就可以顺路看一眼。', exp:'从这里出发去托莱多约 30 分钟。站内指示清楚，提前 15–20 分钟看大屏找站台即可。' },
+'Estacion de Moncloa': { tag:'🚌 马德里西北汽车站', why:'去塞戈维亚的大巴（La Sepulvedana 公司）从这里发车，约 1 小时 15 分直达。', note:'大巴随到随买，但旺季建议提前一天在官网买好来回票，打印或存二维码。' },
+'Toledo Railway Station': { tag:'🚉 托莱多火车站', why:'从马德里 Atocha 坐高铁约 30 分钟到托莱多。', note:'车站离老城还有一段距离，出站可坐 5/6 路公交或打车进古城。' },
+'Centauro Rent a Car Barcelona Sants': { tag:'🚗 租车门店（Sants 站旁）', why:'9/25 自驾 Costa Brava 在这里取车和还车，车型为 VW T-Roc 或同组。', note:'提车要带：主驾驶人护照原件、驾照原件、驾照认证翻译件（租车公司通常要求公证件或领馆认证件）、信用卡。还车前记得加满油、留足时间，20:30 截止。' },
+
+/* ---------- 住宿 ---------- */
+'Plaça de Sants 5, Barcelona': { tag:'🏠 巴塞罗那住宿（9/23–9/27 共 4 晚）', why:'位于 Sants 区的公寓式民宿，就在 Sants 火车站附近，进市区、赶火车、坐机场线都很方便。', note:'民宿通常 15:00 后自助入住、没有前台，房东会提前把进门密码发到邮箱/手机，记得留意消息；离开时按房东要求放好钥匙。' },
+'Hotel Giralda Center Seville': { tag:'🏨 塞维利亚住宿（9/27–9/29 共 2 晚）', why:'正经酒店，有前台，位置离塞维利亚大教堂、王宫都近，很多景点步行可达。', note:'酒店 14:00 左右可办入住；如果早到可先寄存行李出去玩。含早餐的话记得问清用餐时间。' },
+'BiBo Suites San Agustin Granada': { tag:'🏠 格拉纳达住宿（9/29–9/30 共 1 晚）', why:'在老城中心的公寓式民宿，出门就是大教堂，离阿尔拜辛、阿尔罕布拉宫上山口都近。', note:'公寓通常自助入住、无前台。格拉纳达老城很多石板坡道，拉行李箱时注意。' },
+'Calle de la Luna 5 Madrid': { tag:'🏠 马德里住宿（9/30–10/4 共 4 晚）', why:'名叫 Attic Luna 的顶层公寓，位于市中心 Luna 街 5 号，离 Gran Vía 大道和 Callao 地铁站步行几分钟，逛街、去各景点都方便。', note:'公寓自助入住，到达时间晚的话提前和房东约好。市中心周末晚上会热闹一些，怕吵可以准备耳塞。' },
+
+/* ---------- 赫罗纳（9/23） ---------- */
+'Restaurant Normal Girona': { tag:'🍽️ 餐厅（已订 3 人午餐）', why:'开在老城边缘的现代加泰罗尼亚餐厅，本地口碑好，已预订 9/23 13:30 三人位。', note:'这家要求提前 3 天邮件确认订位（已列入待办），临时取消会收费，务必按时出席。' },
+'Pont de les Peixateries Velles': { tag:'🌉 旧鱼市桥 · 拍照点', why:'一座红色铁桥，是埃菲尔铁塔设计师埃菲尔早年的作品，也是《权力的游戏》里布拉佛斯的取景地。', exp:'桥下就是彩色河畔房与翁亚尔河，站桥上往河岸两侧拍都很出片。走过去只当路过打卡，不用专门花时间。' },
+'Banys Arabs Girona': { tag:'🛁 中世纪阿拉伯浴场（小景点）', why:'11 世纪摩尔人留下的公共浴场，是加泰罗尼亚保存最完好的中世纪浴场之一，屋顶开着星形天窗，光线很美。', exp:'地方不大，十几分钟就能看完，门票约 3 欧。里面光线暗、地面滑，上下台阶小心。', feet:'室内地面可能湿滑，穿防滑的鞋。' },
+'Girona Cathedral': { tag:'⛪ 赫罗纳主教座堂 · 建议 40–60 分钟', why:'赫罗纳最标志的建筑：正面一段 86 级宽台阶是《权力的游戏》经典镜头机位，里面拥有全世界最宽的哥特式中殿（约 23 米，比一般教堂宽一倍）。', see:['大台阶下仰拍教堂全景（权游同款机位）','进殿看金色祭坛和宽到震撼的中殿','地下珍宝馆（可选）'], dress:'进教堂请勿穿吊带、短裙短裤过短的衣服，备一件薄外套或披肩即可。', feet:'86 级台阶只是开头，教堂前广场也是石板路，穿舒服的鞋。', audio:'官方语音导览可现场租借（多语言）。' },
+'Muralles de Girona': { tag:'🧱 古城墙 · 免费', why:'赫罗纳的古城墙保存完好，登上去可以绕着老城走，俯瞰整片红瓦屋顶，是看全景最划算的方式。', exp:'城墙免费开放，找到台阶入口上去，环形走一段拍全景即可，不必走完一整圈。', feet:'城墙是石头台阶和窄道，路面不平，务必穿防滑的舒适鞋。' },
+'Barri Vell de Girona': { tag:'🏘️ 赫罗纳老城', why:'《权力的游戏》里君临城的拍摄地之一，窄窄的石板巷、河边彩色房子，本身就是一座露天博物馆。', exp:'老城是步行区，随便钻小巷都会有惊喜：教堂前的台阶、河岸的彩色房、铁桥都是打卡点。傍晚店铺陆续关门，想买东西趁早。', feet:'全程石板路，今天累计步数会不少，穿舒服的鞋。' },
+
+/* ---------- 巴塞罗那（9/24–9/26） ---------- */
+'Casa Batlló': { tag:'🏠 高迪代表作 · 建议 1–1.5 小时', why:'高迪改造的公寓楼，外立面像龙脊和面具，内部几乎没有直线——门框、楼梯、天井全是波浪形，是"曲线属于上帝"的最佳体现。', see:['楼顶龙脊造型与彩色马赛克烟囱','天井的蓝色瓷砖（从下往上看像海底）','高迪设计的内庭与木质细节'], exp:'门票含官方平板智能导览（有中文），跟着一层层往上逛即可，出口在礼品店那层。上午光线好，拍照更漂亮。', feet:'全程约 5–6 层螺旋上下，台阶多但不算陡，穿舒服的鞋。' },
+'Sagrada Família': { tag:'⛪ 圣家堂 · 已订 9/24 14:00 入场（3 人）', why:'高迪倾尽毕生心血、盖了 140 多年还没完工的旷世教堂，是全世界唯一一座还没完工就被列入世界遗产的建筑，被称为"石头写的圣经"。', see:['诞生立面：高迪生前亲手完成、细节最丰富的一面（Marina 口入口这侧）','内部彩色花窗光线：下午斜阳洒进来如置身森林','受难立面的几何线条与塔楼（外观）'], exp:'已订 14:00 场次，提前 30 分钟到 Marina 入口排队，带护照原件核对。进去先别急着走，坐下看一会儿光透过彩窗的变化——这是圣家堂最动人的体验。', dress:'这是仍在举行弥撒的教堂，请勿穿吊带、超短裙/裤，备薄外套或披肩。', feet:'内部参观约 1.5 小时基本是平地+扶梯，上塔才需要爬楼梯，量力而行。', audio:'官方语音导览含中文讲解，非常值得租；也可提前下载官方 App 自带耳机听。' },
+'Park Guell': { tag:'🏞️ 古埃尔公园 · 建议 1.5 小时', why:'高迪的"童话公园"：彩色马赛克蜥蜴、波浪长椅、百柱厅都集中在这里，建在半山腰上，还能俯瞰巴塞罗那市区和海。', see:['门口马赛克大蜥蜴（公园吉祥物）','百柱厅与波浪长椅（贴满碎瓷片）','平台上看巴塞罗那全景'], exp:'纪念区（monumental zone）按票面时段入园，需要提前购票；大门外围区域免费。公园在山上，从地铁站出来还要走一段上坡。', feet:'园区里台阶、坡道、碎石路都多，全程都在"爬山"，务必穿防滑舒适的鞋，带瓶水。' },
+'Cathedral of Barcelona': { tag:'⛪ 巴塞罗那大教堂（哥特区）', why:'哥特区中心的哥特式大教堂，13 世纪动工、盖了几百年。教堂庭院里养着一群白鹅，是中世纪"鹅守护圣器室"传统的延续，非常有趣。', see:['中殿与回廊（回廊里的白鹅是看点）','登上屋顶/塔楼看哥特区全景（付费可选）','教堂外的国王广场与哥特小巷'], dress:'教堂要求衣着得体，别穿吊带和过短短裤，带件外套/披肩。', audio:'现场可租语音导览（多语言）。' },
+'Palau de la Musica Catalana': { tag:'🎻 加泰罗尼亚音乐宫 · 9/26 18:30 音乐会（已订 3 座）', why:'世界遗产级的现代主义音乐厅，彩色玻璃穹顶能把自然光洒进大厅，被誉为"一朵开在水泥森林里的花"。我们专程来听勃拉姆斯专场音乐会。', exp:'演出 18:30 开始，建议提前 20–30 分钟入场，先抬头看穹顶和立柱上马赛克花朵。中场休息可以到阳台看街景。', note:'演出期间全场禁止拍照录像、手机调静音；鼓掌要在乐章之间等指挥放下手再鼓。', dress:'正式音乐厅，不用穿礼服，整洁得体即可；厅内空调较足，带件薄外套。' },
+
+/* ---------- Costa Brava 自驾（9/25） ---------- */
+'Jardi Botanic Marimurtra': { tag:'🌺 悬崖植物园 · 建议 1 小时', why:'建在地中海悬崖上的植物园，种着来自世界各地的奇花异木，一路往下走就是海景凉亭，花园+海的组合非常治愈。', exp:'先看全景导览图再往下逛：花园沿悬崖逐级向下，最底层的海景亭子是最佳拍照位。门票现场买即可。', feet:'整个园区都在坡上，台阶多，穿防滑舒适的鞋。' },
+'Tossa de Mar': { tag:'🏖️ 滨海托萨老城 · 建议 1–1.5 小时', why:'Costa Brava 海岸线上最上镜的中世纪海边小城：一边是碧蓝海湾沙滩，一边是石头老城和城墙，午餐和放空都安排在这里。', see:['海湾沙滩（踩水拍照）','Vila Vella 石头老城门','海边小馆子吃午饭'], feet:'从停车场走到老城一路缓坡+台阶，穿舒服的鞋。' },
+'Castillo de San Juan Blanes': { tag:'🏰 圣胡安城堡（Blanes）', why:'Blanes 小镇山顶的 10 世纪了望塔城堡，当年用来防海盗。就在 Marimurtra 植物园旁边，是这段海岸线视野最高的观景点——一面看悬崖花园，一面看 Blanes 红瓦屋顶和弯月形海湾。', see:['圆柱形了望塔（城堡的标志）','山顶 360° 观景平台：海岸线 + 小镇全景','顺路能望见山下的植物园和植物园海角'], exp:'从 Marimurtra 植物园步行或开车几分钟即到，两者安排在一起最顺。城堡本体不大，20–30 分钟足够，主要是上来吹海风、看全景。', feet:'上城堡最后一段是土路坡道+台阶，穿防滑舒服的鞋；山顶无遮挡，戴帽子、带水。' },
+'Sabatini Gardens Madrid': { tag:'🌳 萨巴蒂尼花园', why:'马德里王宫北侧的法式古典园林，修剪整齐的几何绿篱、水池和喷泉。名字来自 18 世纪为王宫设计的意大利建筑师萨巴蒂尼。', see:['水池拍王宫倒影——公认的西边最佳机位','几何绿篱迷宫与雕塑','喷泉广场上的黄昏光影'], exp:'早上来人少光线也好，拍完倒影步行 6 分钟就到王宫，动线刚好。花园免费开放。', feet:'园内平整好走，慢慢逛 30–40 分钟即可。' },
+'Puerta del Sol Madrid': { tag:'🟦 太阳门广场', why:'西班牙的"国家中心点"：全国公路的零公里起点就镶在广场地面，广场上的熊与树莓雕像是马德里城徽，新年钟声也在旁边的邮局楼顶敲响。', see:['零公里地标（半圆形磁砖，踩上去拍照）','熊与树莓雕像','卡洛斯三世国王骑马像'], exp:'从王宫步行约 14 分钟过来，顺路可以把旁边的主广场一起看了。周边购物街Preciados就从这个广场延伸出去，10/4 购物也在这里。', note:'人流最密集的扒手高发区，背包放身前、手机别揣外兜。' },
+'Chocolateria San Gines': { tag:'🍫 圣吉内斯巧克力油条店', why:'1894 年开业的百年老店，马德里"油条蘸热巧克力"这种国民小吃的代名词，24 小时营业，西班牙王室和无数明星都来打卡过。', see:['白瓷杯浓稠热巧克力','现炸脆油条 churros（6 根起卖）','百年大理石店面和木柜台'], exp:'排队快（翻台率高），店内先买单后取餐。油条 6 根 + 热巧克力约 €6–7，够两三人分。当下午茶或早餐都合适，13:00 前后来正好垫垫肚子。', note:'巧克力很浓、油条顶饱，别按国内"豆浆油条"的量点。' },
+'Museo Thyssen-Bornemisza': { tag:'🖼️ 提森-博内米萨博物馆', why:'与普拉多、索菲亚王后中心并称马德里"艺术金三角"，收藏了世界上最大的私人藏画：从中世纪宗教画、伦勃朗、卡拉瓦乔一路到莫奈、梵高、美国现代画派，八百年艺术史一栋楼看完。', see:['卡拉瓦乔《圣卡塔琳娜》','梵高《瓦兹河畔》','莫奈、雷诺阿、毕加索各占一厅'], exp:'和普拉多风格互补：普拉多重古典，提森覆盖面更广、更"好看懂"。 permanent 收藏免费时段也有（周一 19:00 后常有限定，以官网为准），走累了这里的节奏比普拉多轻松。', feet:'馆内可寄包，逛 1.5–2 小时为佳；有咖啡店可中途歇脚。', note:'🎓 教师福利：妈妈已申领 ITIC 电子教师证，持证免费（需出示电子证件+护照），同行线上只需买 2 张。' },
+'Mercadona Sants Barcelona': { tag:'🛒 超市（公寓附近采购点）', why:'西班牙国民连锁超市，公寓附近就有一家，价格实惠。9/23 回公寓前先来囤接下来几天的早餐食材。', see:['牛奶、酸奶、面包、牛角包','火腿、奶酪','水果、果汁、瓶装水'], exp:'Mercadona 是西班牙人日常采购的地方，找"Hacendado"自有品牌最划算。晚上 9 点前后关门，回公寓前顺路买好。', note:'购物袋要自费买（约 €0.1/个），建议随身带个布袋。' },
+'Estanco Sevillano': { tag:'🏪 烟草店（estanco）· 买交通卡', why:'西班牙的烟草店（estanco，招牌是深蓝底黄字"TABACOS"）不只卖烟，还代售公共交通卡和邮票。塞维利亚的公交「绿卡」就在这里买。', exp:'进店说"Tarjeta verde, por favor"即可：制卡费 €1.5，最低充值 €5。坐地铁、公交、有轨电车刷卡比单买票便宜，可多人共用一张（轮流刷）。', note:'绿卡买来是给后面几天在塞维利亚市内坐公交/地铁用的，用不完余额可留作纪念。' },
+'Puerta Nueva de Bisagra Toledo': { tag:'🚪 比萨格拉门', why:'托莱多老城的正门，16 世纪查理五世时代重建，门楼上刻着帝国的双头鹰徽章——进古城基本都要从这里走，是托莱多的"大门脸"。', see:['双头鹰石雕徽章','门楼上的卡洛斯五世雕像','城门内外的古城墙步道'], exp:'出火车站走过来约 15 分钟（或坐公交到门口）。穿过城门就算正式进入世界遗产老城，从此只能靠步行。', feet:'进门后是缓坡石板路上行，穿舒服的鞋，行李别带太多。' },
+'Puerta del Sol Toledo': { tag:'🚪 托莱多太阳门', why:'14 世纪穆德哈尔（摩尔-哥特混合）风格的古城门，马蹄形拱券是它的标志——别和马德里的太阳门广场搞混，这是一座真正的中世纪城门。', see:['马蹄形红砖拱门','门楣上的石雕纹饰','城门视角的老城街景'], exp:'从比萨格拉门进来顺路就到，10 分钟打卡拍照即可，继续往索科多韦广场方向走。', feet:'周边全是石板坡路，注意脚下。' },
+'Plaza de Zocodover Toledo': { tag:'🏟️ 索科多韦广场', why:'托莱多古城的中心广场，名字来自阿拉伯语"牲口市集"——摩尔人时代这里就是市场，现在满街咖啡座和杏仁糕店，古城各条动线都在这里交汇。', see:['拱廊环绕的广场建筑','街边杏仁糕（marzipan）老字号','广场旁就是上阿尔卡萨城堡的坡道'], exp:'想坐观光小火车或去山谷观景台的大巴也在这里发车。逛累了在这里歇脚喝一杯，顺便定一下后面路线。', note:'游客最集中的地方，注意随身物品。' },
+'Alcantara Bridge Toledo': { tag:'🌉 阿尔坎塔拉桥', why:'横跨塔霍河峡谷的古罗马桥（摩尔时代加固），桥头护塔像卫士一样立着——托莱多建在河湾环抱的山岩上，这座桥是古时进出城的咽喉。', see:['罗马拱券与八角桥头堡','桥上拍托莱多古城侧影（阿尔卡萨城堡入画）','塔霍河峡谷全景'], exp:'从索科多韦广场下坡步行约 8 分钟到桥头。想拍古城全景又不去山谷观景台的话，桥中段机位很出片。', feet:'下到桥再爬回老城是连续坡道，量力而行；石板面滑，穿防滑鞋。' },
+'Calle Comercio 3 Toledo': { tag:'🛍️ 商业街3号（伴手礼小店）', why:'Calle Comercio 是托莱多古城的主商业街，从中心广场一路通向大教堂，沿街全是老字号小店；3 号这家主营本地特产，是行程里留的"扫货点"。', see:['托莱多杏仁糕 marzipan——城里最有名的特产','达马丁金丝镶嵌（damasquino）小件工艺品','陶瓷、明信片等伴手礼'], exp:'买杏仁糕认准现做保质期短的，好吃但建议回国前就吃完；金丝镶嵌首饰小巧有特色，适合送礼。', note:'古城小店大多 14:00–16:30 午休关门，别扑空。' },
+'Mirador del Alcazar Toledo': { tag:'🔭 城堡观景台', why:'托莱多阿尔卡萨城堡（16 世纪要塞，现为军事博物馆）旁的高处观景台，能俯瞰城堡正立面和整片红瓦屋顶——比山谷观景台更"贴身"，能看清城市细节。', see:['阿尔卡萨城堡四塔正立面','层层叠叠的红瓦老城屋顶','远处的大教堂塔楼'], exp:'从商业街步行几分钟即到，作为大教堂前的过渡站很顺路。上午顺光，拍照效果好。', feet:'台地和坡道无遮拦，夏天记得防晒；台阶不多，一般体力轻松应对。' },
+'Taberna Skala Toledo': { tag:'🍽️ Taberna Skala（午餐）', why:'托莱多本地人气小酒馆，分量足、价格实在，招牌是卡拉马雷斯（整只炸鱿鱼）和各色烤椒，评分常年居高。', exp:'饭点本地人也排队，建议 13:00 前到。烤椒+鱿鱼+一杯红酒是经典组合，人均约 €15–20。', note:'西班牙小馆午市开门早（约 13:00），别按国内饭点掐太准。' },
+'Vila Vella Tossa de Mar': { tag:'🏘️ Tossa 石头老城', why:'Tossa 的老城由一圈完整的中世纪城墙围住，是加泰罗尼亚沿海仅存的防御古城之一，1931 年就被列为国家文物。', exp:'进城门后随便逛：白墙窄巷、石头房子、海边教堂，绕一圈回到城门约 40 分钟。', feet:'老城内全是石头路面和台阶，穿舒适鞋。' },
+'Tibidabo': { tag:'⛰️ 巴塞罗那最高峰', why:'俯瞰巴塞罗那全城和地中海的制高点，山顶有教堂和百年游乐场，傍晚来能看到城市灯光慢慢亮起。', exp:'自驾直接开到山顶最方便。建议 18:00 左右到：先看全景，等日落华灯初上再下山。山顶比市区凉、风大。', note:'山顶温度比城里低好几度，傍晚看日落记得带件外套。' },
+'Tibidabo Amusement Park': { tag:'🎡 蒂比达博山顶', why:'山顶的百年小游乐场+大教堂，是本地人周末家庭游的地方；即使不玩项目，山顶平台也是全巴塞罗那最壮观的观景台。', exp:'游乐场项目按次/通票另购，可玩可不玩。重点是站到教堂前的平台看日落和城市全景，拍夜景。', note:'傍晚风大降温快，穿暖和些。' },
+
+/* ---------- 塞维利亚（9/27–9/28） ---------- */
+'Catedral de Sevilla': { tag:'⛪ 塞维利亚大教堂 · 已约 9/27 17:05 免费场（3 人）', why:'世界最大的哥特式教堂之一，由清真寺改建而来——保留了原清真寺的宣礼塔（现在的希拉尔达塔）和橘园庭院。哥伦布的灵柩就安放在这里。', see:['主祭坛：世界上最大的祭坛屏风之一，金光闪闪','哥伦布墓（四位"抬棺人"雕像扛着棺木）','希拉尔达塔登顶：塔内是坡道不是楼梯，俯瞰全城'], exp:'已预约 17:05 免费场次，带上预约凭证提前 10 分钟排队。进去后先逛主殿，闭馆前登希拉尔达塔看日落光线。', dress:'教堂着装要求严格：不要穿吊带、无袖上衣和过短的裤/裙，随身带外套或披肩。', feet:'大教堂+登塔约 1.5–2 小时，以站立走动为主；登塔是缓坡绕行 35 层高，膝盖不好的话慢慢走。', audio:'现场可租语音导览（多语言，讲解很详细）。' },
+'Puente de Triana': { tag:'🌉 Triana 老桥', why:'塞维利亚最有名的桥，横跨瓜达尔基维尔河，对岸的 Triana 区是传统陶艺和 tapas 酒吧聚集地，晚上河边散步特别舒服。', exp:'黄昏或入夜后来：桥下河边步道看大教堂与黄金塔的倒影，过桥到 Triana 找家小馆子吃饭。', note:'桥面人流混杂，背包放身前，注意随身财物。' },
+'Real Alcazar de Sevilla': { tag:'🏰 塞维利亚王宫 · 建议 2 小时', why:'欧洲还在使用的王宫中最古老的一座，穆斯林工匠建的穆德哈尔式宫殿，《权力的游戏》多恩王国"流水花园"就在这里拍。', see:['大使厅：贴满金箔的穹顶','少女庭院与花园（权游取景地）','挂毯厅与查理五世宫殿'], exp:'需要按时段购票入场。花园很大、很耐逛，看完宫殿别急着走，花园深处人少景美。', feet:'宫殿+花园走下来步数可观，穿舒服的鞋。', audio:'现场可租语音导览（多语言），门口也可租讲解器。' },
+'Plaza de Toros de la Real Maestranza': { tag:'🐂 塞维利亚斗牛场（可选）', why:'西班牙最古老的斗牛场之一（18 世纪），塞维利亚斗牛季的主场。不比赛时，可买票进场地参观和逛小型博物馆。', exp:'纯属可去可不去的选项：感兴趣就买票进场看一圈，不感兴趣就门口拍张照。', note:'如对斗牛文化不适应，可只看建筑外观，不进场。' },
+'Museo del Baile Flamenco': { tag:'💃 弗拉明戈博物馆 + 小剧场演出', why:'由弗拉明戈舞后克里斯蒂娜·奥约斯创办的博物馆+剧场，白天看弗拉明戈历史展览，晚上有现场演出，是了解安达卢西亚灵魂的地方。', exp:'晚上 18:00 前后的演出已列入待办，记得提前购票。演出约 1 小时，小剧场离演员很近，很有感染力。', note:'演出进行中请勿拍照录像、保持安静；结束后可与演员合影（先询问）。' },
+'Torre del Oro': { tag:'🗼 黄金塔 · 河畔夜景', why:'13 世纪瓜达尔基维尔河边建的瞭望塔，当年镀金瓷砖在阳光下泛金光，是塞维利亚的河边地标。', exp:'塔本身不大，亮点是黄昏和入夜后河边的散步道：一边是黄金塔，一边是大教堂和斗牛场，夜景很出片。', feet:'以河边平地散步为主，穿着随意。' },
+
+/* ---------- 格拉纳达（9/29–9/30） ---------- */
+'Estacion de Autobuses Granada': { tag:'🚌 格拉纳达汽车站', why:'9/29 早上乘 ALSA 大巴从塞维利亚到这里（约 2.5–3.5 小时）。', note:'大巴票建议提前线上购买（已列入待办）。到站后可打车或公交去老城住宿。' },
+'Parador de Granada': { tag:'🍽️ 观景餐厅（午餐点）', why:'开在阿尔罕布拉宫园区旁的国营古堡酒店（由修道院改建），餐厅阳台正对阿尔罕布拉和山谷，是"边吃饭边看景"的经典位置。', note:'作为午餐备选在山上解决，省得来回跑。价格比山下贵一些，胜在位置和景观。' },
+'Palacio de Generalife': { tag:'🌿 赫内拉利费宫（阿尔罕布拉夏宫）· 通票已含', why:'纳斯里德苏丹的夏宫花园，被称为"建筑师的花园"：水渠庭院里一长排水柱、修剪整齐的树篱与远处的雪山相映，是阿尔罕布拉最清爽的部分。', see:['水渠庭院（一排水柱+花坛的中轴）','苏丹塔与凉亭','从高处回望阿尔罕布拉宫主体'], exp:'下午 14:00 先进这里逛，赶在 17:00 纳斯里德宫场次前把花园部分看完。通票已含，不用再买。', feet:'花园上下台阶、坡道多，穿防滑舒适的鞋。', audio:'建议下载官方 App「Alhambra」或到门口租语音导览（多语言）。' },
+'Alcazaba Alhambra': { tag:'🏰 阿尔卡萨瓦要塞 · 通票已含', why:'阿尔罕布拉最古老的军事要塞，登上有名的瞭望塔（Vela 塔），整个格拉纳达城和内华达雪山尽收眼底，是拍全景的最佳位置。', exp:'16:00 左右从要塞开始，17:00 前正好走到纳斯里德宫入口。要塞风大日照强，拍照注意站稳。', feet:'要塞全是石头坡道和台阶，穿防滑鞋；晴天很晒，注意防晒补水。' },
+'Palacios Nazaries': { tag:'🕌 纳斯里德宫 · 入场时间 17:00 锁定（3 人票）', why:'阿尔罕布拉宫的灵魂——穆斯林王朝的宫殿，墙壁布满繁复的石膏雕花和阿拉伯铭文，庭院里的狮子喷泉举世闻名。这里是整个西班牙最抢手、最难约的景点。', see:['狮子庭院（12 只大理石狮子托起喷泉）','大使厅：蜂窝状穹顶与满墙雕花','桃金娘庭院：倒影池是最经典画面'], exp:'17:00 场次时间锁定、不可迟到，建议 16:40 就到入口排队，带护照核对。宫内按批次放行，跟着人流单向参观约 1 小时。', note:'宫内禁止使用自拍杆、三脚架；大背包、行李箱要先寄存；拍照关闭闪光灯。', feet:'宫内总体平缓，但全程站立走动约 1 小时，穿舒服的鞋。', audio:'官方 App「Alhambra」内有导览，建议提前下载离线包；也可租语音导览器。' },
+'Albaicin Granada': { tag:'🏘️ 阿尔拜辛老城区', why:'与阿尔罕布拉隔谷相望的白色老城区，是格拉纳达最老的街区，迷宫般的白墙小巷和观景台是这里的魅力。', exp:'傍晚下山后逛最舒服：小巷看白墙花窗，走到圣尼古拉观景台看阿尔罕布拉夜景——那是明信片角度。', feet:'老城区全是陡坡和石板台阶，晚上灯光偏暗，穿防滑鞋、走路看脚下。' },
+'Granada Cathedral': { tag:'⛪ 格拉纳达大教堂', why:'16 世纪文艺复兴式大教堂，紧挨着它的皇家礼拜堂里安葬着天主教双王（伊莎贝拉与费尔南多），是"收复格拉纳达"这段历史的核心见证。', see:['大教堂内部高挑明亮的文艺复兴空间','皇家礼拜堂（双王陵墓，需另购票，可选）','教堂前的 Plaza de las Pasiegas 广场'], dress:'教堂着装需得体，勿穿吊带、过短短裤，带外套/披肩。', audio:'现场可租语音导览（多语言）。' },
+
+/* ---------- 马德里（9/30–10/4） ---------- */
+'Parque del Retiro': { tag:'🌳 丽池公园', why:'马德里市中心最大的公园，相当于"马德里的中央公园"，本地人散步、划船、看街头艺人都在这里。', see:['水晶宫：玻璃+铁的温室，下午光线最美','大池塘划船（湖心有阿方索十二世雕像）','公园里随时出现的街头音乐家'], exp:'傍晚来最舒服：10 月日落约 19:45，赶上余晖在水晶宫和大池塘拍几张，光线最好。', feet:'公园很大，走一圈约 1 小时起，穿舒服的鞋。' },
+'Puerta de Alcala': { tag:'🏛️ 阿尔卡拉门', why:'马德里的"凯旋门"地标（18 世纪），晚上亮灯后特别漂亮，就在丽池公园旁边，顺路打卡。', exp:'不用专门安排，丽池出来沿普拉多大道走过来，广场中央拍夜景即可。', note:'晚上留意周围车辆与随身物品。' },
+'Royal Palace of Madrid': { tag:'👑 马德里王宫 · 建议 2 小时', why:'西欧现存最大的王宫之一，至今仍是西班牙国王举行国事活动的官方场所。宫内 3000 多间房，极尽奢华：水晶吊灯、金箔穹顶、斯特拉迪瓦里提琴收藏。', see:['王座厅与宴会厅','药房与兵器广场（盔甲收藏）','萨巴蒂尼花园（外部，免费）'], exp:'王宫内部按固定参观动线走，约 1.5 小时。宫前广场（东方广场）和南侧花园的机位别忘了。', note:'室内大部分厅堂禁止拍照，请遵守工作人员指引；旺季务必提前预约时段票（已列入待办）。🎓 教师福利：妈妈已申领 ITIC 电子教师证，教师凭 ITIC 免费（需出示电子证件+护照），同行线上只需买 2 张。', feet:'宫内参观以平路为主，但动线较长，穿舒服的鞋。', audio:'现场可租语音导览（多语言，含中文），讲得非常细。' },
+'Plaza Mayor Madrid': { tag:'🏟️ 主广场 & 太阳门', why:'马德里的两大地标广场：主广场是 17 世纪建的红砖回廊广场，太阳门广场则是西班牙公路零公里起点、熊与树莓雕像所在地。', see:['主广场红墙回廊（四面一圈）','太阳门广场的"零公里"地标和熊雕像','广场周边的街头艺人与咖啡座'], exp:'两个广场步行 5 分钟可达，安排在中午前后顺路逛。主广场适合坐下来喝杯咖啡看人来人往。', note:'广场人流密集，是扒手高发区，背包放身前，手机别揣外兜。' },
+'Mercado de San Miguel': { tag:'🍽️ 圣米格尔市场（午餐）', why:'百年玻璃铁艺市场，马德里"站着吃 tapas"的代表：几十个小摊一字排开，火腿、海鲜、油条巧克力一次吃遍。', exp:'午餐高峰人多，建议两人分工：一人占桌子/吧台，一人去买。每家摊点份量小，多试几家。', note:'市场内人多手杂，钱包手机贴身放。价格比街边酒吧略贵，胜在一站式体验。' },
+'Museo Nacional del Prado': { tag:'🖼️ 普拉多美术馆', why:'西班牙的国家美术馆，与卢浮宫、乌菲齐并称欧洲三大美术馆。戈雅、委拉斯开兹、格列柯、博斯等大师的镇馆级作品都在这。', see:['委拉斯开兹《宫娥》（镇馆之宝）','戈雅《裸体的玛哈》与《1808 年 5 月 3 日》','博斯《人间乐园》三联画'], exp:'行程安排 18:00–20:00 免费时段（周一至周六），需在门口排队入场，建议 17:30 前就去排队。免费时段人多，优先看一楼和二楼必看名作，别贪多。', feet:'展厅很大，逛完腿会很酸，穿最舒服的鞋来。', audio:'官方语音导览/App 支持中文讲解；也可先下载普拉多官方 App 自带耳机。', note:'🎓 教师福利：妈妈已申领 ITIC 电子教师证，教师凭 ITIC 免费；若不在免费时段来，同行线上也只需买 2 张。' },
+
+/* ---------- 塞戈维亚（10/2） ---------- */
+'Aqueduct of Segovia': { tag:'🏛️ 罗马大水渠 · 免费', why:'近 2000 年前罗马人修的高架水渠，全长几百米、最高处 28 米，2 万多块花岗岩全靠自身重力叠成、没有用一滴砂浆，至今仍在使用。', see:['主广场（Plaza del Azoguejo）仰拍水渠最高段','水渠脚下找阶梯上去走近看石缝','水渠与老城同框的全景机位'], exp:'到得早就先在广场拍水渠，这是塞戈维亚的第一名片。免费参观。', note:'广场人多，注意随身财物。' },
+'Casa de los Picos Segovia': { tag:'🧱 尖锥石屋（路过打卡）', why:'外墙布满上百颗尖锥形花岗岩的老宅，是塞戈维亚最上镜的民间建筑之一，如今是艺术学校。', exp:'从水渠去大教堂的必经之路上，路过看一眼外观即可，不用专门绕路。' },
+'Segovia Cathedral': { tag:'⛪ 塞戈维亚大教堂 · "大教堂中的贵妇"', why:'西班牙最后一座哥特式大教堂（16 世纪），因为身形修长优雅得名"贵妇"。就在古城中心，值得入内看主祭坛与彩窗。', see:['高挑的哥特中殿与彩窗','主祭坛与唱诗班','教堂侧面回廊的安静庭院'], dress:'教堂内着装得体，勿穿吊带、过短短裤；脱帽。', audio:'现场可租语音导览（多语言）。' },
+'Alcazar of Segovia': { tag:'🏰 阿尔卡萨城堡 · 白雪公主城堡原型', why:'建在悬崖上的城堡，据说迪士尼《白雪公主》城堡的灵感就来自它，从谷底看像一艘"石船"停在峭壁上。', see:['国王厅的镀金天花板','登胡安二世塔看平原全景（付费可选）','从城堡下的观景台看"船头"造型'], exp:'进城堡逛约 1 小时。若想拍明信片全景，要到谷底对岸的观景台（下一条）。', feet:'城堡内外台阶多，登塔的旋转楼梯很陡，膝盖不好或恐高就放弃登塔。', audio:'城堡内有语音导览（多语言）。' },
+'Mirador del Alcazar Segovia': { tag:'📷 阿尔卡萨最佳观景台', why:'站在城堡下方的谷底草坪仰望，才能看到阿尔卡萨"石船"最完整的样子，是塞戈维亚最经典的明信片机位。', exp:'从城堡走下来约 10 分钟。下午光线顺光，拍城堡+蓝天绝佳；拍完原路返回或沿河边步道散步。', feet:'上下坡和草坪土路，穿防滑的鞋。' },
+'Paseo de San Marcos Segovia': { tag:'🌿 河边休息草坪', why:'紧挨阿尔卡萨观景台的河边绿道，本地人评分很高的散步地，行程到尾声时坐下来晒晒太阳歇歇脚。', exp:'不想赶路就找张长椅休息，看看河水和鸭子；体力好可沿河多走一段。' },
+
+/* ---------- 托莱多（10/3） ---------- */
+'Toledo Cathedral': { tag:'⛪ 托莱多大教堂 · 建议 1.5 小时', why:'西班牙红衣主教的总座堂（全西最高级别教堂），13 世纪始建，把哥特、穆德哈尔、巴洛克风格全揉在了一起，被称为"西班牙教堂之母"。', see:['圣器室：格列柯《脱掉基督的外衣》等名画','唱诗班与主祭坛','穆德哈尔式天窗与回廊'], dress:'教堂着装要求严格，勿穿吊带、短裙短裤，带外套/披肩。', feet:'教堂内部很大，动线长，穿舒服的鞋。', audio:'现场可租语音导览（多语言）。' },
+'Iglesia de Santo Tome Toledo': { tag:'🖼️ Santo Tomé 教堂（只为看一幅画）', why:'小小的教堂只为一幅画而来：格列柯的传世名作《奥尔加斯伯爵的葬礼》，画面一半在天堂一半在人间，是他最著名的作品。', exp:'教堂很小，买票进场直奔主祭坛旁看画即可，约 20 分钟看完。门口有英语讲解卡片。', note:'教堂内禁止拍照（格列柯画作版权保护严格）。', dress:'教堂场所，着装得体。' },
+'Juderia Toledo': { tag:'🏘️ 托莱多犹太区', why:'老城东南侧的旧犹太街区，迷宫一样的窄巷保留着中世纪"三文化共处"的痕迹（基督教、伊斯兰、犹太），也是逛小店、找餐厅的地方。', see:['白墙窄巷随便走（认准 El Transito 犹太会堂方向）','街道两旁的刀剑店、金银镶嵌工艺品店','巷子深处的老犹太会堂（可选购票）'], exp:'大教堂逛完正好中午，在这一带穿巷子+找午餐。路窄坡多，跟着人流走就不会迷路。', feet:'全是石板坡道和台阶，穿防滑舒适的鞋。' },
+'Mirador del Valle': { tag:'📷 托莱多全景观景台', why:'在塔霍河对岸的山坡上看整座托莱多古城的最佳位置：红瓦老城被河水环抱，像一幅中世纪油画，尤其日落时分。', exp:'下午 16:30 左右过去，等光线变暖拍全景。观景台在老城对岸，打车约 5 分钟或坐观光小火车；想徒步走过去要翻过河再上坡，约 40 分钟。', feet:'如选择徒步，是持续上坡山路，穿好走的鞋、留足时间；否则建议打车上去。' },
+
+/* ---------- 购物（10/4） ---------- */
+'El Corte Ingles Preciados Madrid': { tag:'🛍️ 英格列斯百货（太阳门店）', why:'西班牙最大的连锁百货，这家在太阳门旁的主店货最全：火腿、橄榄油、藏红花、Turrón 等伴手礼一趟买齐。', exp:'时间有限就直接去地下一层食品超市扫货；服饰箱包在楼上。买满退税金额可到服务台咨询退税（Global Blue 柜台）。', note:'购物时间按 1.5 小时封顶，别耽误去机场；离境前保留好小票和退税单。' },
+
+/* ---------- 9/24 新增 ---------- */
+'Casa Milà': { tag:'🏠 米拉之家（La Pedrera）· 建议 1–1.5 小时', why:'高迪设计的最后一座私人住宅，外墙像起伏的海浪，锻铁阳台像海藻缠绕；因为它通体灰白、粗粝如采石场，被本地人戏称"La Pedrera（采石场）"。', see:['顶楼露台：一排"武士头"造型烟囱（最出片）','阁楼层：鲸鱼骨架般的拱形结构展馆','中庭从下仰望天光'], exp:'离巴特略之家步行约 10 分钟，两家安排一上午正合适。顶楼露台视野开阔，白天拍照光线好。', feet:'室内以平层参观为主，上顶楼需坐电梯+走一段台阶，穿舒服的鞋。', audio:'官方语音导览可租（多语言），门票一般已含讲解设备，记得领一副。' },
+'Buenas Migas Barcelona': { tag:'🥖 烘焙连锁（午餐）', why:'加泰罗尼亚本地烘焙品牌，主打现烤佛卡夏、咸派和焦糖芝士蛋糕，配咖啡吃得又快又好，适合中午赶场时解决午饭。', note:'就在格拉西亚大道一带，中午人多但翻台快，随到随点。' },
+'La Madurada Barcelona': { tag:'🍽️ 晚餐（9/24）', why:'9/24 高迪一天的收尾晚餐，逛完古埃尔公园正好过来。', note:'西班牙晚餐一般 20:00 后才热闹，去早了可能上座慢；人多的话可提前订位。' },
+
+/* ---------- 9/26 新增（老城） ---------- */
+'Recinte Modernista de Sant Pau Barcelona': { tag:'🏥 圣保罗现代主义建筑群 · 建议 1.5 小时（9:45–11:15）', why:'曾是全球最早的"花园医院"之一（用花园疗养病人），整组建筑是加泰罗尼亚现代主义大师多梅内克·蒙塔内尔的作品，与圣家堂隔街相望、同为世界遗产。彩色穹顶、瓷砖、马赛克美得不像医院。', see:['行政楼彩色穹顶大厅','马赛克与瓷砖装饰的病房楼','花园视角拍穹顶全景'], exp:'早上人少光线好，9:45–11:15 逛完正好步行去老城吃饭。门票现场买即可，旺季也可提前网上订。', audio:'现场可租语音导览（多语言），讲解建筑和医院历史很清楚。' },
+'El Xampanyet Barcelona': { tag:'🥂 百年老馆（1929）· 12:00 开门', why:'波恩区开了近百年的家庭小馆，柜台挂满火腿和腌货，自酿卡瓦起泡酒（copa）配小海螺、烤鳀鱼是一绝，是巴塞"站着吃"文化的代表。', exp:'12 点开门前到、排前几个进去。必点：自酿起泡酒 + baby clam 小海螺 + 小贻贝，橄榄油调味极鲜；烤伊比利亚猪也值得。', note:'店里窄小拥挤，背包放身前；老店翻台快，吃完就给后面人让座。' },
+'CAJU gelato Barcelona': { tag:'🍦 冰淇淋店', why:'波恩区的人气手工 gelato 小店，饭后一支正合适。', note:'口味常换，跟着当天黑板点即可。' },
+'Pont del Bisbe Barcelona': { tag:'🌉 主教桥 · 打卡点', why:'哥特区最上镜的哥特式石桥，桥身下方的骷髅头插剑浮雕是"隐藏彩蛋"，实际是 1929 年为新哥特街区添建的。', exp:'从主教座堂步行 2 分钟即到，站在桥下仰拍即可，人多时等个空档。', feet:'老城石板路，慢慢走。' },
+'El món neix en un petó Barcelona': { tag:'💋 世界因吻而生（亲吻墙）', why:'摄影师琼·丰特库贝塔用 4000 多张市民"自由之吻"照片拼成的马赛克墙，2014 年落成，是巴塞近年最受欢迎的公共艺术之一。', exp:'在哥特区小广场上，免费参观；下午侧光拍照最清楚。别错过旁边的常驻小馆氛围。', note:'广场狭窄人流多，注意随身财物。' },
+'Nomad Coffee Barcelona': { tag:'☕ 精品咖啡名店', why:'前身是巴塞精品咖啡鼻祖 Coffee Lab，如今是 Nomad 旗下门店，豆子品质在本地数一数二，适合下午歇脚回血。', note:'店面小、主打外带，可选手冲或拿铁。' },
+'Mercat de Santa Caterina Barcelona': { tag:'🍍 圣卡特琳娜市场', why:'巴塞最古老市场（1848 年）改建的室内市集，屋顶是彩色马赛克拼成的"波浪"，水果海鲜摊一排排，红魔虾（cigala）是招牌。', see:['门口抬头看彩色波浪屋顶','海鲜摊点的红魔虾/生蚝','水果摊来杯现榨果汁'], exp:'17:00 前后摊位陆续收摊，想吃得趁早；买海鲜可以直接让摊主烹做（部分摊位收费加热）。', note:'市场人多，现金和手机贴身放。' },
+'YUMILAB The Deco artshop Barcelona': { tag:'🛍️ 复古杂货小店', why:'藏在老城的复古杂货与设计小店，明信片、手作、装饰小物适合随手淘点伴手礼。', note:'顺路逛即可，不必专门绕路。' },
+'JONCAKE Barcelona': { tag:'🍰 巴斯克蛋糕（波恩店）', why:'以巴斯克"烧焦"芝士蛋糕出名的小甜品店，音乐宫演出前来一块正合适，步行几分钟就到。', note:'蛋糕当天现做，热门口味傍晚可能售罄，18:00 到正合适。' },
+'Prado de Flores Restaurant Barcelona': { tag:'🍽️ 加利西亚海鲜餐厅（演出后晚餐）', why:'以加利西亚风格海鲜见长，招牌章鱼脚（pulpo）软嫩入味，是音乐宫散场后聚餐的好选择。', note:'结账会加约 10% 服务费；演出后 20:30 到店正好，人多可提前电话留位。' },
+
+/* ---------- 9/27 新增 ---------- */
+'Metropol Parasol Seville': { tag:'🍄 都市阳伞 · 可选（日落场最佳）', why:'塞维利亚的"大蘑菇"——世界最大的木结构建筑之一，德国设计师于尔根·迈耶的作品，顶上波浪形步道能 360° 看塞维利亚全城，日落与华灯初上时尤其漂亮。', see:['乘电梯上顶，环形步道走一圈看全城','日落约 20:15，华灯初上时最好看','地下的考古博物馆（罗马遗迹，含在票内）'], exp:'从市政厅步行几分钟即到，9/27 逛完大教堂+市政厅正好过来赶日落；日落时段人最多，想占好机位早点上。门票便宜（含顶部饮品券）。赶不及就留到 9/28。', feet:'顶部步道有起伏坡道和台阶（也有电梯），恐高的话在底层广场看结构就很震撼。' },
+'La Bartola Sevilla': { tag:'🍽️ 餐厅（9/27 午餐）', why:'老城中心、离大教堂和都市阳伞都近的本地餐厅，落地塞维利亚的第一顿正餐就在这里。', note:'西班牙餐厅一般 13:00 后正式营业，时间正好；点菜可让店家推荐当日 tapas。' },
+'Universidad de Sevilla': { tag:'🏛️ 塞维利亚大学（外观打卡）', why:'主楼是 18 世纪的皇家卷烟厂旧址——当年欧洲最大的工业建筑，歌剧《卡门》里卷烟女工卡门工作的地方就是这里，如今是塞维利亚大学主楼。', exp:'外观和临街立面很气派，路过打卡即可（10 分钟）；进内部庭院要看开放情况。', note:'大学 9/27 那天作为去西班牙广场路上的顺访点，不用专门久留。' },
+'Plaza de Espana Seville': { tag:'🇪🇸 西班牙广场 · 建议 40–60 分钟', why:'为 1929 年世博会建的半圆形红砖广场，是塞维利亚最震撼的地标：护城河、拱桥、塔楼围成一圈，电影《星球大战》也来取过景。', see:['沿弧线找 48 个省的瓷砖长椅（每省一幅瓷砖画，找找 Sevilla 和 Madrid 的）','中央拱桥与倒影池（最佳全景机位）','广场塔楼（可登，视野好）'], exp:'下午 16:00 前后光线柔和最适合拍照；广场大、弧线长，重点逛中间一段即可。旁边就是玛丽亚·路易莎公园，树荫多，走累了进去歇脚。', feet:'广场弧线一圈走下来步数不少，穿舒服的鞋；夏季后下午仍晒，注意防晒补水。' },
+'Ayuntamiento de Sevilla': { tag:'🏛️ 塞维利亚市政厅（外观）', why:'16 世纪的银匠风格（Plateresque）建筑，立面雕刻精细华丽，坐落在圣弗朗西斯科广场，是老城的中心路口。', exp:'从大教堂步行几分钟即到，看一眼立面、拍张照即可；它就在去都市阳伞的路上，顺访正合适。', note:'内部一般不对外开放，看外观即可。' }
+};
+/* ================= Google 地图链接 ================= */
+function gSearch(name) {
+  return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(name);
+}
+function gNav(name, mode) {
+  return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(name) +
+         '&travelmode=' + (mode || 'walking');
+}
+function gDayNav(day) {
+  const qs = day.stops.filter(s => s.q).map(s => s.q);
+  if (qs.length < 2) return null;
+  return 'https://www.google.com/maps/dir/?api=1' +
+    '&origin=' + encodeURIComponent(qs[0]) +
+    '&destination=' + encodeURIComponent(qs[qs.length - 1]) +
+    '&waypoints=' + qs.slice(1, -1).map(encodeURIComponent).join('%7C') +
+    '&travelmode=' + (day.mode || 'walking');
+}
+
+/* ================= 渲染：逐日行程 ================= */
+(function renderDays() {
+  const box = document.getElementById('dayList');
+  const reg = window.__reg = [];
+  // 返回地名的 HTML：有介绍库→可点击按钮；否则→地图导航链接
+  function nameHtml(x, q, mode, arrow) {
+    if (!q) return x;
+    const idx = reg.push({ n: x, q: q, m: mode || 'walking' }) - 1;
+    if (!SPOT[q]) {
+      return '<a class="poi" href="' + gNav(q, mode) + '" target="_blank" rel="noopener" title="Google 地图导航">' + x + '</a>';
+    }
+    return '<button type="button" class="sname" data-spot="' + idx + '" title="点我看中文介绍">' + x + '</button>' +
+           (arrow ? '<a class="sn" href="' + gNav(q, mode) + '" target="_blank" rel="noopener" title="Google 地图导航">🧭</a>' : '');
+  }
+  box.innerHTML = DAYS.map(day => {
+    const nav = gDayNav(day);
+    const evs = day.stops.map((s) => {
+      let badges = '';
+      if (s.book) badges += '<span class="badge need">🎫 需提前订票</span>';
+      if (s.ok) badges += '<span class="badge ok">✓ 已确认</span>';
+      return '<div class="ev"><div class="time">' + s.t + '</div><div class="what">' +
+             nameHtml(s.x, s.q, day.mode, true) + badges +
+             (s.d ? '<span class="desc">' + s.d + '</span>' : '') + '</div></div>';
+    }).join('');
+    let stayHtml = '';
+    if (day.stay && day.stay !== '—' && day.stay !== '夜宿飞机') {
+      stayHtml = '🌙 今晚住宿：' + nameHtml(day.stay, day.stayQ, 'transit', true);
+    } else if (day.stay === '夜宿飞机') {
+      stayHtml = '🌙 夜宿飞机';
+    }
+    const route = nav
+      ? '<details class="route"><summary>当日路线 · ' + day.stops.length + ' 站（点击展开地图导航）</summary>' +
+        '<ol class="stops">' + day.stops.map((s, i) =>
+          '<li><span class="n">' + (i + 1) + '</span><span class="tm">' + s.t + '</span>' +
+          nameHtml(s.x, s.q, day.mode, true) +
+          '</li>').join('') + '</ol>' +
+        '<a class="navbtn" href="' + nav + '" target="_blank" rel="noopener">🧭 一键打开全天多点导航</a></details>'
+      : '';
+    const alts = day.alts && day.alts.length
+      ? '<div class="alts">🍽 备选餐厅/咖啡：' + day.alts.map(a =>
+          '<a href="' + gSearch(a.q) + '" target="_blank" rel="noopener">' + a.n + '</a>').join('') + '</div>'
+      : '';
+    return '<div class="day" style="border-left-color:' + day.color + '">' +
+      '<div class="head"><span class="date">' + day.date.slice(5).replace('-', '/') + ' 周' + wd(day.date, day.tz) + '</span>' +
+      '<span class="title">' + day.title + '</span></div>' +
+      (stayHtml ? '<div class="stay">' + stayHtml + '</div>' : '') +
+      '<div class="evs">' + evs + '</div>' + route + alts + '</div>';
+  }).join('');
+})();
+
+/* ================= 倒计时 ================= */
+let nextEventIdx = 0;
+function findNext() {
+  const now = Date.now();
+  for (let i = 0; i < EVENTS.length; i++) {
+    if (evUTC(EVENTS[i][0], EVENTS[i][1], EVENTS[i][2]).getTime() > now) return i;
+  }
+  return -1;
+}
+function pad(n) { return String(n).padStart(2, '0'); }
+function tick() {
+  const i = findNext();
+  const el = id => document.getElementById(id);
+  if (i === -1) {
+    el('nextTitle').textContent = '行程已圆满结束，欢迎回家 🏠';
+    el('nextMeta').textContent = '';
+    ['cdD','cdH','cdM','cdS'].forEach(x => el(x).textContent = '0');
+    return;
+  }
+  const e = EVENTS[i];
+  el('nextTitle').textContent = e[3];
+  const dt = evUTC(e[0], e[1], e[2]);
+  const local = new Date(dt.getTime() + (e[2] === 'ES' ? -120 : -480) * 60000 * -1); // display in trip tz
+  const opts = { month: 'numeric', day: 'numeric', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false, timeZone: e[2] === 'ES' ? 'Europe/Madrid' : 'Asia/Shanghai' };
+  el('nextMeta').textContent = dt.toLocaleString('zh-CN', opts) + ' · ' + e[4];
+  let diff = Math.max(0, Math.floor((dt.getTime() - Date.now()) / 1000));
+  const d = Math.floor(diff / 86400); diff -= d * 86400;
+  const h = Math.floor(diff / 3600); diff -= h * 3600;
+  const m = Math.floor(diff / 60); diff -= m * 60;
+  el('cdD').textContent = d; el('cdH').textContent = pad(h);
+  el('cdM').textContent = pad(m); el('cdS').textContent = pad(diff);
+}
+tick();
+setInterval(tick, 1000);
+
+/* ================= 待办同步 ================= */
+let todoState = { done: {} };
+let syncOk = false;
+const syncDot = document.getElementById('syncDot');
+function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+function lsDel(k) { try { localStorage.removeItem(k); } catch (e) {} }
+function normDone(d) { return (d && typeof d === 'object' && !Array.isArray(d)) ? d : {}; }
+function setSync(ok) {
+  syncOk = ok;
+  syncDot.className = 'sync-dot' + (ok ? ' on' : '');
+  syncDot.textContent = ok ? '已连接 · 多人实时同步' : '离线 · 勾选暂存本机';
+}
+async function pull() {
+  const ctl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+  const timer = ctl ? setTimeout(() => ctl.abort(), 8000) : null;
+  try {
+    const r = await fetch('/api/todos', { cache: 'no-store', signal: ctl ? ctl.signal : undefined });
+    if (!r.ok) throw 0;
+    const data = await r.json();
+    const srv = normDone(data && data.done);
+    // merge: keep local unsynced checkmarks if offline mode was used
+    const local = JSON.parse(lsGet('todoLocal') || '{}');
+    if (!syncOk && Object.keys(local).length) {
+      todoState = { done: Object.assign({}, srv, local) };
+      await push();
+      lsDel('todoLocal');
+    } else {
+      todoState = { done: srv };
+    }
+    setSync(true);
+    renderTodos();
+  } catch (e) {
+    setSync(false);
+    const local = JSON.parse(lsGet('todoLocal') || '{}');
+    todoState = { done: Object.assign(normDone(todoState.done), local) };
+    renderTodos();
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+}
+async function push() {
+  try {
+    const r = await fetch('/api/todos', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(todoState)
+    });
+    if (!r.ok) throw 0;
+    setSync(true);
+  } catch (e) {
+    setSync(false);
+    lsSet('todoLocal', JSON.stringify(normDone(todoState.done)));
+  }
+}
+function renderTodos() {
+  const list = document.getElementById('todoList');
+  const doneMap = normDone(todoState.done);
+  todoState.done = doneMap;
+  const done = Object.keys(doneMap).filter(k => doneMap[k]).length;
+  list.innerHTML = TODOS.map(t => {
+    const isDone = !!doneMap[t.id];
+    const dstr = t.due.slice(5).replace('-', '/');
+    return '<div class="todo' + (isDone ? ' done' : '') + '" data-id="' + t.id + '">' +
+      '<div class="box">✓</div><div><div class="txt">' + t.txt + '</div>' +
+      '<div class="meta"><span class="chip">' + t.chip + '</span>建议完成：' + dstr +
+      (t.note ? ' · ' + t.note : '') + '</div></div></div>';
+  }).join('');
+  document.getElementById('todoBar').style.width = (done / TODOS.length * 100) + '%';
+  document.getElementById('todoCount').textContent = done + ' / ' + TODOS.length;
+  // hero current todo = first undone by due order
+  const first = TODOS.find(t => !doneMap[t.id]);
+  document.getElementById('heroTodo').innerHTML = first
+    ? '<a href="#todos">' + first.txt + '</a>'
+    : '全部完成，坐等出发 🎉';
+}
+document.getElementById('todoList').addEventListener('click', e => {
+  const item = e.target.closest('.todo');
+  if (!item) return;
+  const id = item.dataset.id;
+  const m = normDone(todoState.done);
+  todoState.done = m;
+  m[id] = !m[id];
+  if (!m[id]) delete m[id];
+  renderTodos();
+  push();
+});
+// 立即用本机状态渲染一次，任何网络状况下都不会停在「加载中」
+renderTodos();
+setSync(false);
+pull();
+setInterval(pull, 20000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });
+
+/* ================= 白天/黑夜自动配色 ================= */
+const themeBtn = document.getElementById('themeBtn');
+function autoNight() { const h = new Date().getHours(); return h >= 19 || h < 7; }
+function applyTheme() {
+  const mode = lsGet('themeMode') || 'auto';
+  const night = autoNight();
+  const theme = mode === 'auto' ? (night ? 'dark' : 'light') : mode;
+  document.documentElement.setAttribute('data-theme', theme);
+  themeBtn.textContent = mode === 'auto' ? (night ? '🌙 夜间（自动）' : '☀️ 白天（自动）') : (mode === 'light' ? '☀️ 白天' : '🌙 夜间');
+}
+themeBtn.addEventListener('click', () => {
+  const cur = lsGet('themeMode') || 'auto';
+  const next = cur === 'auto' ? 'light' : cur === 'light' ? 'dark' : 'auto';
+  lsSet('themeMode', next);
+  applyTheme();
+});
+applyTheme();
+setInterval(applyTheme, 60000);
+
+/* ================= 景点中文介绍弹层 ================= */
+const spotModal = document.createElement('div');
+spotModal.className = 'smodal';
+spotModal.hidden = true;
+document.body.appendChild(spotModal);
+function escHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+}
+function secHtml(icon, title, body, cls) {
+  return '<div class="sec' + (cls ? ' ' + cls : '') + '"><div class="sh">' + icon + ' ' + title + '</div><div class="b">' + body + '</div></div>';
+}
+function openSpot(idx) {
+  const r = window.__reg && window.__reg[idx];
+  if (!r) return;
+  const info = SPOT[r.q];
+  if (!info) return;
+  const h = ['<div class="spop">'];
+  h.push('<button type="button" class="x" data-close="1" aria-label="关闭">×</button>');
+  h.push('<h3>' + escHtml(r.n) + '</h3>');
+  if (info.tag) h.push('<div class="tag">' + escHtml(info.tag) + '</div>');
+  if (info.why) h.push(secHtml('📍', '这里是什么 · 为什么值得来', escHtml(info.why)));
+  if (info.see && info.see.length) h.push(secHtml('👀', '来了看什么', '<ul><li>' + info.see.map(escHtml).join('</li><li>') + '</li></ul>'));
+  if (info.exp) h.push(secHtml('✨', '怎么逛更尽兴', escHtml(info.exp)));
+  if (info.feet) h.push(secHtml('👟', '走路提醒', '<b>这段路/台阶不少：</b>' + escHtml(info.feet), 'warn'));
+  if (info.dress) h.push(secHtml('🧥', '穿着提醒', '<b>宗教场所请注意：</b>' + escHtml(info.dress), 'warn'));
+  if (info.audio) h.push(secHtml('🎧', '官方讲解 / 电子导览', escHtml(info.audio)));
+  if (info.note) h.push(secHtml('💡', '小提示', escHtml(info.note)));
+  h.push('<div class="sbtns">' +
+    '<a class="sbtn map" href="' + gNav(r.q, r.m) + '" target="_blank" rel="noopener">🧭 导航去这里</a>' +
+    '<a class="sbtn walk" href="' + gSearch(r.q) + '" target="_blank" rel="noopener">🔎 在地图上看看</a>' +
+    '</div></div>');
+  spotModal.innerHTML = h.join('');
+  spotModal.hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+function closeSpot() {
+  spotModal.hidden = true;
+  document.body.style.overflow = '';
+}
+spotModal.addEventListener('click', e => {
+  if (e.target === spotModal || e.target.closest('[data-close]')) closeSpot();
+});
+document.addEventListener('click', e => {
+  const b = e.target.closest('.sname');
+  if (b) openSpot(Number(b.dataset.spot));
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSpot(); });
+
+/* ================= 折叠：订单区 + 每日行程 ================= */
+const foldBtn = document.getElementById('foldBookings');
+const foldSec = foldBtn ? foldBtn.closest('section') : null;
+if (foldBtn) foldBtn.addEventListener('click', () => {
+  const collapsed = foldSec.classList.toggle('collapsed');
+  foldBtn.textContent = collapsed ? '展开 ▾' : '收起 ▴';
+});
+document.addEventListener('click', e => {
+  const head = e.target.closest('.day .head');
+  if (head) head.parentElement.classList.toggle('collapsed');
+});
+</script>
+</body>
+</html>
