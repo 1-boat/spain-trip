@@ -84,6 +84,18 @@ h2 .en{font-size:12px; color:var(--muted); font-weight:500; letter-spacing:2px;}
 .legend span{display:inline-flex; align-items:center; gap:6px;}
 .legend i{width:22px; height:0; border-top:3px solid; border-radius:2px; display:inline-block;}
 .legend i.dash{border-top-style:dashed;}
+/* ---------- 总览地图：彩铅质感 + 点选联动 ---------- */
+#map svg.pencil{--paper:#fbf7ec; --land:#f8f2e3; --hatchSea:#a3c4de; --hatchLand:#d9b877;
+  --coast1:#6f8fb0; --coast2:#c39a52; --fiber-op:.1; --grain-op:.14; --grain-blend:multiply;}
+html[data-theme=dark] #map svg.pencil{--paper:#1a2230; --land:#212b3a; --hatchSea:#3d6084;
+  --hatchLand:#7c6337; --coast1:#93b3cf; --coast2:#c9a86a; --fiber-op:.14; --grain-op:.2; --grain-blend:overlay;}
+#map .hot{cursor:pointer;}
+#map .hot .lab,#map .hot .nights{transition:fill .15s;}
+#map .hot:hover .lab,#map .hot.on .lab{fill:var(--accent); font-weight:700;}
+#map .hot:hover .halo,#map .hot.on .halo{opacity:.55;}
+@keyframes dayflash{0%,100%{box-shadow:var(--shadow)} 45%{box-shadow:0 0 0 5px var(--accent-soft); border-color:var(--accent);}}
+.day.flash{animation:dayflash 1.1s ease 2;}
+.day.map-on{border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft);}
 
 /* ---------- booking cards ---------- */
 .cards{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px;}
@@ -267,66 +279,201 @@ section.foldable.collapsed .cards{display:none;}
   <section id="map" data-page-node-id="eFCko0XrK7KaebZGOH8TL0">
     <h2 data-page-node-id="cOP7WGeLMEjqZc4Z53RnKr">🗺 行程总览 <span class="en" data-page-node-id="yq5fweJHxUDc1v6wVRwzaQ">ROUTE OVERVIEW</span></h2>
     <div class="map-panel" data-page-node-id="0d2PSsObg8Q6OWWZhSqdDG">
-      <svg viewBox="0 0 640 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="西班牙行程手绘地图" data-page-node-id="r9obO6DrkAYQgwQigbqmjg">
+      <svg class="pencil" viewBox="0 0 680 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="西班牙行程手绘地图" data-page-node-id="r9obO6DrkAYQgwQigbqmjg">
         <defs data-page-node-id="PJOY3CsnwCzkJlJtVMFiCK">
-          <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%" data-page-node-id="qOrpEx91U3x16OFYa7UqoG">
-            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="7" result="n" data-page-node-id="b5D7ypmNXVezkmQZkGnPZL"/>
-            <feDisplacementMap in="SourceGraphic" in2="n" scale="5" data-page-node-id="LeyEZcXujkgUeP6tQKFnn5"/>
+          <clipPath id="cardClip"><rect x="0" y="0" width="680" height="470" rx="14"/></clipPath>
+          <filter id="jitter" filterUnits="userSpaceOnUse" x="0" y="0" width="680" height="470">
+            <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="11" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/>
           </filter>
+          <filter id="grainA">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="2"/>
+            <feColorMatrix type="saturate" values="0"/>
+          </filter>
+          <filter id="fiberA">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012 0.85" numOctaves="3" seed="9"/>
+            <feColorMatrix type="saturate" values="0"/>
+          </filter>
+          <pattern id="hatchSea" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-24)">
+            <line x1="0" y1="0" x2="0" y2="7" stroke="var(--hatchSea)" stroke-width="1.7" opacity=".55"/>
+            <line x1="3.6" y1="0" x2="3.6" y2="7" stroke="var(--hatchSea)" stroke-width="1" opacity=".3"/>
+          </pattern>
+          <pattern id="hatchLand" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(34)">
+            <line x1="0" y1="0" x2="0" y2="9" stroke="var(--hatchLand)" stroke-width="1.3" opacity=".45"/>
+          </pattern>
         </defs>
-        <!-- paper -->
-        <rect x="0" y="0" width="640" height="470" rx="14" fill="var(--card)" data-page-node-id="7tSg4FUWImo1924rWETChB"/>
-        <!-- sea hint -->
-        <text x="600" y="330" font-size="13" fill="var(--muted)" opacity=".55" transform="rotate(-72 600 330)" data-page-node-id="5ESN3XvhViUsPgGYsY426e">地中海 Mediterranean Sea</text>
-        <text x="30" y="90" font-size="12" fill="var(--muted)" opacity=".5" data-page-node-id="HGRaMep6pEThXHnxliUZN0">大西洋</text>
-        <g filter="url(#wobble)" data-page-node-id="KcCr71Mdi0O3FiCvNr1yvd">
-          <!-- Iberia outline -->
-          <path d="M14,55 L72,17 L168,22 L264,28 L370,33 L490,72 L614,88
-                   L605,121 L560,144 L516,160 L439,250 L432,311 L408,352 L338,394
-                   L242,401 L187,438 L154,413 L125,374 L101,374
-                   L94,319 L125,237 L127,165 L62,116 L29,118 Z"
-                fill="var(--panel)" stroke="var(--muted)" stroke-width="2.4" stroke-linejoin="round" data-page-node-id="Roq3FptTyQYgxKEAT3BAZm"/>
-          <!-- Portugal -->
-          <path d="M29,118 L36,165 L8,197 L29,208 L34,374 L101,374 L94,319 L125,237 L127,165 L62,116 Z"
-                fill="var(--line)" opacity=".45" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5 4" data-page-node-id="079k8rJeqgYMG6GhABAJFP"/>
-          <text x="46" y="265" font-size="12" fill="var(--muted)" opacity=".8" data-page-node-id="lyjehTa8b1FykPjR728qC5">葡萄牙</text>
-          <!-- routes -->
-          <!-- D1 Girona -->
-          <path d="M560,144 Q580,128 594,113" fill="none" stroke="#E8833A" stroke-width="3.4" stroke-linecap="round" data-page-node-id="e9ZXzC2VJXs5oTn560W1au"/>
-          <!-- D3 Costa Brava loop -->
-          <path d="M560,144 Q575,132 589,128 Q600,124 597,128 Q592,134 575,141 Q565,146 560,144" fill="none" stroke="#2FA88C" stroke-width="3.2" stroke-linecap="round" data-page-node-id="cTrfJnqLpPuY8HhEBFb7S2"/>
-          <!-- D5 flight BCN-SVQ -->
-          <path d="M556,152 Q390,300 176,360" fill="none" stroke="#E05252" stroke-width="3.2" stroke-dasharray="8 7" stroke-linecap="round" data-page-node-id="DEzmbXRPCqidzklxS4KApd"/>
-          <!-- D7 SVQ-GRX -->
-          <path d="M172,364 Q225,378 278,374" fill="none" stroke="#8A63C9" stroke-width="3.2" stroke-linecap="round" data-page-node-id="cInSV6T4wCrRXP3crKp18o"/>
-          <!-- D8 train GRX-MAD -->
-          <path d="M281,370 Q290,280 278,202" fill="none" stroke="#3E7BC4" stroke-width="3.2" stroke-dasharray="2 6" stroke-linecap="round" data-page-node-id="6WD2MOwStGKeElFcra1G2T"/>
-          <!-- D10 MAD-Segovia -->
-          <path d="M276,193 Q266,180 259,172" fill="none" stroke="#4CAF6D" stroke-width="3.2" stroke-linecap="round" data-page-node-id="Gq2nXWUiAeFkV7y68OlTks"/>
-          <!-- D11 MAD-Toledo -->
-          <path d="M276,202 Q268,214 264,224" fill="none" stroke="#D4A017" stroke-width="3.2" stroke-linecap="round" data-page-node-id="PezXeHIf4hxN8TvhBxizf1"/>
-          <!-- D12 flight home -->
-          <path d="M285,193 Q430,90 590,45" fill="none" stroke="var(--muted)" stroke-width="2.6" stroke-dasharray="8 7" stroke-linecap="round" data-page-node-id="BJL1b0eUytg6CF3xYM7PaW"/>
-          <text x="596" y="42" font-size="15" data-page-node-id="R08O3DJq4V1t41ypYbFehe">✈️</text>
+        <!-- 彩铅纸面：素描纸 + 纸纤维 + 海面排线，海岸线两遍叠色 -->
+        <rect x="0" y="0" width="680" height="470" rx="14" fill="var(--paper)"/>
+        <rect x="0" y="0" width="680" height="470" rx="14" clip-path="url(#cardClip)" filter="url(#fiberA)" style="opacity:var(--fiber-op);mix-blend-mode:var(--grain-blend)"/>
+        <rect x="0" y="0" width="680" height="470" rx="14" fill="url(#hatchSea)"/>
+        <path d="M616,149 L610,144 L539,139 L472,134 L417,117 L388,105 L344,104 L310,99 L230,96 L111,104 L74,125 L98,153 L100,200 L80,307 L90,316 L86,381 L132,381 L174,373 L203,402 L232,425 L283,394 L367,389 L430,356 L453,323 L458,274 L476,252 L527,202 L567,190 L594,177 Z" fill="var(--land)" opacity=".92"/>
+        <path d="M616,149 L610,144 L539,139 L472,134 L417,117 L388,105 L344,104 L310,99 L230,96 L111,104 L74,125 L98,153 L100,200 L80,307 L90,316 L86,381 L132,381 L174,373 L203,402 L232,425 L283,394 L367,389 L430,356 L453,323 L458,274 L476,252 L527,202 L567,190 L594,177 Z" fill="url(#hatchLand)" opacity=".6"/>
+        <path d="M616,149 L610,144 L539,139 L472,134 L417,117 L388,105 L344,104 L310,99 L230,96 L111,104 L74,125 L98,153 L100,200 L80,307 L90,316 L86,381 L132,381 L174,373 L203,402 L232,425 L283,394 L367,389 L430,356 L453,323 L458,274 L476,252 L527,202 L567,190 L594,177 Z" fill="none" stroke="var(--coast1)" stroke-width="1.3" filter="url(#jitter)"/>
+        <path d="M616,149 L610,144 L539,139 L472,134 L417,117 L388,105 L344,104 L310,99 L230,96 L111,104 L74,125 L98,153 L100,200 L80,307 L90,316 L86,381 L132,381 L174,373 L203,402 L232,425 L283,394 L367,389 L430,356 L453,323 L458,274 L476,252 L527,202 L567,190 L594,177 Z" fill="none" stroke="var(--coast2)" stroke-width="1.05" filter="url(#jitter)" transform="translate(1.3,1)" opacity=".5"/>
+        <path d="M98,153 L190,160 L170,205 L168,260 L173,300 L158,345 L156,368" fill="none" stroke="var(--coast2)" stroke-width="1" stroke-dasharray="5 4" opacity=".85"/>
+        <path d="M52,150 q10,-5 20,-1 q10,4 20,0 M112,66 q10,-5 20,-1 q10,4 20,0 M556,80 q10,-5 20,-1 q10,4 20,0 M498,302 q10,-5 20,-1 q10,4 20,0 M604,214 q10,-5 20,-1 q10,4 20,0 M120,418 q10,-5 20,-1 q10,4 20,0 M374,436 q10,-5 20,-1 q10,4 20,0 M56,252 q10,-5 20,-1 q10,4 20,0 M622,338 q10,-5 20,-1 q10,4 20,0 M250,64 q10,-5 20,-1 q10,4 20,0" fill="none" stroke="var(--coast1)" stroke-width="1.1" opacity=".45" filter="url(#jitter)"/>
+        <text x="116" y="250" font-size="11" fill="var(--muted)" opacity=".85">葡萄牙</text>
+        <text x="600" y="330" font-size="12" fill="var(--muted)" opacity=".55" transform="rotate(-72 600 330)">地中海 Mediterranean Sea</text>
+        <text x="30" y="90" font-size="11" fill="var(--muted)" opacity=".5">大西洋</text>
+        <rect x="0" y="0" width="680" height="470" rx="14" clip-path="url(#cardClip)" filter="url(#grainA)" style="opacity:var(--grain-op);mix-blend-mode:var(--grain-blend)"/>
+        <!-- 路线（悬停可看说明） -->
+        <g id="routes" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M567,190 L595,164" stroke="#E8833A" stroke-width="2.6" filter="url(#jitter)"><title>9/23 巴塞罗那 → 赫罗纳 · 火车约 45 分</title></path>
+          <g class="hand-route" stroke="#2FA88C">
+            <path class="rhit" d="M567,190 Q578,170 601,176 Q590,188 567,194" stroke="transparent" stroke-width="13"><title>9/25 Costa Brava 自驾 · Tossa de Mar</title></path>
+            <path d="M567.22,190.14 Q568.95,188.00 569.81,185.19" stroke-width="2.52"/>
+            <path d="M572.45,182.65 Q574.89,180.42 576.79,178.83" stroke-width="2.46"/>
+            <path d="M580.35,176.49 Q583.04,176.21 585.75,175.43" stroke-width="2.36"/>
+            <path d="M588.77,174.45 Q591.05,175.03 593.34,174.87" stroke-width="2.31"/>
+            <path d="M596.64,174.87 Q598.35,175.56 600.45,176.84" stroke-width="2.38"/>
+            <path d="M598.05,179.13 Q595.52,180.43 593.68,182.94" stroke-width="2.14"/>
+            <path d="M588.98,185.26 Q586.25,187.49 583.30,188.31" stroke-width="2.49"/>
+            <path d="M578.12,191.07 Q574.49,191.77 571.49,193.08" stroke-width="2.16"/>
+          </g>
+          <g class="hand-route" stroke="#E05252">
+            <path class="rhit" d="M567,190 Q395,240 215,365" stroke="transparent" stroke-width="13"><title>9/27 巴塞罗那 ✈ 塞维利亚 · 1h40</title></path>
+            <path d="M567.05,190.15 Q561.75,191.30 556.26,192.64" stroke-width="2.25"/>
+            <path d="M551.44,194.55 Q547.11,196.37 543.33,197.77" stroke-width="2.52"/>
+            <path d="M536.80,199.67 Q531.82,201.32 526.62,203.18" stroke-width="2.48"/>
+            <path d="M517.65,206.36 Q514.27,207.08 511.21,208.02" stroke-width="1.95"/>
+            <path d="M505.13,209.80 Q502.04,210.87 498.50,213.35" stroke-width="1.95"/>
+            <path d="M490.64,215.78 Q485.49,217.19 480.66,219.85" stroke-width="2.37"/>
+            <path d="M474.22,222.34 Q469.11,223.70 463.30,226.15" stroke-width="1.98"/>
+            <path d="M455.60,229.34 Q452.75,231.26 449.09,232.43" stroke-width="2.26"/>
+            <path d="M440.69,236.43 Q435.67,239.10 431.05,240.64" stroke-width="2.25"/>
+            <path d="M423.21,243.82 Q418.88,246.40 414.60,248.26" stroke-width="1.88"/>
+            <path d="M407.38,251.70 Q402.35,254.43 397.06,256.54" stroke-width="2.21"/>
+            <path d="M388.50,261.09 Q385.61,262.68 382.59,263.97" stroke-width="2.26"/>
+            <path d="M374.22,267.95 Q369.53,270.42 364.27,273.88" stroke-width="2.32"/>
+            <path d="M356.04,277.69 Q353.40,279.86 350.41,281.33" stroke-width="1.95"/>
+            <path d="M345.52,284.22 Q340.44,286.96 336.20,289.28" stroke-width="2.27"/>
+            <path d="M329.17,292.93 Q323.81,296.31 319.09,299.20" stroke-width="2.05"/>
+            <path d="M314.09,301.35 Q309.70,304.03 304.38,306.93" stroke-width="2.00"/>
+            <path d="M298.56,310.45 Q293.64,313.87 288.91,317.13" stroke-width="2.45"/>
+            <path d="M282.10,321.24 Q277.65,323.38 273.09,326.78" stroke-width="2.15"/>
+            <path d="M268.80,329.40 Q264.23,331.66 260.22,335.19" stroke-width="2.53"/>
+            <path d="M255.18,338.46 Q250.21,340.36 246.17,343.76" stroke-width="2.42"/>
+            <path d="M240.47,347.36 Q236.46,349.99 231.78,354.04" stroke-width="2.03"/>
+            <path d="M226.22,357.79 Q222.79,359.93 219.38,362.02" stroke-width="2.16"/>
+          </g>
+          <path d="M215,365 Q265,382 318,374" stroke="#8A63C9" stroke-width="2.6" filter="url(#jitter)"><title>9/29 塞维利亚 → 格拉纳达 · 大巴 3h</title></path>
+          <g class="hand-route" stroke="#3E7BC4">
+            <path class="rhit" d="M318,374 Q332,300 314,232" stroke="transparent" stroke-width="13"><title>9/30 格拉纳达 → 马德里 · 高铁 3h30</title></path>
+            <path d="M318.29,374.05 Q318.69,372.74 318.18,371.39" stroke-width="2.49"/>
+            <path d="M319.14,370.06 Q318.67,368.44 319.62,367.15" stroke-width="2.17"/>
+            <path d="M320.08,365.11 Q319.99,363.79 319.82,362.69" stroke-width="1.92"/>
+            <path d="M320.60,360.44 Q321.04,359.05 320.43,357.44" stroke-width="2.51"/>
+            <path d="M321.07,355.46 Q321.44,354.40 321.75,353.33" stroke-width="2.44"/>
+            <path d="M321.53,351.16 Q321.09,349.97 321.49,348.83" stroke-width="2.49"/>
+            <path d="M321.80,346.79 Q322.33,345.45 322.71,344.14" stroke-width="2.48"/>
+            <path d="M322.72,342.93 Q323.27,341.46 323.14,340.06" stroke-width="1.99"/>
+            <path d="M322.59,337.59 Q322.74,336.67 322.79,335.58" stroke-width="2.19"/>
+            <path d="M323.46,333.25 Q323.28,332.04 323.09,330.90" stroke-width="2.22"/>
+            <path d="M323.73,328.75 Q324.30,327.84 323.99,326.99" stroke-width="1.98"/>
+            <path d="M323.41,325.06 Q323.92,323.61 323.79,322.11" stroke-width="2.22"/>
+            <path d="M323.99,320.56 Q324.03,319.50 324.56,318.49" stroke-width="2.42"/>
+            <path d="M324.45,316.75 Q323.82,315.29 323.73,313.81" stroke-width="2.21"/>
+            <path d="M324.67,311.66 Q323.98,310.52 324.01,309.38" stroke-width="2.25"/>
+            <path d="M324.61,307.73 Q323.49,306.72 323.66,305.70" stroke-width="1.95"/>
+            <path d="M324.40,303.70 Q324.21,302.53 324.46,301.34" stroke-width="1.92"/>
+            <path d="M324.26,299.33 Q324.31,298.45 323.60,297.55" stroke-width="2.23"/>
+            <path d="M323.41,295.47 Q323.42,294.19 323.74,292.90" stroke-width="2.39"/>
+            <path d="M323.34,291.69 Q323.60,290.61 323.64,289.50" stroke-width="1.90"/>
+            <path d="M323.79,287.85 Q323.37,287.02 323.57,286.06" stroke-width="2.13"/>
+            <path d="M322.85,284.57 Q323.14,283.46 322.85,282.44" stroke-width="1.98"/>
+            <path d="M322.80,280.95 Q322.14,279.89 322.06,278.83" stroke-width="2.36"/>
+            <path d="M322.00,277.14 Q322.75,275.72 322.45,274.26" stroke-width="2.00"/>
+            <path d="M321.89,272.55 Q322.15,271.48 321.22,270.27" stroke-width="2.34"/>
+            <path d="M321.32,267.89 Q321.52,266.44 321.16,264.92" stroke-width="2.14"/>
+            <path d="M320.97,263.75 Q320.79,262.72 319.86,261.47" stroke-width="2.36"/>
+            <path d="M319.70,259.38 Q319.78,258.49 319.52,257.57" stroke-width="1.97"/>
+            <path d="M318.92,255.36 Q319.34,254.41 318.82,253.23" stroke-width="1.97"/>
+            <path d="M318.28,251.99 Q319.02,250.50 318.00,249.00" stroke-width="2.08"/>
+            <path d="M317.42,246.76 Q317.36,245.18 316.54,243.94" stroke-width="2.34"/>
+            <path d="M316.08,242.64 Q316.40,241.76 316.48,240.65" stroke-width="2.39"/>
+            <path d="M315.95,238.31 Q315.21,237.59 314.73,236.84" stroke-width="2.34"/>
+            <path d="M314.90,234.59 Q314.66,233.61 313.95,232.96" stroke-width="2.00"/>
+          </g>
+          <path d="M314,232 Q305,218 296,209" stroke="#4CAF6D" stroke-width="2.6" filter="url(#jitter)"><title>10/2 马德里 → 塞戈维亚 · 火车 30 分</title></path>
+          <path d="M314,232 Q306,244 300,257" stroke="#D4A017" stroke-width="2.6" filter="url(#jitter)"><title>10/3 马德里 → 托莱多 · 火车 35 分</title></path>
+          <g class="hand-route" stroke="var(--muted)">
+            <path class="rhit" d="M314,232 Q480,120 614,60" stroke="transparent" stroke-width="13"><title>10/5 马德里 → 上海 · 经北京中转</title></path>
+            <path d="M313.91,231.87 Q318.49,229.16 323.46,226.28" stroke-width="1.74"/>
+            <path d="M327.53,223.06 Q331.48,220.21 334.42,217.72" stroke-width="1.95"/>
+            <path d="M340.21,214.13 Q344.48,211.22 349.15,208.13" stroke-width="1.92"/>
+            <path d="M357.09,202.86 Q360.29,201.40 362.96,199.75" stroke-width="1.51"/>
+            <path d="M368.49,196.65 Q370.99,194.84 374.20,191.77" stroke-width="1.51"/>
+            <path d="M381.41,187.78 Q386.15,185.40 390.42,181.88" stroke-width="1.83"/>
+            <path d="M396.31,178.27 Q400.89,175.97 406.44,172.67" stroke-width="1.53"/>
+            <path d="M413.54,168.34 Q416.00,165.99 419.54,164.34" stroke-width="1.74"/>
+            <path d="M427.33,159.26 Q432.11,156.05 436.38,153.91" stroke-width="1.74"/>
+            <path d="M443.83,149.90 Q447.93,146.94 451.98,144.65" stroke-width="1.45"/>
+            <path d="M458.88,140.61 Q463.70,137.52 468.82,135.04" stroke-width="1.71"/>
+            <path d="M477.10,129.99 Q479.90,128.27 482.86,126.84" stroke-width="1.74"/>
+            <path d="M491.07,122.55 Q495.68,119.95 500.88,116.38" stroke-width="1.79"/>
+            <path d="M509.07,112.49 Q511.72,110.32 514.70,108.85" stroke-width="1.51"/>
+            <path d="M519.63,106.00 Q524.73,103.35 529.04,101.11" stroke-width="1.75"/>
+            <path d="M536.19,97.69 Q541.65,94.53 546.54,91.88" stroke-width="1.59"/>
+            <path d="M551.65,90.01 Q556.27,87.66 561.72,85.10" stroke-width="1.55"/>
+            <path d="M567.80,82.05 Q572.99,79.09 578.02,76.29" stroke-width="1.89"/>
+            <path d="M585.24,72.93 Q590.00,71.37 594.84,68.49" stroke-width="1.66"/>
+            <path d="M599.44,66.44 Q604.31,64.86 608.74,61.91" stroke-width="1.95"/>
+          </g>
         </g>
-        <!-- cities -->
-        <g font-size="13" font-weight="700" fill="var(--ink)" data-page-node-id="XxtFLkbNTQyq4XCD1pAiho">
-          <circle cx="560" cy="144" r="6" fill="#E8833A" stroke="#fff" stroke-width="2" data-page-node-id="Nsk0RIAOzy6DIs0EFcjrno"/>
-          <text x="548" y="165" data-page-node-id="7JUfBGXdRbzzlYUgaT1obd">巴塞罗那 <tspan font-size="11" fill="var(--muted)" data-page-node-id="HdF4SmrQsnsxD66lxSZxOh">🌙×4</tspan></text>
-          <circle cx="594" cy="111" r="5" fill="#E8833A" stroke="#fff" stroke-width="2" data-page-node-id="KWkICV7x1qnCcmbRJz1Yx5"/>
-          <text x="560" y="100" data-page-node-id="jAkXZtEhiopcJNM3A7mwLu">赫罗纳</text>
-          <circle cx="597" cy="127" r="4" fill="#2FA88C" stroke="#fff" stroke-width="2" data-page-node-id="HJGqXuGnWCa7eOPLFsI4V0"/>
-          <text x="606" y="130" font-size="11" fill="var(--muted)" data-page-node-id="EC2NCclFEXzjEzuIjytyx9">Tossa</text>
-          <circle cx="168" cy="364" r="6" fill="#E05252" stroke="#fff" stroke-width="2" data-page-node-id="SHytVGfaBTMAWPH8FmHz7R"/>
-          <text x="150" y="385" data-page-node-id="hWV9GdvBt5rO2wBjrmquQl">塞维利亚 <tspan font-size="11" fill="var(--muted)" data-page-node-id="ziEFxPRTooECZwro100taU">🌙×2</tspan></text>
-          <circle cx="283" cy="375" r="6" fill="#8A63C9" stroke="#fff" stroke-width="2" data-page-node-id="Ap5UuLFprtcfa3IKa9KUuN"/>
-          <text x="295" y="392" data-page-node-id="CPAJHwURqLOsO442vuBcEp">格拉纳达 <tspan font-size="11" fill="var(--muted)" data-page-node-id="H0vAEieEkYRwZqkgl0ilj9">🌙×1</tspan></text>
-          <circle cx="278" cy="197" r="6" fill="#3E7BC4" stroke="#fff" stroke-width="2" data-page-node-id="lBk6HREEUhMLFCupEYX8VI"/>
-          <text x="290" y="192" data-page-node-id="Un77eg0uJu6zuSM319Q1hR">马德里 <tspan font-size="11" fill="var(--muted)" data-page-node-id="JjbFavVhHmaCqvCFAKVqLN">🌙×4</tspan></text>
-          <circle cx="258" cy="168" r="4.5" fill="#4CAF6D" stroke="#fff" stroke-width="2" data-page-node-id="k20Sd4Ff0H2dK7Bh3EuhCq"/>
-          <text x="200" y="162" font-size="12" data-page-node-id="0v1CuuTJHGVtDJAGRbeN6s">塞戈维亚</text>
-          <circle cx="263" cy="228" r="4.5" fill="#D4A017" stroke="#fff" stroke-width="2" data-page-node-id="o7ewxaIcKNJqAPkEDlR5C1"/>
-          <text x="275" y="240" font-size="12" data-page-node-id="iO0K1UWObV2hLxVaP7PfAd">托莱多</text>
+        <!-- 交通方式 · 纯 emoji（日期看图例和日卡） -->
+        <g text-anchor="middle">
+          <g><ellipse cx="606" cy="141" rx="10.5" ry="8.5" fill="var(--paper)" opacity=".85"/><text x="606" y="146" font-size="15">🚄</text></g>
+          <g><ellipse cx="393" cy="257" rx="10.5" ry="8.5" fill="var(--paper)" opacity=".85"/><text x="393" y="262" font-size="15">✈️</text></g>
+          <g><ellipse cx="266" cy="374" rx="10.5" ry="8.5" fill="var(--paper)" opacity=".85"/><text x="266" y="379" font-size="15">🚌</text></g>
+          <g><ellipse cx="324" cy="302" rx="10.5" ry="8.5" fill="var(--paper)" opacity=".85"/><text x="324" y="307" font-size="15">🚄</text></g>
+          <g><ellipse cx="472" cy="133" rx="10.5" ry="8.5" fill="var(--paper)" opacity=".85"/><text x="472" y="138" font-size="15">✈️</text></g>
+        </g>
+        <!-- 城市（点一下 → 跳到对应那几天的行程） -->
+        <g class="hots">
+          <g class="hot" data-hot="girona">
+            <circle class="halo" cx="595" cy="164" r="12" fill="#E8833A" opacity=".18"/>
+            <circle class="dot" cx="595" cy="164" r="5" fill="#E8833A" stroke="var(--paper)" stroke-width="1.6"/>
+            <text class="lab" x="585" y="155" font-size="12" font-weight="700" fill="var(--ink)" text-anchor="end">赫罗纳</text>
+          </g>
+          <g class="hot" data-hot="costa">
+            <circle class="dot" cx="601" cy="176" r="3.6" fill="#2FA88C" stroke="var(--paper)" stroke-width="1.5"/>
+            <text class="lab" x="611" y="180" font-size="11.5" font-weight="700" fill="var(--ink)">🚗 Tossa</text>
+          </g>
+          <g class="hot" data-hot="bcn">
+            <circle class="halo" cx="567" cy="190" r="13" fill="#E8833A" opacity=".2"/>
+            <circle class="dot" cx="567" cy="190" r="6.2" fill="#E8833A" stroke="var(--paper)" stroke-width="1.8"/>
+            <text class="lab" x="528" y="214" font-size="12.5" font-weight="700" fill="var(--ink)" text-anchor="end">巴塞罗那</text>
+            <text class="nights" x="464" y="214" font-size="11" fill="var(--muted)" text-anchor="end">🌙×4</text>
+          </g>
+          <g class="hot" data-hot="svq">
+            <circle class="halo" cx="215" cy="365" r="13" fill="#E05252" opacity=".2"/>
+            <circle class="dot" cx="215" cy="365" r="6.2" fill="#E05252" stroke="var(--paper)" stroke-width="1.8"/>
+            <text class="lab" x="200" y="372" font-size="12.5" font-weight="700" fill="var(--ink)" text-anchor="end">塞维利亚</text>
+            <text class="nights" x="146" y="372" font-size="11" fill="var(--muted)" text-anchor="end">🌙×2</text>
+          </g>
+          <g class="hot" data-hot="grx">
+            <circle class="halo" cx="318" cy="374" r="12" fill="#8A63C9" opacity=".2"/>
+            <circle class="dot" cx="318" cy="374" r="5.8" fill="#8A63C9" stroke="var(--paper)" stroke-width="1.8"/>
+            <text class="lab" x="332" y="380" font-size="12.5" font-weight="700" fill="var(--ink)">格拉纳达</text>
+            <text class="nights" x="386" y="380" font-size="11" fill="var(--muted)">🌙×1</text>
+          </g>
+          <g class="hot" data-hot="mad">
+            <circle class="halo" cx="314" cy="232" r="13" fill="#3E7BC4" opacity=".2"/>
+            <circle class="dot" cx="314" cy="232" r="6.2" fill="#3E7BC4" stroke="var(--paper)" stroke-width="1.8"/>
+            <text class="lab" x="326" y="228" font-size="12.5" font-weight="700" fill="var(--ink)">马德里</text>
+            <text class="nights" x="368" y="228" font-size="11" fill="var(--muted)">🌙×4</text>
+          </g>
+          <g class="hot" data-hot="seg">
+            <circle class="dot" cx="296" cy="209" r="4.4" fill="#4CAF6D" stroke="var(--paper)" stroke-width="1.5"/>
+            <text class="lab" x="285" y="204" font-size="12" font-weight="700" fill="var(--ink)" text-anchor="end">🚆 塞戈维亚</text>
+          </g>
+          <g class="hot" data-hot="tol">
+            <circle class="dot" cx="300" cy="257" r="4.4" fill="#D4A017" stroke="var(--paper)" stroke-width="1.5"/>
+            <text class="lab" x="288" y="272" font-size="12" font-weight="700" fill="var(--ink)" text-anchor="end">🚆 托莱多</text>
+          </g>
+          <g class="hot" data-hot="home">
+            <text class="lab" x="626" y="52" font-size="15" text-anchor="middle">✈️</text>
+          </g>
         </g>
       </svg>
       <div class="legend" data-page-node-id="iGAuCeMcqe1dKYN9koN2Hm">
@@ -874,6 +1021,46 @@ function gDayNav(day) {
       (stayHtml ? '<div class="stay">' + stayHtml + '</div>' : '') +
       '<div class="evs">' + evs + '</div>' + route + alts + '</div>';
   }).join('');
+})();
+
+/* ================= 总览地图 · 点城市跳行程 ================= */
+(function mapNav() {
+  const svg = document.querySelector('#map svg');
+  if (!svg) return;
+  const dayCards = document.querySelectorAll('#dayList .day');
+  const HOT = { bcn:[1,2,3,4,5], girona:[1], costa:[3], svq:[5,6,7], grx:[7,8],
+                mad:[8,9,10,11,12,13], seg:[10], tol:[11], home:[13] };
+  let hlTimer = null;
+  function focusCity(k) {
+    svg.querySelectorAll('.hot').forEach(g => g.classList.toggle('on', g.dataset.hot === k));
+    const idx = HOT[k];
+    if (!idx || !dayCards.length) return;
+    const cards = [];
+    idx.forEach(i => { if (dayCards[i]) cards.push(dayCards[i]); });
+    document.querySelectorAll('#dayList .day').forEach(c => c.classList.remove('map-on'));
+    cards.forEach(c => c.classList.remove('collapsed', 'flash')); // 已折叠的过去日期自动展开
+    cards.forEach(c => c.classList.add('map-on'));
+    const first = cards[0];
+    if (!first) return;
+    void first.offsetWidth;
+    first.classList.add('flash');
+    first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    clearTimeout(hlTimer);
+    hlTimer = setTimeout(() => document.querySelectorAll('#dayList .day').forEach(c => c.classList.remove('flash')), 2600);
+  }
+  svg.querySelectorAll('.hot').forEach(g => g.addEventListener('click', () => focusCity(g.dataset.hot)));
+  // 反向：鼠标扫过某天日卡 → 地图点亮对应城市（不抢点击）
+  const REV = {};
+  Object.keys(HOT).forEach(k => HOT[k].forEach(i => { (REV[i] = REV[i] || []).push(k); }));
+  dayCards.forEach((c, i) => {
+    c.addEventListener('mouseenter', () => {
+      const ks = (REV[i] || []).sort((a, b) => HOT[a].length - HOT[b].length);
+      svg.querySelectorAll('.hot').forEach(g => g.classList.toggle('on', ks[0] === g.dataset.hot));
+    });
+    c.addEventListener('mouseleave', () => {
+      svg.querySelectorAll('.hot.on').forEach(g => g.classList.remove('on'));
+    });
+  });
 })();
 
 /* ================= 倒计时 ================= */
