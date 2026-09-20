@@ -407,8 +407,8 @@ section.foldable.collapsed .cards{display:none;}
             <path d="M315.95,238.31 Q315.21,237.59 314.73,236.84" stroke-width="2.34"/>
             <path d="M314.90,234.59 Q314.66,233.61 313.95,232.96" stroke-width="2.00"/>
           </g>
-          <path d="M314,232 Q305,218 296,209" stroke="#4CAF6D" stroke-width="2.6" filter="url(#jitter)"><title>10/2 马德里 → 塞戈维亚 · 火车 30 分</title></path>
-          <path d="M314,232 Q306,244 300,257" stroke="#D4A017" stroke-width="2.6" filter="url(#jitter)"><title>10/3 马德里 → 托莱多 · 火车 35 分</title></path>
+          <path d="M314,232 Q305,218 296,209" stroke="#4CAF6D" stroke-width="2.6" filter="url(#jitter)"><title>10/2 马德里 → 塞戈维亚 · 大巴 1h15</title></path>
+          <path d="M314,232 Q306,244 300,257" stroke="#D4A017" stroke-width="2.6" filter="url(#jitter)"><title>10/4 马德里 → 托莱多 · 火车 35 分</title></path>
           <g class="hand-route" stroke="var(--muted)">
             <path class="rhit" d="M314,232 Q480,120 614,60" stroke="transparent" stroke-width="13"><title>10/5 马德里 → 上海 · 经北京中转</title></path>
             <path d="M313.91,231.87 Q318.49,229.16 323.46,226.28" stroke-width="1.74"/>
@@ -496,7 +496,7 @@ section.foldable.collapsed .cards{display:none;}
         <span data-page-node-id="2JqWUKPZJoebxby0DBBggC"><i style="border-color:#8A63C9" data-page-node-id="atclgzx7zanna3E7yhpTX8"></i>9/29 巴士去格拉纳达</span>
         <span data-page-node-id="zDsUTjFqMWpyl38DJcSOwJ"><i style="border-color:#3E7BC4" class="dash" data-page-node-id="ri3Z8SEeW8vPlQYgNxbg9P"></i>9/30 高铁去马德里</span>
         <span data-page-node-id="4deptEuIVrlvB9FGnNbADI"><i style="border-color:#4CAF6D" data-page-node-id="bGR6Dz1SmHEoDqSl8kbvkH"></i>10/2 塞戈维亚</span>
-        <span data-page-node-id="EqMPDPDgAJ4H1XNWqBH2DA"><i style="border-color:#D4A017" data-page-node-id="goYqHxDIij2fUM3TQ1wgqE"></i>10/3 托莱多</span>
+        <span data-page-node-id="EqMPDPDgAJ4H1XNWqBH2DA"><i style="border-color:#D4A017" data-page-node-id="goYqHxDIij2fUM3TQ1wgqE"></i>10/4 托莱多</span>
         <span data-page-node-id="GYUwY2gKl4JdGeGYAQcOfD"><i style="border-color:var(--muted)" class="dash" data-page-node-id="jQQfCuTMhOtOgYZIahb4zk"></i>10/5 回国航班</span>
       </div>
     </div>
@@ -631,9 +631,9 @@ const EVENTS = [
   ['2026-10-01','08:30','ES','🥐 Bucólico Café 早午餐','Chueca 区 · 8:30 开门，9 点前基本不用排队'],
   ['2026-10-01','10:00','ES','👑 马德里王宫','先逛萨巴蒂尼花园 · 需预约时段票'],
   ['2026-10-01','18:00','ES','🐂 拉斯文塔斯斗牛 · Novillada','已购票 3 张 · 第 8 号看台 Grada 第 1 排 · 18:00 开赛'],
-  ['2026-10-02','10:00','ES','🖼️ 普拉多美术馆','周五上午付费场 · 需买票（妈妈 ITIC 免费）· 12:45 出发去购物村'],
-  ['2026-10-02','14:00','ES','🛍️ 拉斯罗萨斯两个 outlet','先 The Style Outlets 再 Village · 逛到 18:45'],
-  ['2026-10-03','09:45','ES','🏛️ 塞戈维亚一日','水道桥 · 大教堂 · 阿尔卡萨城堡 · 周六人多，早班出发'],
+  ['2026-10-03','10:00','ES','🖼️ 普拉多美术馆','周六上午付费场 · 需买票（妈妈 ITIC 免费）· 12:45 出发去购物村'],
+  ['2026-10-03','14:00','ES','🛍️ 拉斯罗萨斯两个 outlet','先 The Style Outlets 再 Village · 逛到 18:45'],
+  ['2026-10-02','09:45','ES','🏛️ 塞戈维亚一日','水道桥 · 大教堂 · 阿尔卡萨城堡 · 周五人少，早班出发'],
   ['2026-10-04','08:30','ES','⛪ 托莱多一日','套票 4 馆 + 大教堂（周日 14:00 开门）· 17:30 返程取行李'],
   ['2026-10-04','15:10','ES','⛪ 托莱多大教堂','800 周年 · 门票 €12 · 周日 14:00–18:30 · 建议官网提前买'],
   ['2026-10-04','21:00','ES','🚇 出发巴拉哈斯机场 T1','从 Ópera 坐 L5 直达 Canillejas 换 101 路公交（免 €3 机场费）· 约 1h · 到 T1 约 22:00'],
@@ -663,8 +663,8 @@ const TODOS = [
   { id:'t18',due:'2026-10-02', chip:'行李',  txt:'订 10/4 LOCK & ENJOY 行李寄存（Ópera 旁 · 3 人箱子）', note:'官网 lockandenjoy.com 先订柜：S+ / M+ / XL+ 三档，按柜型与天数计价，3 人行李约 2 个 XL+（XL+ 一格放得下 1 只大箱 + 1 只登机箱 + 1 个背包）· 选 Plaza Mayor 店：C. de la Escalinata 1，就在 Ópera 地铁站旁、离住处步行约 10 分钟 · 24 小时自助柜，凭开柜码存取、期间可反复开 · 当天 08:20 去存，晚上 18:45 从托莱多回来取，再从 Ópera 坐 L5 直达 Canillejas 换 101 路去机场' },
   { id:'t19',due:'2026-10-03', chip:'订票',  txt:'购买 10/4 托莱多景点套票（Pulsera Turística · 3 人 €42）', note:'网上买：tickets.toledomonumental.com → 选日期人数 → 邮箱收 PDF 电子票（可存 Apple / Google 钱包）· 到任一景点售票处换成实体手环，戴手腕上 · 含 7 个馆：圣多美、白圣母犹太会堂、圣胡安修道院、救世主教堂、基督之光清真寺、耶稣会教堂、贵族女子学院 · ⚠️ 每个馆限进一次（不是不限次数）、7 天内有效 · 我们走前 4 个：单买 4×€4=€16 > 套票 €14，仍然划算 · 不含大教堂' },
   { id:'t20',due:'2026-10-03', chip:'订票',  txt:'购买 10/4 托莱多大教堂门票（3 人 €36）', note:'€12/人 · 套票不含，要单独买 · ⚠️ 2026 年是教堂动工 800 周年，周末现场排队常要一小时，建议官网提前买免排队票 · ⚠️ 周日只在 14:00–18:30 对游客开放（上午礼拜不对游客开放）、最后入场 18:00，走 Puerta Llana 进' },
-  { id:'t21',due:'2026-10-01', chip:'交通',  txt:'购买 10/3 马德里 ⇄ 塞戈维亚往返票（Avanza 大巴 · 3 人）', note:'从 Moncloa 汽车站发车（Avanza，就是过去的 La Sepulvedana）· 约 1h15–1h30、白天每 30 分钟一班 · 官网 avanzabus.com 或站内自助机买，约 €6/人/程 · 也可选高铁（Chamartín → Segovia-Guiomar 27 分钟、€8–22），但车站离古城 6 公里、还要再换 11 路公交或打车，还是大巴省事' },
-  { id:'t22',due:'2026-10-01', chip:'订票',  txt:'购买 10/2 普拉多美术馆门票（只需 2 张）', note:'🎓 妈妈 ITIC 教师证免费（当天到售票处出示证件换票）· 10/2 是周五 10:00–19:00（免费场 18:00–20:00），上午属付费时段，普通票 €15/人 · 官网 entradas.museodelprado.es，走 Jerónimos 正门' }
+  { id:'t21',due:'2026-10-01', chip:'交通',  txt:'购买 10/2 马德里 ⇄ 塞戈维亚往返票（Avanza 大巴 · 3 人）', note:'从 Moncloa 汽车站发车（Avanza，就是过去的 La Sepulvedana）· 约 1h15–1h30、白天每 30 分钟一班 · 官网 avanzabus.com 或站内自助机买，约 €6/人/程 · 也可选高铁（Chamartín → Segovia-Guiomar 27 分钟、€8–22），但车站离古城 6 公里、还要再换 11 路公交或打车，还是大巴省事' },
+  { id:'t22',due:'2026-10-01', chip:'订票',  txt:'购买 10/3 普拉多美术馆门票（只需 2 张）', note:'🎓 妈妈 ITIC 教师证免费（当天到售票处出示证件换票）· 10/3 是周六 10:00–20:00（免费场 18:00–20:00），上午属付费时段，普通票 €15/人 · 官网 entradas.museodelprado.es，走 Jerónimos 正门' }
 ];
 
 /* ---- 逐日行程 ---- */
@@ -680,14 +680,14 @@ const DAYS = [
       {t:'08:15', x:'落地巴塞罗那 T1', q:'Barcelona Airport Terminal 1', d:'入境、取行李 · 月卡和电话卡到 Sants 一带再办，不占落地时间'},
       {t:'10:00', x:'机场 → Sants 车站', q:'Barcelona Sants Railway Station', d:'不用寄存，10:40 直接去公寓放行李（房东同意 11:00 进）'},
       {t:'10:40', x:'公寓放行李（房东同意提前进）', q:'Plaça de Sants 5, Barcelona', d:'房东 Kike & María 说 11 点可以进来放行李 · 顺手回 Sants 车站一带办月卡和电话卡（见待办 t3 / t4）'},
-      {t:'13:14', x:'高铁 Sants → 赫罗纳', q:'Girona Railway Station', d:'✅ 已购票 ✓ AVE 13:14 → 13:58 · Localizador 83BCTH · 车厢 5 · 座位 7A / 7C / 7D', book:1, ok:1},
+      {t:'13:14', x:'高铁 Sants → 赫罗纳', q:'Girona Railway Station', d:'✅ 已购票 ✓ AVE 13:14 → 13:58 · Localizador 83BCTH · 车厢 5 · 座位 7A / 7C / 7D', book:1, done:4},
       {t:'14:30', x:'Restaurant Normal 午餐', q:'Restaurant Normal Girona', d:'已订 3 人（时间从 13:30 挪到 14:30）· 老城为步行区，车停外围', ok:1},
       {t:'14:45', x:'旧鱼市桥', q:'Pont de les Peixateries Velles', d:'埃菲尔设计的红杆桥 · 《权游》布拉佛斯取景机位'},
       {t:'15:15', x:'阿拉伯浴场', q:'Banys Arabs Girona', d:'中世纪浴场 · 门票约 3 欧（周日 14:00 关门，周三无碍）'},
       {t:'16:00', x:'赫罗纳主教座堂', q:'Girona Cathedral', d:'世界最宽哥特中殿 · 86 级台阶是《权游》经典机位 · 约 8 欧'},
       {t:'17:15', x:'赫罗纳城墙', q:'Muralles de Girona', d:'免费登城墙，俯瞰红瓦老城全景'},
       {t:'18:15', x:'老城区漫步', q:'Barri Vell de Girona', d:'《权游》君临城取景地，石板小巷 + 彩色河畔房'},
-      {t:'20:09', x:'火车返回巴塞罗那', q:'Barcelona Sants Railway Station', d:'✅ 已购票 ✓ Regional 20:09 → 21:40（无座票）· Localizador 83BCTH', book:1, ok:1},
+      {t:'20:09', x:'火车返回巴塞罗那', q:'Barcelona Sants Railway Station', d:'✅ 已购票 ✓ Regional 20:09 → 21:40（无座票）· Localizador 83BCTH', book:1, done:5},
       {t:'21:50', x:'公寓附近超市采购早餐', q:'Mercadona Sants Barcelona', d:'🛒 回公寓前先去超市囤接下来几天早餐：牛奶、酸奶、面包、火腿、水果 · 就近 Mercadona / Condis / Bonpreu 都行，Google 地图一搜就有 · 公寓有冰箱和厨房'},
       {t:'22:15', x:'入住公寓', q:'Plaça de Sants 5, Barcelona', d:'早点休息倒时差 · 明早 9:15 巴特略之家，8:50 出门'}
     ],
@@ -818,9 +818,24 @@ const DAYS = [
       {n:'Los Torreznos（斗牛场旁 · 炖牛尾）', q:'Restaurante Los Torreznos Madrid'},
       {n:'Bar El 7（斗牛场旁 · 老牌 tapas）', q:'Bar El 7 Madrid'}
     ]},
-  { date:'2026-10-02', tz:'ES', color:'#4CAF6D', title:'普拉多上午场 · 拉斯罗萨斯购物村', stay:'马德里 · Attic Luna 顶楼公寓', stayQ:'Calle de la Luna 5 Madrid', mode:'transit',
+  { date:'2026-10-02', tz:'ES', color:'#4CAF6D', title:'塞戈维亚一日 · 白雪公主城堡', stay:'马德里 · Attic Luna 顶楼公寓', stayQ:'Calle de la Luna 5 Madrid', mode:'transit',
     stops:[
-      {t:'10:00', x:'普拉多美术馆（上午场）', q:'Museo Nacional del Prado', d:'周五 10:00–19:00（免费场 18:00–20:00，上午属付费时段）· ⚠️ 需买票：普通票 €15/人，线上买 2 张（🎓 妈妈 ITIC 教师证免费，当天到售票处出示证件换票，见待办 t22）· 上午人相对少，能踏实看 2.5 小时：委拉斯开兹《宫娥》、戈雅《黑色绘画》、博斯《人间乐园》· 提前 10 分钟到 Jerónimos 正门 · 从公寓步行约 25 分钟或地铁 L2 到 Banco de España', book:1, todo:'t22'},
+      {t:'08:00', x:'Moncloa 站乘大巴出发', q:'Estacion de Moncloa', d:'Avanza 大巴约 1h15–1h30、白天每 30 分钟一班；在 avanzabus.com 或站内自助机买往返票，约 €6/人/程（见待办 t21）· 周五人比周末少，8:00 这班出发时间正好 · 高铁虽只 27 分钟，但 Segovia-Guiomar 站离古城 6 公里、还得再换 11 路公交，还是大巴省事'},
+      {t:'09:45', x:'罗马大水道', q:'Aqueduct of Segovia', d:'两千年无灰浆干砌奇迹，印在欧元上'},
+      {t:'10:30', x:'恶魔雕像 & 老城爬坡', q:'Casa de los Picos Segovia', d:'穿城往大教堂方向'},
+      {t:'11:15', x:'塞戈维亚大教堂', q:'Segovia Cathedral', d:'西班牙最后一座哥特式大教堂，"大教堂中的贵妇"'},
+      {t:'12:30', x:'阿尔卡萨城堡', q:'Alcazar of Segovia', d:'白雪公主城堡原型'},
+      {t:'14:00', x:'城堡和山谷观景台', q:'Mirador del Alcazar Segovia', d:'俯瞰城堡与平原全景'},
+      {t:'15:00', x:'圣马尔科斯草坪休息', q:'Paseo de San Marcos Segovia', d:'评分最高的休闲地，晒晒太阳'},
+      {t:'17:30', x:'返回马德里', q:'Estacion de Moncloa', d:'周五回程相对宽松，返程票仍提前买好（见待办 t21）· 回去早点休息，明天上午普拉多、下午购物村'},
+    ],
+    alts:[
+      {n:'Mesón de Cándido（烤乳猪百年老店）', q:'Meson de Candido Segovia'},
+      {n:'José María（塞戈维亚名店）', q:'Restaurante Jose Maria Segovia'}
+    ]},
+  { date:'2026-10-03', tz:'ES', color:'#5B8DB8', title:'普拉多上午场 · 拉斯罗萨斯购物村', stay:'马德里 · Attic Luna 顶楼公寓', stayQ:'Calle de la Luna 5 Madrid', mode:'transit',
+    stops:[
+      {t:'10:00', x:'普拉多美术馆（上午场）', q:'Museo Nacional del Prado', d:'周六 10:00–20:00（免费场 18:00–20:00，上午属付费时段）· ⚠️ 需买票：普通票 €15/人，线上买 2 张（🎓 妈妈 ITIC 教师证免费，当天到售票处出示证件换票，见待办 t22）· 上午人相对少，能踏实看 2.5 小时：委拉斯开兹《宫娥》、戈雅《黑色绘画》、博斯《人间乐园》· 提前 10 分钟到 Jerónimos 正门 · 从公寓步行约 25 分钟或地铁 L2 到 Banco de España', book:1, todo:'t22'},
       {t:'12:45', x:'去拉斯罗萨斯购物村（公交）', q:'The Style Outlets Las Rozas', mv:'L2 从 Banco de España 到 Moncloa（约 10 分钟）→ 站内下到地下巴士总站换 625 / 628 / 629 路到 Las Rozas（约 20 分钟一班、30–45 分钟）· 全程约 1h15', d:'⚠️ 上车向司机买票、约 €3–4/人（备零钱）：Zone A 的 10 次卡在这段郊区线不能用 · 行李留在公寓，今天空手轻装 · 两个 outlet 都是 10:00 开门，第一站先去 The Style Outlets（Avenida del Noroeste s/n）'},
       {t:'14:00', x:'The Style Outlets Las Rozas（第一站）', q:'The Style Outlets Las Rozas', d:'约 40 家店、折扣 30–70%：设计师时装、运动鞋服、化妆品，还有一整片 Petit Mall 童装区（Mayoral / Boboli / Pom d\'Api）· 比购物村更偏西班牙本土品牌、人少好逛 · 全年 7 天 10:00–22:00 · 逛到 15:30'},
       {t:'15:30', x:'步行转场到 Las Rozas Village', q:'Las Rozas Village', d:'两个 outlet 相距约 1 公里，步行 10–15 分钟'},
@@ -830,21 +845,6 @@ const DAYS = [
     ],
     alts:[
       {n:'Malasaña 一带晚餐', q:'Malasaña Madrid'}
-    ]},
-  { date:'2026-10-03', tz:'ES', color:'#5B8DB8', title:'塞戈维亚一日 · 白雪公主城堡', stay:'马德里 · Attic Luna 顶楼公寓', stayQ:'Calle de la Luna 5 Madrid', mode:'transit',
-    stops:[
-      {t:'08:00', x:'Moncloa 站乘大巴出发', q:'Estacion de Moncloa', d:'Avanza 大巴约 1h15–1h30、白天每 30 分钟一班；在 avanzabus.com 或站内自助机买往返票，约 €6/人/程（见待办 t21）· ⚠️ 周六是塞戈维亚一周里人最多的一天，去程坐 8:00 前后这班 · 高铁虽只 27 分钟，但 Segovia-Guiomar 站离古城 6 公里、还得再换 11 路公交，还是大巴省事'},
-      {t:'09:45', x:'罗马大水道', q:'Aqueduct of Segovia', d:'两千年无灰浆干砌奇迹，印在欧元上'},
-      {t:'10:30', x:'恶魔雕像 & 老城爬坡', q:'Casa de los Picos Segovia', d:'穿城往大教堂方向'},
-      {t:'11:15', x:'塞戈维亚大教堂', q:'Segovia Cathedral', d:'西班牙最后一座哥特式大教堂，"大教堂中的贵妇"'},
-      {t:'12:30', x:'阿尔卡萨城堡', q:'Alcazar of Segovia', d:'白雪公主城堡原型'},
-      {t:'14:00', x:'城堡和山谷观景台', q:'Mirador del Alcazar Segovia', d:'俯瞰城堡与平原全景'},
-      {t:'15:00', x:'圣马尔科斯草坪休息', q:'Paseo de San Marcos Segovia', d:'评分最高的休闲地，晒晒太阳'},
-      {t:'17:30', x:'返回马德里', q:'Estacion de Moncloa', d:'周六回程人多，返程票提前买好（见待办 t21）· 回去早点休息，明天一早去托莱多'},
-    ],
-    alts:[
-      {n:'Mesón de Cándido（烤乳猪百年老店）', q:'Meson de Candido Segovia'},
-      {n:'José María（塞戈维亚名店）', q:'Restaurante Jose Maria Segovia'}
     ]},
   { date:'2026-10-04', tz:'ES', color:'#D4A017', title:'托莱多一日 · 深夜回国航班', stay:'⚠️ 今晚深夜（10/5 凌晨 01:05）的航班 · 早上退房后行李寄存在 Ópera 地铁站旁的 LOCK & ENJOY（24h 自助柜），傍晚从托莱多回来取件，再从 Ópera 坐 L5 直达 Canillejas 换 101 路进机场（免 €3 机场费）',
     stops:[
@@ -967,7 +967,7 @@ const SPOT = {
 'Royal Palace of Madrid': { tag:'👑 马德里王宫 · 建议 2 小时', why:'西欧现存最大的王宫之一，至今仍是西班牙国王举行国事活动的官方场所。宫内 3000 多间房，极尽奢华：水晶吊灯、金箔穹顶、斯特拉迪瓦里提琴收藏。', see:['王座厅与宴会厅','药房与兵器广场（盔甲收藏）','萨巴蒂尼花园（外部，免费）'], exp:'王宫内部按固定参观动线走，约 1.5 小时。宫前广场（东方广场）和南侧花园的机位别忘了。', note:'室内大部分厅堂禁止拍照，请遵守工作人员指引；旺季务必提前预约时段票（已列入待办）。🎓 教师福利：妈妈已申领 ITIC 电子教师证，教师凭 ITIC 免费（需出示电子证件+护照），同行线上只需买 2 张。', feet:'宫内参观以平路为主，但动线较长，穿舒服的鞋。', audio:'现场可租语音导览（多语言，含中文），讲得非常细。' },
 'Plaza Mayor Madrid': { tag:'🏟️ 主广场 & 太阳门', why:'马德里的两大地标广场：主广场是 17 世纪建的红砖回廊广场，太阳门广场则是西班牙公路零公里起点、熊与树莓雕像所在地。', see:['主广场红墙回廊（四面一圈）','太阳门广场的"零公里"地标和熊雕像','广场周边的街头艺人与咖啡座'], exp:'两个广场步行 5 分钟可达，安排在中午前后顺路逛。主广场适合坐下来喝杯咖啡看人来人往。', note:'广场人流密集，是扒手高发区，背包放身前，手机别揣外兜。' },
 'Mercado de San Miguel': { tag:'🍽️ 圣米格尔市场（午餐）', why:'百年玻璃铁艺市场，马德里"站着吃 tapas"的代表：几十个小摊一字排开，火腿、海鲜、油条巧克力一次吃遍。', exp:'午餐高峰人多，建议两人分工：一人占桌子/吧台，一人去买。每家摊点份量小，多试几家。', note:'市场内人多手杂，钱包手机贴身放。价格比街边酒吧略贵，胜在一站式体验。' },
-'Museo Nacional del Prado': { tag:'🖼️ 普拉多美术馆 · 10/4 上午', why:'西班牙的国家美术馆，与卢浮宫、乌菲齐并称欧洲三大美术馆。戈雅、委拉斯开兹、格列柯、博斯等大师的镇馆级作品都在这。', see:['委拉斯开兹《宫娥》（镇馆之宝）','戈雅《裸体的玛哈》与《1808 年 5 月 3 日》','博斯《人间乐园》三联画'], exp:'这次走 10/4（周日）上午：周日 10:00–19:00，免费场是 17:00–19:00，上午属付费时段，普通票 €15/人——上午人相对少，能踏实看 2.5 小时，比挤免费场舒服。⚠️ 提前在官网 entradas.museodelprado.es 买票，走 Jerónimos 正门进；🎓 妈妈持 ITIC 教师证当天到售票处出示证件换免费票。免费时段（周一–周六 18:00–20:00 / 周日 17:00–19:00）的票只能在 Goya 门现场领、19:30 停发，队伍很长。馆藏 8000 多件，优先看一楼和二楼必看名作，别贪多。', feet:'展厅很大，逛完腿会很酸，穿最舒服的鞋来。', audio:'官方语音导览/App 支持中文讲解；也可先下载普拉多官方 App 自带耳机。', note:'🎓 教师福利：妈妈已申领 ITIC 电子教师证，教师凭 ITIC 免费；同行线上只需买 2 张。' },
+'Museo Nacional del Prado': { tag:'🖼️ 普拉多美术馆 · 10/3 上午', why:'西班牙的国家美术馆，与卢浮宫、乌菲齐并称欧洲三大美术馆。戈雅、委拉斯开兹、格列柯、博斯等大师的镇馆级作品都在这。', see:['委拉斯开兹《宫娥》（镇馆之宝）','戈雅《裸体的玛哈》与《1808 年 5 月 3 日》','博斯《人间乐园》三联画'], exp:'这次走 10/3（周六）上午：周六 10:00–20:00，免费场是 18:00–20:00（周一至周六），上午属付费时段，普通票 €15/人——上午人相对少，能踏实看 2.5 小时，比挤免费场舒服。⚠️ 提前在官网 entradas.museodelprado.es 买票，走 Jerónimos 正门进；🎓 妈妈持 ITIC 教师证当天到售票处出示证件换免费票。免费时段（周一–周六 18:00–20:00 / 周日 17:00–19:00）的票只能在 Goya 门现场领、19:30 停发，队伍很长。馆藏 8000 多件，优先看一楼和二楼必看名作，别贪多。', feet:'展厅很大，逛完腿会很酸，穿最舒服的鞋来。', audio:'官方语音导览/App 支持中文讲解；也可先下载普拉多官方 App 自带耳机。', note:'🎓 教师福利：妈妈已申领 ITIC 电子教师证，教师凭 ITIC 免费；同行线上只需买 2 张。' },
 
 /* ---------- 塞戈维亚（10/2） ---------- */
 'Aqueduct of Segovia': { tag:'🏛️ 罗马大水渠 · 免费', why:'近 2000 年前罗马人修的高架水渠，全长几百米、最高处 28 米，2 万多块花岗岩全靠自身重力叠成、没有用一滴砂浆，至今仍在使用。', see:['主广场（Plaza del Azoguejo）仰拍水渠最高段','水渠脚下找阶梯上去走近看石缝','水渠与老城同框的全景机位'], exp:'到得早就先在广场拍水渠，这是塞戈维亚的第一名片。免费参观。', note:'广场人多，注意随身财物。' },
@@ -977,7 +977,7 @@ const SPOT = {
 'Mirador del Alcazar Segovia': { tag:'📷 阿尔卡萨最佳观景台', why:'站在城堡下方的谷底草坪仰望，才能看到阿尔卡萨"石船"最完整的样子，是塞戈维亚最经典的明信片机位。', exp:'从城堡走下来约 10 分钟。下午光线顺光，拍城堡+蓝天绝佳；拍完原路返回或沿河边步道散步。', feet:'上下坡和草坪土路，穿防滑的鞋。' },
 'Paseo de San Marcos Segovia': { tag:'🌿 河边休息草坪', why:'紧挨阿尔卡萨观景台的河边绿道，本地人评分很高的散步地，行程到尾声时坐下来晒晒太阳歇歇脚。', exp:'不想赶路就找张长椅休息，看看河水和鸭子；体力好可沿河多走一段。' },
 
-/* ---------- 托莱多（10/3） ---------- */
+/* ---------- 托莱多（10/4） ---------- */
 'Toledo Cathedral': { tag:'⛪ 托莱多大教堂 · 建议 1.5 小时 · 门票 €12（套票不含）', why:'西班牙红衣主教的总座堂（全西最高级别教堂），1226 年动工、1493 年主体完成，把哥特、穆德哈尔、巴洛克风格全揉在了一起，2026 年正好是它动工 800 周年，被称为"西班牙教堂之母"。', see:['圣器室：格列柯《脱掉基督的外衣》等名画（同厅还有戈雅、委拉斯开兹、提香）','透明祭坛 El Transparente（正午阳光从穹顶开口打在天使像上）','唱诗班雕花座椅与主祭坛木雕','穆德哈尔式天窗与回廊'], exp:'€12/人，套票不含，要单独买；周一至周六 10:00–18:30、周日只在 14:00–18:30（上午礼拜不对游客开放）、最后入场 18:00，走 Puerta Llana 进。⚠️ 800 周年加上周末，现场排队常要一小时，强烈建议官网提前买免排队票。', dress:'教堂着装要求严格，勿穿吊带、短裙短裤，带外套/披肩。', feet:'教堂内部很大，动线长，穿舒服的鞋。', audio:'现场可租语音导览（多语言）。' },
 'Iglesia de Santo Tome Toledo': { tag:'🖼️ Santo Tomé 教堂（只为看一幅画）', why:'小小的教堂只为一幅画而来：格列柯的传世名作《奥尔加斯伯爵的葬礼》，画面一半在天堂一半在人间，是他最著名的作品。', exp:'教堂很小，买票进场直奔主祭坛旁看画即可，约 20 分钟看完。门口有英语讲解卡片。', note:'教堂内禁止拍照（格列柯画作版权保护严格）。', dress:'教堂场所，着装得体。' },
 'Remonte Mecanico Toledo': { tag:'🛗 托莱多免费公共扶梯（Remonte Mecánico）', why:'托莱多老城建在花岗岩山上，从河边到教堂广场要爬升约 80 米，石板路又陡又不平。市政府在山脚装了两处免费的自动扶梯加电梯（Remonte Mecánico），一处叫 Recaredo、一处叫 Safont，从山下的停车场和河岸直接把人和行李送到老城高处，省掉最累的那一段爬坡。', see:['穿过城墙的玻璃棚扶梯','扶梯顶出来就是老城高处'], exp:'从火车站沿指示牌步行约 15–20 分钟（约 1 公里）到扶梯口；每天运行：周一至周四 7:00–23:00、周五 7:00–次日 2:00、周六 8:00–次日 2:00、周日及节假日 8:00–23:00。不想走这段路，打车约 €5–8、10 分钟直接到比萨格拉门，或坐 12 路公交到索科多韦广场（€1.40）。', note:'扶梯完全免费、不需要任何票。老城内部车行严格受限，出租车只能到几个城门口，进城以后全靠走。' },
@@ -990,7 +990,7 @@ const SPOT = {
 'Mirador del Valle': { tag:'📷 托莱多全景观景台', why:'在塔霍河对岸的山坡上看整座托莱多古城的最佳位置：红瓦老城被河水环抱，像一幅中世纪油画，尤其日落时分。', exp:'下午 16:30 左右过去，等光线变暖拍全景。观景台在老城对岸，打车约 5 分钟或坐观光小火车；想徒步走过去要翻过河再上坡，约 40 分钟。', feet:'如选择徒步，是持续上坡山路，穿好走的鞋、留足时间；否则建议打车上去。' },
 
 /* ---------- 购物（10/4 · 拉斯罗萨斯两个 outlet） ---------- */
-'Cristina Oria Las Rozas Village': { tag:'🍽️ 购物村内的餐厅 · 兼卖食品与厨具', why:'西班牙美食博主 Cristina Oria 在 Las Rozas Village 开的复合店：一半是食品与厨房杂货，一半是餐厅，主打地中海家常菜和现做甜品，露台座位正对着村里的花园。', exp:'10/4 的午餐就地解决，省掉回市区吃饭来回的两小时。西班牙午餐高峰在 14:00 之后，13:00 前后到基本不用等位。', note:'同一家店也能顺手买橄榄油、果酱、烘焙模具之类的伴手礼。' },
+'Cristina Oria Las Rozas Village': { tag:'🍽️ 购物村内的餐厅 · 兼卖食品与厨具', why:'西班牙美食博主 Cristina Oria 在 Las Rozas Village 开的复合店：一半是食品与厨房杂货，一半是餐厅，主打地中海家常菜和现做甜品，露台座位正对着村里的花园。', exp:'10/3 的午餐就地解决，省掉回市区吃饭来回的两小时。西班牙午餐高峰在 14:00 之后，13:00 前后到基本不用等位。', note:'同一家店也能顺手买橄榄油、果酱、烘焙模具之类的伴手礼。' },
 'The Style Outlets Las Rozas': { tag:'🛍️ The Style Outlets Las Rozas · 全年无休 10:00–22:00', why:'马德里西北的西班牙本土连锁折扣中心（Neinver 旗下 The Style Outlets 品牌），位于 Las Rozas 的 Avenida del Noroeste，与 Las Rozas Village 隔街相望、步行约 10 分钟。约 40 家店主打设计师时装、运动鞋服和化妆品，折扣常年 30–70%；这里人比购物村少、牌子更"日常"，还有一整片 Petit Mall 童装区。', see:['Petit Mall 童装区（Mayoral、Boboli、Pom d\'Api）','运动与户外品牌折扣店','西班牙本土时装品牌（比购物村更全）'], exp:'比 Las Rozas Village 更偏大众品牌、逛起来快，两家排在一起正好填一个整天。全年 7 天 10:00–22:00，周日照常营业（只有 12/25、1/1、1/6 闭店）。', note:'和购物村一样可办退税：结账时出示护照索取 DIVA 退税单。两个园区之间步行 8–10 分钟，不用打车。' },
 'Las Rozas Village': { tag:'🛍️ 拉斯罗萨斯购物村 · 全年无休 10:00–21:00', why:'马德里西北 25 公里外的露天设计师折扣村，The Bicester Collection 在欧洲的 12 个购物村之一，2026 年正逢开业 25 周年。100 多个精品店常年按建议零售价 3–6 折卖过季款，Loewe、Burberry、BOSS、Coach、Camper、Tous、Le Creuset 都有常设折扣店。', see:['Welcome Center（出示护照换 VIP 邀请卡）','Loewe、Burberry 的折扣店','Joselito 伊比利亚火腿店、Cristina Oria 食品厨具店'], exp:'进门先去 Welcome Center，用非欧盟护照换 VIP 邀请卡，部分店可在折扣价上再叠 10%。西班牙退税没有最低门槛，每笔消费都能退：结账时出示护照索取 DIVA 退税单，村里设有 Tax-Free 柜台可先办手续，但最终要在离境机场的自助机上扫码才算生效。这天从 10:00 一路逛到 16:30：先去隔街的 The Style Outlets（约 2 小时），步行过来吃午饭，再在村里泡到下午。', note:'⚠️ 买的东西要留到在机场扫过 DIVA 码之后才能塞进托运行李，海关可能要求看实物。村内提供 Hands-Free Shopping，可把购物袋先寄在柜台，省得拎着袋子逛。' },
 'El Corte Ingles Preciados Madrid': { tag:'🛍️ 英格列斯百货（太阳门店）', why:'西班牙最大的连锁百货，这家在太阳门旁的主店货最全：火腿、橄榄油、藏红花、Turrón 等伴手礼一趟买齐。', exp:'10/4 是最后采购日，时间有限就直接去地下一层食品超市扫货；买满退税金额到服务台开 Global Blue 退税单，离境时在机场 DIVA 盖章。', note:'退税小票、发票全部留好别打包进行李托运——机场验货要看实物。' },
@@ -1135,7 +1135,7 @@ function renderDayList() {
   // 用「日期」而不是下标关联地图城市 —— 以后在行程中间插入一天也不会错位
   const HOT = { bcn:['09-23','09-24','09-25','09-26','09-27'], girona:['09-23'], costa:['09-25'],
                 svq:['09-27','09-28','09-29'], grx:['09-29','09-30'],
-                mad:['09-30','10-01','10-02','10-03','10-04','10-05'], seg:['10-02'], tol:['10-03'], home:['10-05'] };
+                mad:['09-30','10-01','10-02','10-03','10-04','10-05'], seg:['10-02'], tol:['10-04'], home:['10-05'] };
   const ORD = ['09-22','09-23','09-24','09-25','09-26','09-27','09-28','09-29','09-30',
                '10-01','10-02','10-03','10-04','10-05'];
   const dkey = c => (c.dataset.date || '').slice(5);          // '2026-09-24' → '09-24'
